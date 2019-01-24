@@ -1,0 +1,71 @@
+##
+## Copyright (C) 2018 LeWiz Communications, Inc. 
+## 
+## This library is free software; you can redistribute it and/or
+## modify it under the terms of the GNU Lesser General Public
+## License as published by the Free Software Foundation; either
+## version 2.1 of the License, or (at your option) any later version.
+## 
+## This library is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+## Lesser General Public License for more details.
+## 
+## You should have received a copy of the GNU Lesser General Public
+## License along with this library release; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+## 
+## LeWiz can be contacted at:  support@lewiz.com
+## or address:  
+## PO Box 9276
+## San Jose, CA 95157-9276
+## www.lewiz.com
+## 
+##    Author: LeWiz Communications, Inc.
+##    Language: Verilog
+##
+
+# source TESTS/Rx_TESTS/CASE02_06B_PACKETGAP/TEST04_EOF07/ARP_PKT/Script4_RxPath_Test_c02t04_5G.txt
+# Script to test LMAC: test rx path, 64-bit mode (XGMII).
+# fmac_speed: 000 = 10 Gig mode
+#			  101 = 5 Gig mode
+#			  010 = 2.5 Gig mode
+#			  001 = 1 Gig mode
+# rx_pkt_gen_sel selects the source of the data on RxD and RxC. If 1 = data is from the rx_pkt_gen. If 0 = loopback data (TxD and TxC is sent to RxD and RxC).                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                 
+            
+                                                                                                                                                                                                                                                                                                                    
+vsim work.axis_lmac_tb 
+                                                                                                                                                                                                                                                                                                        
+view wave
+do C:/LMAC2_INFO/waveforms/rx_path_test
+
+view -new wave
+add wave -r /*
+
+mem load -i C:/LMAC2_INFO/AXIS_MASTER/memory_wr_data.txt -format hex /AXIS_LMAC_TB/axi_stream_master/memory_wr_module/memory_wr_data
+mem load -i C:/LMAC2_INFO/AXIS_MASTER/memory_wr_ctrl.txt -format hex /AXIS_LMAC_TB/axi_stream_master/memory_wr_module/memory_wr_ctrl
+
+mem load -i C:/LMAC2_INFO/TESTS/Rx_TESTS/CASE02_06B_PACKETGAP/TEST04_EOF07/ARP_PKT/rx_pkt_gen_data.mem -format hex /AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_10G/rx_pkt_gen2kx64_inst/dram_data/mem
+mem load -i C:/LMAC2_INFO/TESTS/Rx_TESTS/CASE02_06B_PACKETGAP/TEST04_EOF07/ARP_PKT/rx_pkt_gen_ctrl.mem -format hex /AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_10G/rx_pkt_gen2kx8_inst/dram_ctrl/mem
+
+
+force -freeze sim:/AXIS_LMAC_TB/fmac_speed 3'd5 0
+
+force -freeze sim:/AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_start_addr 64'd00 0
+force -freeze sim:/AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_read_cnt 11'd0 0
+
+
+# Select the rx_pkt_gen memory data
+run 200ns
+force -freeze sim:/AXIS_LMAC_TB/rx_pkt_gen_sel 1 0
+
+# Generate the rx_pkt_gen data packet	-- (pkt-1, pkt-2 and pkt-3)
+force -freeze sim:/AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_read_cnt 11'd247 0
+force -freeze sim:/AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_start_addr 64'd14 0
+force -freeze sim:/AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_en 1 0
+run 4ns
+force -freeze sim:/AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_en 0 0
+
+
+run 10us
