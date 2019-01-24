@@ -1,0 +1,65 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/reg_clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/reset_
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/address
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/host_addr
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/reg_rd_start
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/start
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/reg_rd_done_out
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/mac_regdout
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/data
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/rif_rd_state
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/rif_rd_idle_st
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/rif_rd_address_st
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/rif_rd_wait_st
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/rif_rd_data_st
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/rif_rd_done_st
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/data_out_count
+add wave -noupdate -format Literal -radix ascii /AXIS_LMAC_TB/axi_stream_master/register_interface1/ascii_rif_rd_state
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/xA_clk
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/reset_
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/reg_rd_start
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/reg_rd_done_out
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/clk
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/reg_rd_start
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/reg_rd_done_out
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/reg_rd_done_in
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/reg_rd_done_in
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/reg_rd_done_in
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/reg_rd_done_out
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/done_out
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/reset_
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/wrclk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/wren
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/datain
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/wrfull
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/wrempty
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/wrusedw
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/rdclk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/rden
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/dataout
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/rdfull
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/rdempty
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/rdusedw
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/AXIS_BRIDGE_TOP/rif_if_bridge1/rxrregif_fifo4x8_done/dbg
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/fmac_register_if/FMAC_TX_BYTE_CNT_addr
+add wave -noupdate -format Literal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/fmac_register_if/FMAC_RX_BYTE_CNT_addr
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/fmac_register_if/FMAC_TX_BYTE_CNT
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/tx_axis_mac_tdata
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {207187 ps} 0}
+configure wave -namecolwidth 286
+configure wave -valuecolwidth 134
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {191243 ps} {892797 ps}

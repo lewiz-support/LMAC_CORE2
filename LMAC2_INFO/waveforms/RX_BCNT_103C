@@ -1,0 +1,44 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate -divider TB_Signals
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/reset_
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/gen_en_wr
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/xA_clk
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/fmac_speed
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/rx_mac_aclk
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/rx_axis_mac_tdata
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/rx_axis_mac_tvalid
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/rx_axis_mac_tlast
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/rx_axis_mac_tstrb
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/rx_axis_mac_tready
+add wave -noupdate -divider Register_Interface
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/reg_clk
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/reset_
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/address
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/host_addr
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/reg_rd_start
+add wave -noupdate -format Logic -radix hexadecimal /AXIS_LMAC_TB/axi_stream_master/register_interface1/reg_rd_done_out
+add wave -noupdate -format Literal -radix unsigned /AXIS_LMAC_TB/axi_stream_master/register_interface1/mac_regdout
+add wave -noupdate -divider FMAC_Register_Interface
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/fmac_register_if/FMAC_RX_BYTE_CNT_LO
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/fmac_register_if/FMAC_RX_BYTE_CNT_HI
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/fmac_ctrl
+add wave -noupdate -format Logic /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/fmac_register_if/fmac_rx_clr_en
+add wave -noupdate -format Literal -radix hexadecimal /AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/rx_xgmii/nbytes
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {1491929 ps} 0}
+configure wave -namecolwidth 270
+configure wave -valuecolwidth 103
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+update
+WaveRestoreZoom {0 ps} {1491834 ps}

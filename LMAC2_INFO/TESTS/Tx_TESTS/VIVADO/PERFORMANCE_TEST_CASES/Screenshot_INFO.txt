@@ -1,0 +1,22 @@
+fmac_speed = 3'b001  1G Mode
+---------------------------------------------------------------
+fmac_speed = 3'b000  10G Mode
+---------------------------------------------------------------
+fmac_speed = 3'b101  5G Mode
+---------------------------------------------------------------
+fmac_speed = 3'b010  2.5G Mode
+---------------------------------------------------------------
+For the maximum transmitting performance, calculate the time internal between each 'gen_en_wr" signal in order to 
+minimize the activated time of tx_fifo 'wrempty' signal to be 12ns 
+
+---------------------------------------------------------------
+The length of pkt_1 = 92 bytes 
+
+The length of pkt_2 = 135 bytes 
+
+The length of pkt_3 = 40 bytes 
+
+The length of pkt_4 = 63 bytes 
+
+CRC checked for each packet: valid
+

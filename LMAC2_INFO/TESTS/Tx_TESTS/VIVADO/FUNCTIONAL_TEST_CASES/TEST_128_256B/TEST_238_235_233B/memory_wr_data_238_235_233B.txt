@@ -1,0 +1,143 @@
+//
+// Copyright (C) 2018 LeWiz Communications, Inc. 
+// 
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public
+// License as published by the Free Software Foundation; either
+// version 2.1 of the License, or (at your option) any later version.
+// 
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library release; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+// 
+// LeWiz can be contacted at:  support@lewiz.com
+// or address:  
+// PO Box 9276
+// San Jose, CA 95157-9276
+// www.lewiz.com
+// 
+//    Author: LeWiz Communications, Inc.
+//    Language: Verilog
+//
+
+0000af4e00321200    //pkt_1 = 238 Bytes
+0000008110111213    
+8ef47983d307fedc
+00450008022db038
+06800040344be900
+a8c07e07a8c00000
+c727c8c43d0d7b07
+18502c03d5ed1bc0
+5bd5000025910001
+8fcdf664a1b75f9f
+96614dde4c20ed1e
+7d849d967196862b
+9b67db88b20d6428
+ab106dfaadb8acb4
+78fdf6e050a6df53
+16744b31a8f22bca
+f1de1f2ffaeb704a
+def189910cb051df
+ce681cb1013a5b41
+29bb9ddb1142960d
+dc375a8f8aa4b20e
+f854b88ff6cb277c
+831c2b279fa7608e
+e306e1102de674b7
+1d7dd3a5da44ca46
+904fbae5e8fde4bf
+8872f2492895e7ef
+dd1124bc87033b93
+b2c7ee362240f356
+9e9a622f2a336426
+
+00000000005e0001   //pkt_2 = 235 Bytes
+01000608a8c00000
+bc24c8c43d0d7b07
+1850389cc2edc26c
+03170000c990ff00
+f5ac7b7ae7600001
+48afa7f3941582b7
+5391e005e0d3074a
+e2967a6bd2756d04
+92e5115767fd77f4
+f5b5449f4ff2f5fc
+6a944590a665c6d9
+4f7026df8f7e9253
+a372496916c8a228
+d1efaaf2f65e4713
+a5b3041b6c4c22b7
+11400040b824bb00
+a8c06508a8c08283
+a700c5f4a1004208
+0301029c8130dc5f
+0003020001020e30
+030102030104e3ff
+00800d0435303704
+2130f999e180881f
+02022701025b27ae
+696d64410504e202
+0045060810111213           
+9911991199119911
+f6efd32065a4d798
+7f82550edfcad08c    
+
+0000ffffffffffff   //pkt_3 = 233 Bytes
+0045000810111213          
+53769d8b7f0fd7bd
+dd3a931541235a48
+35517f66d6fb9d3c
+ff705057cc44ba8f
+fcc13f04aa48036e
+a22bc2d2bb697156
+96c541391fbcdc54
+0bdb70a8649707fb
+2d9905667849c556
+9120820f411c3aba
+fc3185fa5a02f21a
+de0ed1740b145096
+1b21621d8a8660ab
+ef0c4ff387f00073
+f7e98b1c967ed350
+4c80ccdf137e2909
+2741388879ee11b3
+bb76e6849d5bd5f7
+c766f62f5474553f
+43e76844ca3c14c5
+726c5304fd48336c
+50d202066043bb83
+4b2e66aaddf1437e
+3add9d8f5574ee5c
+1a2df3d0d6b14959
+1185c6f833cee198
+088c9fd70feaedb8
+45b6c5b28aca87dd
+153c6cc9b33d8a9c
+7f193deb1d06ee4f
+521783818caad70f
+ae7a384d89e0def9
+9cfe1304f10843ee
+9978bbdfb7851fdb
+7b2029dc915351be
+b19b5784ffe3b1c5
+75f66014e54d50d0
+8bd1ee51437d9be4
+189549b7b78f8c12
+3844bcae719fb245
+ef4bdb74c00f138b
+34653a38d8612e9b
+1eea913cfa039193
+f951445dd030a074
+29387cdcc300bcfe
+428a51230aa73f7d
+bd24f78d62140176
+ae4b7f2d02581844
+b508d6ec71ea7486
+f536dffa7dc41bc7
+eae313c1dbee6880
+3ea5a69eda4e923b

@@ -1,0 +1,1363 @@
+##
+## Copyright (C) 2018 LeWiz Communications, Inc. 
+## 
+## This library is free software; you can redistribute it and/or
+## modify it under the terms of the GNU Lesser General Public
+## License as published by the Free Software Foundation; either
+## version 2.1 of the License, or (at your option) any later version.
+## 
+## This library is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+## Lesser General Public License for more details.
+## 
+## You should have received a copy of the GNU Lesser General Public
+## License along with this library release; if not, write to the Free Software
+## Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+## 
+## LeWiz can be contacted at:  support@lewiz.com
+## or address:  
+## PO Box 9276
+## San Jose, CA 95157-9276
+## www.lewiz.com
+## 
+##    Author: LeWiz Communications, Inc.
+##    Language: Verilog
+##
+
+# source C:/LMAC2_INFO/TESTS/Tx_TESTS/PERFORMANCE_TEST_CASES/FORCED_PERFORMANCE_TESTS/FORCE_PERFORMANCE_TEST_1/script_5G.txt
+
+
+
+
+vsim work.axis_lmac_tb 
+
+do C:/LMAC2_INFO/waveforms/tx_fifo
+
+mem load -i C:/LMAC2_INFO/TESTS/Tx_TESTS/PERFORMANCE_TEST_CASES/FORCED_PERFORMANCE_TESTS/FORCE_PERFORMANCE_TEST_1/10G_performance_test1_data.txt -format hex /AXIS_LMAC_TB/axi_stream_master/memory_wr_module/memory_wr_data
+mem load -i C:/LMAC2_INFO/TESTS/Tx_TESTS/PERFORMANCE_TEST_CASES/FORCED_PERFORMANCE_TESTS/FORCE_PERFORMANCE_TEST_1/10G_performance_test1_ctrl.txt -format hex /AXIS_LMAC_TB/axi_stream_master/memory_wr_module/memory_wr_ctrl
+                   
+mem load -i C:/LMAC2_INFO/PHY_EMULATOR/rx_pkt_gen_data.mem -format mti /AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_10G/rx_pkt_gen2kx64_inst/dram_data/mem
+mem load -i C:/LMAC2_INFO/PHY_EMULATOR/rx_pkt_gen_ctrl.mem -format mti /AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_10G/rx_pkt_gen2kx8_inst/dram_ctrl/mem
+                   
+
+force -freeze sim:/AXIS_LMAC_TB/fmac_speed 3'b101 0
+force -freeze sim:/AXIS_LMAC_TB/phy_emulator_10G/rx_pkt_gen_start_addr 64'd00 0
+
+
+# generating first packet       -- TX packet 1
+
+run 1026ns
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St1 0
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h000000000000055F 0
+run 6ns
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb79aaf4e00321200 0
+run 6ns
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0000008110111213 0
+run 6ns                                                                     
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h8ef47983d307fedc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h00450008022db038 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h06800040344be900 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8c07e07a8c00000 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc727c8c43d0d7b07 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h18502c03d5ed1bc0 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5bd5000025910001 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h8fcdf664a1b75f9f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h96614dde4c20ed1e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7d849d967196862b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9b67db88b20d6428 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'heae313c1dbee6880 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3ea5a69eda4e923b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hebc70c46cbf97a28 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h783b3614ccce3241 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5675749201bd0732 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6016d97402ca6f27 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h56ee14bd46fba444 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hde8e8fc60b35326a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h65df054bcaa6ba56 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc30351967b51a41f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc582fba346291e04 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h207d2dcae1d3fc85 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb5c506332c3c3ec4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9608fa153a8ffdc0 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2a4a21e9f619b6a4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcc2ddf777f3aa995 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6e6e872d4e61d5d0 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9ccd85e7b084f5e4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb2a4929fc1c76e20 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb79a2bc7b3da8351 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h91f932c6f16ba8a9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3a6efbafe2cfb31f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h40bcf7ccf11839ad 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd672718573bf734f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6c2fae45a128776a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2a10b6bd405154c1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hff3da833b890bfa1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc1aa71c00406580f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7c9605118ed28a68 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h63d7ab09fedaf8bf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h99926b28b196c357 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6740c3098e49f8fa 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbb6df07431f77e0a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc79d506b04a8bd9b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1ca379511f22c86e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h8419ea1c85b71065 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h4e8c24d45e80413a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9b43123da42059bc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf65a60701b75ac8e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf021fca19e794ddb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha94e1d3627cc6827 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h4945787b682f75c7 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h74b08eb4b50e4793 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbceecb2137318dbc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h22dd61b8a6426752 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h87820e22a01cdb4c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2853b61859edf957 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hce36c3d24effd913 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h22dd61b8a6426752 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h87820e22a01cdb4c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2853b61859edf957 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hce36c3d24effd913 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2c5293cedc70df0d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf0a71a8f9f3a5edd 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h31ec438a44dd3f4d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3c982e72e49ad6ea 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0ebfdaa625f82230 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hffe3485f5d519919 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9c9f809e468e4c65 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd58444aaf386ad0a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf8414cb8387738ba 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hce37329c9ec63e24 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h323518956876a666 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h84bade6de8d20ded 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h619dbcfa5f619080 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcabc0f7d9ff1792c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h96d0150de1cea65b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2f065554f5491e42 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he3b1f1ca7e00ff52 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcd96784b02477b09 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hceef983d1891e63b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h53eb222b88ac4d57 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h004b6a98fe28ec35 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9ab21e772cbcb093 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1aa053470111f62d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h37b6204bee9f7d3a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h4749d44e37920c26 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9ba13f313b23b3e1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h796cfdb53c7c7f5c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc36071f09ad836f1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h93b13b9a126f39a8 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5a9320c3a610a8ff 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h50a6375b6165e375 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc8812a49585f723e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha5033d1d57889b8a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf2708d990a926476 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h72b9f42b4858f694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7ad35a4df5194fbf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc906f1092656b26b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd8d31460a503d0e9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b20716638b65f82 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he8bc2b8b0e4c7daf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h18802ca7487728c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hdff0a036339ec23b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h918a2a3edea76ce4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h46f1420c4f99e024 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b582ee1e267a07e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8a7501b28643908 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha497f9b0bbcba632 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb394e547262cc770 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9551bb761c69fc4a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h15aee9645dcaa5bb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd3a6edefe89736db 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h79b164e1ca612f71 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'heff85aa1b15c8da8 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbcdf4d76a9a8130f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6d2f00d38fb380c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h83df65ae7c3ec1e2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5e247a8ada176120 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb34ab7b2dfb7f3dc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2945bdec0fff3eae 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h19d12535f242aefe 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h144512c4c8e3cb91 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc50e7358b0278694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9877745c6e068bce 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he749fe42a5467540 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h57e81263567da8f9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc04a7405a0d3b074 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9dea60684a5309b3 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5a2afb312d2055ee 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcfe4aedf4548ccb1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2d760a8b7484f05d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha5033d1d57889b8a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf2708d990a926476 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h72b9f42b4858f694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7ad35a4df5194fbf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc906f1092656b26b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd8d31460a503d0e9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b20716638b65f82 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he8bc2b8b0e4c7daf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h18802ca7487728c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hdff0a036339ec23b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h918a2a3edea76ce4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h46f1420c4f99e024 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b582ee1e267a07e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8a7501b28643908 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha497f9b0bbcba632 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb394e547262cc770 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9551bb761c69fc4a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h15aee9645dcaa5bb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd3a6edefe89736db 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h79b164e1ca612f71 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'heff85aa1b15c8da8 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbcdf4d76a9a8130f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6d2f00d38fb380c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h83df65ae7c3ec1e2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5e247a8ada176120 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb34ab7b2dfb7f3dc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2945bdec0fff3eae 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h19d12535f242aefe 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h144512c4c8e3cb91 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc50e7358b0278694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9877745c6e068bce 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he749fe42a5467540 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h57e81263567da8f9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc04a7405a0d3b074 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9dea60684a5309b3 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5a2afb312d2055ee 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcfe4aedf4548ccb1 0
+run 6ns
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St0 0 
+
+run 12ns   
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St1 0 
+                                                                   
+#pkt-2
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0000000000000028 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h602caf4e00321200 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h004500085bc8b40c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1200ffffffffffff 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h01000608f4ffff32 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1200020004060008 0
+run 6ns
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St0 0 
+run 12ns 
+ 
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St1 0 
+
+                                                                   
+#pkt-3 of 333 bytes.
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h000000000000014D 0
+run 6ns                                                                                            
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0000ffffffffffff 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h000000085bc8b40c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1200ffffffffffff 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h01000608f4ffff32 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1200020004060008 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8c0f4ffff321200 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5587ffffffff0000 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb0a908d2f3d23f6c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h84d6ba0d1796c2a0 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3f2004f60db9d2f4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9a7708a71a0219b3 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0000020000001700 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0000180000003d7e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb0a908d2f3d23f6c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h660c000000000008 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hdcb118574172ee51 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd85f2e029d0b15e9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h660c000000000008 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0000020000001700 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3a817e7ecab2e2b3 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbca665c1057261f7 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h738a98df8adf5651 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9cd0fa245a2bd001 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd85f2e029d0b15e9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h11b631c8c5f82d3a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1c493448c0fc87bb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcb0fad256702d850 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hdcb118574172ee51 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3dfebea518e2da46 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5191d99f5e39a6c3 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1098c55d62aa48d2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h11b631c8c5f82d3a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1c493448c0fc87bb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcb0fad256702d850 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hdcb118574172ee51 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0000020000001700 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3a817e7ecab2e2b3 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbca665c1057261f7 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h738a98df8adf5651 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9cd0fa245a2bd001 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h11b631c8c5f82d3a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1c493448c0fc87bb 0
+run 6ns                                                                      
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St0 0 
+                                                                                    
+run 12ns                                                                            
+                                                                                    
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St1 0 
+
+ # pkt -4
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h00000000000005CE 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb79aaf4e00321200 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0100060811011121 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h8ef47983d307fedc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h00450008022db038 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h06800040344be900 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8c07e07a8c00000 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc727c8c43d0d7b07 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h18502c03d5ed1bc0 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5bd5000025910001 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h8fcdf664a1b75f9f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h96614dde4c20ed1e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7d849d967196862b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9b67db88b20d6428 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'heae313c1dbee6880 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3ea5a69eda4e923b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hebc70c46cbf97a28 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h783b3614ccce3241 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5675749201bd0732 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6016d97402ca6f27 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h56ee14bd46fba444 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hde8e8fc60b35326a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h65df054bcaa6ba56 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc30351967b51a41f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc582fba346291e04 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h207d2dcae1d3fc85 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb5c506332c3c3ec4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9608fa153a8ffdc0 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2a4a21e9f619b6a4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcc2ddf777f3aa995 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6e6e872d4e61d5d0 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9ccd85e7b084f5e4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb2a4929fc1c76e20 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb79a2bc7b3da8351 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h91f932c6f16ba8a9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3a6efbafe2cfb31f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h40bcf7ccf11839ad 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd672718573bf734f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6c2fae45a128776a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2a10b6bd405154c1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hff3da833b890bfa1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc1aa71c00406580f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7c9605118ed28a68 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h63d7ab09fedaf8bf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h99926b28b196c357 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6740c3098e49f8fa 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbb6df07431f77e0a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc79d506b04a8bd9b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1ca379511f22c86e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h8419ea1c85b71065 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h4e8c24d45e80413a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9b43123da42059bc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf65a60701b75ac8e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf021fca19e794ddb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha94e1d3627cc6827 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h4945787b682f75c7 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h74b08eb4b50e4793 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbceecb2137318dbc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h22dd61b8a6426752 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h87820e22a01cdb4c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2853b61859edf957 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hce36c3d24effd913 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h22dd61b8a6426752 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h87820e22a01cdb4c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2853b61859edf957 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hce36c3d24effd913 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2c5293cedc70df0d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf0a71a8f9f3a5edd 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h31ec438a44dd3f4d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3c982e72e49ad6ea 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0ebfdaa625f82230 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hffe3485f5d519919 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9c9f809e468e4c65 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd58444aaf386ad0a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf8414cb8387738ba 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hce37329c9ec63e24 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h323518956876a666 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h84bade6de8d20ded 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h619dbcfa5f619080 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcabc0f7d9ff1792c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h96d0150de1cea65b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2f065554f5491e42 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he3b1f1ca7e00ff52 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcd96784b02477b09 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hceef983d1891e63b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h53eb222b88ac4d57 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h004b6a98fe28ec35 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9ab21e772cbcb093 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1aa053470111f62d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h37b6204bee9f7d3a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h4749d44e37920c26 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9ba13f313b23b3e1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h796cfdb53c7c7f5c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc36071f09ad836f1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h93b13b9a126f39a8 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5a9320c3a610a8ff 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h50a6375b6165e375 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc8812a49585f723e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha5033d1d57889b8a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf2708d990a926476 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h72b9f42b4858f694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7ad35a4df5194fbf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc906f1092656b26b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd8d31460a503d0e9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b20716638b65f82 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he8bc2b8b0e4c7daf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h18802ca7487728c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hdff0a036339ec23b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h918a2a3edea76ce4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h46f1420c4f99e024 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b582ee1e267a07e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8a7501b28643908 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha497f9b0bbcba632 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb394e547262cc770 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9551bb761c69fc4a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h15aee9645dcaa5bb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd3a6edefe89736db 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h79b164e1ca612f71 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'heff85aa1b15c8da8 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbcdf4d76a9a8130f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6d2f00d38fb380c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h83df65ae7c3ec1e2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5e247a8ada176120 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb34ab7b2dfb7f3dc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2945bdec0fff3eae 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h19d12535f242aefe 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h144512c4c8e3cb91 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc50e7358b0278694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9877745c6e068bce 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he749fe42a5467540 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h57e81263567da8f9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc04a7405a0d3b074 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9dea60684a5309b3 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5a2afb312d2055ee 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcfe4aedf4548ccb1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2d760a8b7484f05d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha5033d1d57889b8a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf2708d990a926476 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h72b9f42b4858f694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7ad35a4df5194fbf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc906f1092656b26b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd8d31460a503d0e9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b20716638b65f82 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he8bc2b8b0e4c7daf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h18802ca7487728c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hdff0a036339ec23b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h918a2a3edea76ce4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h46f1420c4f99e024 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b582ee1e267a07e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8a7501b28643908 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha497f9b0bbcba632 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb394e547262cc770 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9551bb761c69fc4a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h15aee9645dcaa5bb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd3a6edefe89736db 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h79b164e1ca612f71 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'heff85aa1b15c8da8 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbcdf4d76a9a8130f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6d2f00d38fb380c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h83df65ae7c3ec1e2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5e247a8ada176120 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb34ab7b2dfb7f3dc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha5033d1d57889b8a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf2708d990a926476 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h72b9f42b4858f694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7ad35a4df5194fbf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc906f1092656b26b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd8d31460a503d0e9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b20716638b65f82 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he8bc2b8b0e4c7daf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h18802ca7487728c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hdff0a036339ec23b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h918a2a3edea76ce4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h46f1420c4f99e024 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b582ee1e267a07e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8a7501b28643908 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha497f9b0bbcba632 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb394e547262cc770 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9551bb761c69fc4a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h15aee9645dcaa5bb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd3a6edefe89736db 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h79b164e1ca612f71 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'heff85aa1b15c8da8 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbcdf4d76a9a8130f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6d2f00d38fb380c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h83df65ae7c3ec1e2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5e247a8ada176120 0
+run 6ns                                                                      
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St0 0 
+                                                                                    
+run 12ns                                                                            
+                                                                                    
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St1 0 
+
+  # pkt -5
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h00000000000000C9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h602caf4e00321200 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h010006085bc8b40c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc807a8c0f4ffff32 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0000000000000000 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8c0f4ffff321200 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h000000000000c807 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0018000000000000 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5e64d9700dc6a190 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5e247a8ada176120 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb34ab7b2dfb7f3dc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2945bdec0fff3eae 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h19d12535f242aefe 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h144512c4c8e3cb91 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc50e7358b0278694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9877745c6e068bce 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he749fe42a5467540 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h57e81263567da8f9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc04a7405a0d3b074 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9dea60684a5309b3 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5a2afb312d2055ee 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9877745c6e068bce 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he749fe42a5467540 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h57e81263567da8f9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc04a7405a0d3b074 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9dea60684a5309b3 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5a2afb312d2055ee 0
+run 6ns                                                                      
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St0 0 
+                                                                                    
+run 12ns                                                                            
+                                                                                    
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St1 0 
+
+# pkt - 6
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h000000000000002A 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h602caf4e00321200 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h004500085bc8b40c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1200ffffffffffff 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h01000608f4ffff32 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1200020004060008 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8c0f4ffff321200 0
+run 6ns    
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St0 0 
+                                                                                    
+run 12ns                                                                            
+                                                                                                                                                     
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St1 0 
+
+# pkt- 7
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h000000000000002E 0
+run 6ns                                                                                            
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h602caf4e00321200 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h004500085bc8b40c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1200ffffffffffff 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h01000608f4ffff32 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1200020004060008 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8c0f4ffff321200 0
+run 6ns 
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St0 0  
+                                                                                     
+run 12ns                                                                             
+                                                                                     
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St1 0                                                                       
+
+# pkt - 8
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h000000000000055B 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb79aaf4e00321200 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0000008110111213 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h8ef47983d307fedc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h00450008022db038 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h06800040344be900 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8c07e07a8c00000 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc727c8c43d0d7b07 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h18502c03d5ed1bc0 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5bd5000025910001 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h8fcdf664a1b75f9f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h96614dde4c20ed1e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7d849d967196862b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9b67db88b20d6428 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'heae313c1dbee6880 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3ea5a69eda4e923b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hebc70c46cbf97a28 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h783b3614ccce3241 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5675749201bd0732 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6016d97402ca6f27 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h56ee14bd46fba444 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hde8e8fc60b35326a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h65df054bcaa6ba56 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc30351967b51a41f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc582fba346291e04 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h207d2dcae1d3fc85 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb5c506332c3c3ec4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9608fa153a8ffdc0 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2a4a21e9f619b6a4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcc2ddf777f3aa995 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6e6e872d4e61d5d0 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9ccd85e7b084f5e4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb2a4929fc1c76e20 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb79a2bc7b3da8351 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h91f932c6f16ba8a9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3a6efbafe2cfb31f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h40bcf7ccf11839ad 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd672718573bf734f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6c2fae45a128776a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2a10b6bd405154c1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hff3da833b890bfa1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc1aa71c00406580f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7c9605118ed28a68 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h63d7ab09fedaf8bf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h99926b28b196c357 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6740c3098e49f8fa 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbb6df07431f77e0a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc79d506b04a8bd9b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1ca379511f22c86e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h8419ea1c85b71065 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h4e8c24d45e80413a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9b43123da42059bc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf65a60701b75ac8e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf021fca19e794ddb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha94e1d3627cc6827 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h4945787b682f75c7 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h74b08eb4b50e4793 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbceecb2137318dbc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h22dd61b8a6426752 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h87820e22a01cdb4c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2853b61859edf957 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hce36c3d24effd913 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h22dd61b8a6426752 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h87820e22a01cdb4c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2853b61859edf957 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hce36c3d24effd913 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2c5293cedc70df0d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf0a71a8f9f3a5edd 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h31ec438a44dd3f4d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h3c982e72e49ad6ea 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0ebfdaa625f82230 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hffe3485f5d519919 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9c9f809e468e4c65 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd58444aaf386ad0a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf8414cb8387738ba 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hce37329c9ec63e24 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h323518956876a666 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h84bade6de8d20ded 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h619dbcfa5f619080 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcabc0f7d9ff1792c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h96d0150de1cea65b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2f065554f5491e42 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he3b1f1ca7e00ff52 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcd96784b02477b09 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hceef983d1891e63b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h53eb222b88ac4d57 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h004b6a98fe28ec35 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9ab21e772cbcb093 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h1aa053470111f62d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h37b6204bee9f7d3a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h4749d44e37920c26 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9ba13f313b23b3e1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h796cfdb53c7c7f5c 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc36071f09ad836f1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h93b13b9a126f39a8 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5a9320c3a610a8ff 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h50a6375b6165e375 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc8812a49585f723e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha5033d1d57889b8a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf2708d990a926476 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h72b9f42b4858f694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7ad35a4df5194fbf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc906f1092656b26b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd8d31460a503d0e9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b20716638b65f82 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he8bc2b8b0e4c7daf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h18802ca7487728c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hdff0a036339ec23b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h918a2a3edea76ce4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h46f1420c4f99e024 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b582ee1e267a07e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8a7501b28643908 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha497f9b0bbcba632 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb394e547262cc770 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9551bb761c69fc4a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h15aee9645dcaa5bb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd3a6edefe89736db 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h79b164e1ca612f71 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'heff85aa1b15c8da8 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbcdf4d76a9a8130f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6d2f00d38fb380c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h83df65ae7c3ec1e2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5e247a8ada176120 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb34ab7b2dfb7f3dc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2945bdec0fff3eae 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h19d12535f242aefe 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h144512c4c8e3cb91 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc50e7358b0278694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9877745c6e068bce 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he749fe42a5467540 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h57e81263567da8f9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc04a7405a0d3b074 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9dea60684a5309b3 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5a2afb312d2055ee 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcfe4aedf4548ccb1 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2d760a8b7484f05d 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha5033d1d57889b8a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hf2708d990a926476 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h72b9f42b4858f694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h7ad35a4df5194fbf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc906f1092656b26b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd8d31460a503d0e9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b20716638b65f82 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he8bc2b8b0e4c7daf 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h18802ca7487728c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hdff0a036339ec23b 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h918a2a3edea76ce4 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h46f1420c4f99e024 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h0b582ee1e267a07e 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha8a7501b28643908 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'ha497f9b0bbcba632 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb394e547262cc770 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9551bb761c69fc4a 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h15aee9645dcaa5bb 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hd3a6edefe89736db 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h79b164e1ca612f71 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'heff85aa1b15c8da8 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hbcdf4d76a9a8130f 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h6d2f00d38fb380c2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h83df65ae7c3ec1e2 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5e247a8ada176120 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hb34ab7b2dfb7f3dc 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h2945bdec0fff3eae 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h19d12535f242aefe 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h144512c4c8e3cb91 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc50e7358b0278694 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9877745c6e068bce 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'he749fe42a5467540 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h57e81263567da8f9 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hc04a7405a0d3b074 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h9dea60684a5309b3 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'h5a2afb312d2055ee 0
+run 6ns                                                                      
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/data 64'hcfe4aedf4548ccb1 0
+run 6ns                                                                     
+
+force -freeze sim:/AXIS_LMAC_TB/AXIS_LMAC_TOP/LMAC_CORE_TOP/core/txfifo/wrreq St0 0  
+
+run 12us

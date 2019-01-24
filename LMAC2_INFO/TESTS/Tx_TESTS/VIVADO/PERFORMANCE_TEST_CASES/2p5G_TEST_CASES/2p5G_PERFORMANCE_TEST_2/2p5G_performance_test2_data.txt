@@ -1,0 +1,85 @@
+//
+// Copyright (C) 2018 LeWiz Communications, Inc. 
+// 
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public
+// License as published by the Free Software Foundation; either
+// version 2.1 of the License, or (at your option) any later version.
+// 
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library release; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+// 
+// LeWiz can be contacted at:  support@lewiz.com
+// or address:  
+// PO Box 9276
+// San Jose, CA 95157-9276
+// www.lewiz.com
+// 
+//    Author: LeWiz Communications, Inc.
+//    Language: Verilog
+//
+
+00000000005e0001   // pkt_1 = 72 Byte
+01000608a8c00000
+bc24c8c43d0d7b07
+1850389cc2edc26c
+03170000c990ff00
+f5ac7b7ae7600001
+00450008022db038
+06800040344be900
+a8c07e07a8c00000
+
+0000af4e00321200   //pkt_2 = 43 Byte
+0000008110111213    
+8ef47983d307fedc
+00450008022db038
+06800040344be900
+a8c07e07a8c00000
+
+0000af4e00321200    //pkt_3 = 86 Byte
+0000008110111213    
+8ef47983d307fedc
+00450008022db038
+06800040344be900
+a8c07e07a8c00000
+c727c8c43d0d7b07
+18502c03d5ed1bc0
+5bd5000025910001
+8fcdf664a1b75f9f
+96614dde4c20ed1e
+
+00000000005e0001   // pkt_4 = 148 Byte
+01000608a8c00000
+bc24c8c43d0d7b07
+1850389cc2edc26c
+03170000c990ff00
+f5ac7b7ae7600001
+a5033d1d57889b8a
+2741388879ee11b3
+bb76e6849d5bd5f7
+c766f62f5474553f
+43e76844ca3c14c5
+726c5304fd48336c
+50d202066043bb83
+4b2e66aaddf1437e
+3add9d8f5574ee5c
+1a2df3d0d6b14959
+1185c6f833cee198
+088c9fd70feaedb8
+45b6c5b28aca87dd
+
+0000af4e005e0001  
+0000008110111213    
+8ef47983d307fedc
+00450008022db038
+06800040344be900
+a8c07e07a8c00000
+c727c8c43d0d7b07
+18502c03d5ed1bc0
+5bd5000025910001
