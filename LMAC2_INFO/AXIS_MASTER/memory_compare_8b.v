@@ -29,15 +29,17 @@
 
 module memory_compare_8b(
 
-	rx_mac_aclk,				  //i, RX Clock
-	reset_,        				  //i,
+	rx_mac_aclk,			//i, RX Clock
+	reset_,        			//i,
 	
-	axis_rd_done_st,              //i, self check works at every read_done state    
+	axis_rd_done_st,        //i, self check works at every read_done state 
+	
+	vld_data_flag,			//i-1, will be used for readmem in the memory_compare.v   
 	   	
-	pkt_cnt,					  //i
+	pkt_cnt,				//i
 	
-	rx_axis_mac_tvalid,			  //i
-	rx_axis_mac_tbcnt       	  //i
+	rx_axis_mac_tvalid,		//i
+	rx_axis_mac_tbcnt       //i
 	
 	);
 
@@ -54,11 +56,13 @@ module memory_compare_8b(
 	input							rx_axis_mac_tvalid;			//i
     input		[BCNT_WIDTH-1 : 0]	rx_axis_mac_tbcnt;			//i
     
+    input							vld_data_flag;				//i-1, will be used for readmem in the memory_compare.v   
+    
    	reg								axis_rd_done_st_dly1;		//self check works at every read_done state
 	                                        
-	reg 		[ 7 : 0] 			memory_rd_data [0:8191];	//Depth = 2^13 = 8192 for now
-	reg 		  					memory_rd_ctrl [0:8191];	
-	reg 		[ 7 : 0] 			memory_wr_data [0:8191];	
+	reg 		[ 7 : 0] 			memory_rd_data [0:65535];	//Depth = 2^13 = 8192 for now
+	reg 		  					memory_rd_ctrl [0:65535];	
+	reg 		[ 7 : 0] 			memory_wr_data [0:65535];	
 	
 	integer							i;							//stores the index to help find the wrong data.
 	integer							mem_rd_start_address;		//to store start address for each packet.
@@ -80,6 +84,11 @@ module memory_compare_8b(
 	end
 
 	
+	always @ (negedge vld_data_flag) begin
+		$readmemh("C:/LMAC2_INFO/PHY_EMULATOR/data_file.txt", memory_wr_data);							//read memory file at every rd_done_state
+	end
+	
+	
 	always @ (axis_rd_done_st_dly1) begin
 
 		if (!reset_) begin
@@ -93,9 +102,9 @@ module memory_compare_8b(
 	
 		else if (axis_rd_done_st_dly1) begin
 
-			$readmemh("C:/LMAC2_INFO/AXIS_MASTER/data_8b_received_file.txt", memory_rd_data);				//read memory file at every rd_done_state
-			$readmemb("C:/LMAC2_INFO/AXIS_MASTER/ctrl_8b_received_file.txt", memory_rd_ctrl);				//read memory file at every rd_done_state
-			$readmemh("C:/LMAC2_INFO/PHY_EMULATOR/data_file.txt", memory_wr_data);							//read memory file at every rd_done_state
+			$readmemh("C:/LMAC2_INFO/AXIS_MASTER/data_8b_received_file.txt", memory_rd_data);			//read memory file at every rd_done_state
+			$readmemb("C:/LMAC2_INFO/AXIS_MASTER/ctrl_8b_received_file.txt", memory_rd_ctrl);			//read memory file at every rd_done_state
+			//$readmemh("C:/LMAC2_INFO/PHY_EMULATOR/data_file.txt", memory_wr_data);					//read memory file at every rd_done_state
 			
 			//start address + bcnt + 8 bytes of D5555555555555FB + 4 Bytes CRC and 1 Byte FD.
 			mem_rd_end_address	=	mem_rd_start_address + rx_axis_mac_tbcnt + 13;

@@ -85,7 +85,7 @@ output  reg	fib_mac_ipcs_wr;				      	//o-1	Write enable signal of FMAC FIFO
 //TEST signal
 output		test; 				//o-1 	debug
 
-reg space_ok, rden_wf_delay;
+reg rden_wf_delay;
 reg [1:0] num;
 reg [15:0] wr_cnt_temp;
 
@@ -123,7 +123,6 @@ always @(posedge clk_fib)
 		wr_cnt_temp <= 16'd0;
 		
 		num <= 2'b0;
-		space_ok <=  1'b0;
 		fib_mac_wr <=  1'b0;
 		fib_mac_ipcs_wr  <=  1'b0;
 		
@@ -132,7 +131,7 @@ always @(posedge clk_fib)
 	   begin
 	   
 	   	// read enable for byte count FIFO (check if the fifios are not empty)
-		rden_wcf <= ( wr_idle_st & (!rdempty_wf & !rdempty_wcf )) ? 1'b1 : 1'b0 ;	
+		rden_wcf <= ( wr_idle_st & !rdempty_wf & !rdempty_wcf & (fib_mac_usedw <= 16'h300)) ? 1'b1 : 1'b0 ;	
 
 		// read enable for data FIFO(keep it high if the state is data state (June 9)
 		rden_wf  <= (wr_cnt_st )  ? 1'b1 :                                          
@@ -151,14 +150,9 @@ always @(posedge clk_fib)
                              ;
                              
        // the write count should be read only when fsm enters in we_cnt for 1st time.
+       // allow 3 clocks calc time
        num <= (wr_cnt_st) ?  num + 2'b01  : 2'b0;    
         
-       // compare qword status in FMAC and empty the data from fifo 
-       space_ok <= (  wr_cnt_st )  ?  (((13'h1fff - {{9'h000},{fib_mac_usedw}}) > (dataout_wcf[31:19])) ?  1'b1 :
-                           1'b0) :
-                           1'b0 
-                           ;
-                             						
 		fib_mac_data <= ( (wr_cnt_st | wr_data_st) & rden_wf_delay  ) ? dataout_wf :	// send data in data state (June 9)
 					    ( wr_cnt_st & (num == 2'b01 )  ) ?  {{32'd0}, {dataout_wcf}} :  // send write count in write count state /// Update June 5,2018
 					     fib_mac_data							                       	//  else tri state it.
@@ -176,7 +170,6 @@ always @(posedge clk_fib)
                            (rden_wf) ? wr_cnt_temp - 16'h08 :
                             wr_cnt_temp
                             ;
-			
 					
 		end
 
@@ -187,11 +180,11 @@ always @(posedge clk_fib)
 			wr_state <= WR_IDLE;
 		else
 			if(wr_idle_st)
-				wr_state <= (!rdempty_wf & !rdempty_wcf ) ? WR_CNT :    // ( (write fifo not empty) & (write count fifo not empty) )  //
+				wr_state <= (!rdempty_wf & !rdempty_wcf & (fib_mac_usedw <= 16'h300)) ? WR_CNT :    // ( (write fifo not empty) & (write count fifo not empty) )  //
 				WR_IDLE 												
 				;
 			if(wr_cnt_st)	// Read the wrcnt(byte count) first
-				wr_state <= (space_ok & (num == 2'b10 ) ) ? WR_DATA : 
+				wr_state <= (num == 2'b10 ) ? WR_DATA : 
 				WR_CNT
 				;
 			if(wr_data_st)	// Keep sending data till the fifo gets empty
@@ -202,7 +195,6 @@ always @(posedge clk_fib)
 				wr_state <= WR_IDLE
 				;
 	end 
-
 
 	
 //============== Simulation ONLY =======================//

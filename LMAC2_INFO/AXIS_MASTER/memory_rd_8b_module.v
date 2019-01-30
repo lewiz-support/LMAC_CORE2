@@ -69,8 +69,8 @@ module memory_rd_8b_module(
 	
 	output reg	[31 : 0]				pkt_cnt;				  //packet count
 	
-	reg 		[ 7 : 0] 				memory_rd_ctrl [0:2047];	//Depth = 2^11 = 2048 for now
-	reg 		[DATA_WIDTH-1 : 0]		memory_rd_data [0:2047];
+	reg 		[ 7 : 0] 				memory_rd_ctrl [0:65535];	//Depth = 2^11 = 2048 for now
+	reg 		[DATA_WIDTH-1 : 0]		memory_rd_data [0:65535];
 	
 	integer								data_8b_received_file;
 	integer								ctrl_8b_received_file;

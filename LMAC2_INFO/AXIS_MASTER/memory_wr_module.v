@@ -49,8 +49,8 @@ module memory_wr_module(
 	input		[31 : 0]			mem_wr_address;			//i, address to access the memory
 	
 
-	reg 	[31 : 0]			memory_wr_ctrl [0:2047];		//Depth = 2^11 = 2048 for now
-	reg 	[DATA_WIDTH-1 : 0] 	memory_wr_data [0:2047];
+	reg 	[31 : 0]			memory_wr_ctrl [0:65535];		//Depth = 2^11 = 2048 for now
+	reg 	[DATA_WIDTH-1 : 0] 	memory_wr_data [0:65535];
 	
 	
 	assign  mem_axis_wctrl	=	memory_wr_ctrl [mem_wr_address];

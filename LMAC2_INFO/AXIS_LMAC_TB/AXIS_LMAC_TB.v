@@ -103,6 +103,8 @@ module AXIS_LMAC_TB();
     wire 	[31:0] 	FMAC_REGDOUT;
     reg 			start;
     
+    wire			vld_data_flag;		//will be used for readmem in the memory_compare.v
+    
 
 	axi_stream_master axi_stream_master(
 
@@ -147,6 +149,8 @@ module AXIS_LMAC_TB();
 	.mac_regdout			(FMAC_REGDOUT),	   
 	.start					(start),			       
 	.address 				(address),
+	
+   	.vld_data_flag			(vld_data_flag),			//i-1, will be used for readmem in the memory_compare.v
 	
 	.test 					()							//o-1 debug			        
 
@@ -235,6 +239,8 @@ module AXIS_LMAC_TB();
 	                		            		
    	.xgmii_rxd				(xgmii_rxd),			//o-64
    	.xgmii_rxc				(xgmii_rxc),			//o-8 
+   	
+   	.vld_data_flag			(vld_data_flag),		//o-1, will be used for readmem in the memory_compare.v
     
     .test 					()						//o TEST
     

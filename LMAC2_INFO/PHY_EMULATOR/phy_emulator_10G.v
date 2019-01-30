@@ -42,6 +42,8 @@ module phy_emulator_10G(
    	xgmii_rxd,      //o-64
    	xgmii_rxc,      //o-8 
    	
+	vld_data_flag,	//o-1, will be used for readmem in the memory_compare.v
+   	
     test			//o TEST
     
 	);
@@ -67,6 +69,8 @@ module phy_emulator_10G(
 			
 	output reg	[63: 0]		xgmii_rxd;
     output reg	[ 7: 0]		xgmii_rxc;
+    
+	output reg				vld_data_flag;		//o-1, shows valid data and will be used for readmem in the memory_compare.v
                                             
     output 				test;					//o TEST
     
@@ -83,9 +87,7 @@ module phy_emulator_10G(
    	
    	reg					sof;
    	wire				addr_incr;
-   	
-   	reg					vld_data_flag;
-   	
+   	   	
     
     rx_pkt_gen_10G rx_pkt_gen_10G(
 	
@@ -228,10 +230,12 @@ module phy_emulator_10G(
 					
 					//end of 8-bit data
 					if ((xgmii_rxd[7:0] == 8'hFD)&(xgmii_rxc[0])) begin
-						vld_data_flag = 1'b0;
 						n	=	n + 1;
+						
 						$fclose(data_file);
 						$fclose(ctrl_file);
+						
+						vld_data_flag = 1'b0;
 					end
 				end
 			end
@@ -280,6 +284,8 @@ module phy_emulator_10G(
 																n	=	n + 1;
 																$fclose(data_file);
 																$fclose(ctrl_file);
+																
+																vld_data_flag = 1'b0;
 															end
 					                                      	
 					{64'h??fd????????????, 8'b?1000000} : 	begin
@@ -316,6 +322,8 @@ module phy_emulator_10G(
 																n	=	n + 1;
 																$fclose(data_file);
 																$fclose(ctrl_file);
+																
+																vld_data_flag = 1'b0;
 															end
 					                                      	
 					{64'h????fd??????????, 8'b??100000} : 	begin
@@ -348,6 +356,8 @@ module phy_emulator_10G(
 																n	=	n + 1;
 																$fclose(data_file);
 																$fclose(ctrl_file);
+																
+																vld_data_flag = 1'b0;
 															end
 					                                      	
 					{64'h??????fd????????, 8'b???10000} : 	begin
@@ -376,6 +386,8 @@ module phy_emulator_10G(
 																n	=	n + 1;
 																$fclose(data_file);
 																$fclose(ctrl_file);
+																
+																vld_data_flag = 1'b0;
 															end
 					                                      	
 					{64'h????????fd??????, 8'b????1000} : 	begin
@@ -400,6 +412,8 @@ module phy_emulator_10G(
 																n	=	n + 1;
 																$fclose(data_file);
 																$fclose(ctrl_file);
+																
+																vld_data_flag = 1'b0;
 															end
 					                                      	
 					{64'h??????????fd????, 8'b?????100} : 	begin
@@ -420,6 +434,8 @@ module phy_emulator_10G(
 																n	=	n + 1;
 																$fclose(data_file);
 																$fclose(ctrl_file);
+																
+																vld_data_flag = 1'b0;
 															end
 					                                      	
 					{64'h????????????fd??, 8'b??????10} : 	begin
@@ -436,6 +452,8 @@ module phy_emulator_10G(
 																n	=	n + 1;
 																$fclose(data_file);
 																$fclose(ctrl_file);
+																
+																vld_data_flag = 1'b0;
 															end
 					                                      	
 					{64'h??????????????fd, 8'b???????1} : 	begin
@@ -448,6 +466,8 @@ module phy_emulator_10G(
 																n	=	n + 1;
 																$fclose(data_file);
 																$fclose(ctrl_file);
+																
+																vld_data_flag = 1'b0;
 															end
 				endcase
 				end
@@ -467,6 +487,9 @@ module phy_emulator_10G(
 															end
 						
 					{64'h555555fb????????, 8'b0001????} : 	begin
+					
+															vld_data_flag = 1'b1;
+					
 															sof = 1'b1;
 															data_file 	= $fopen("C:/LMAC2_INFO/PHY_EMULATOR/data_file.txt", "a"); 	
 															ctrl_file 	= $fopen("C:/LMAC2_INFO/PHY_EMULATOR/ctrl_file.txt", "a"); 	
@@ -505,6 +528,9 @@ module phy_emulator_10G(
 															end
 						
 					{64'hD5555555555555fb, 8'b00000001} : 	begin
+					
+															vld_data_flag = 1'b1;
+					
 															sof = 1'b1;
 															data_file 	= $fopen("C:/LMAC2_INFO/PHY_EMULATOR/data_file.txt", "a"); 	
 															ctrl_file 	= $fopen("C:/LMAC2_INFO/PHY_EMULATOR/ctrl_file.txt", "a"); 	
@@ -543,7 +569,7 @@ module phy_emulator_10G(
 															$fdisplayh (data_file, xgmii_rxd[63:56],"\t\t//Index: %3d\tPkt No.: %0d", k, n);	
 															$fdisplayb (ctrl_file, xgmii_rxc[7], 	"\t\t//Index: %3d\tPkt No.: %0d", k, n);																										
 															k	=	k + 1;
-															
+																														
 															end                                                         	
 					
 					default: begin

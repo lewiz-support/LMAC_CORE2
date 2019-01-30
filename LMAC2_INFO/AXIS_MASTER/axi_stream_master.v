@@ -29,18 +29,18 @@
 
 module axi_stream_master(
 
-	clk,			//i-1, 250MHz	
-	reset_,        	//i-1	
-	gen_en_wr,      //i-1, to initiate the write transaction.	
+	clk,					//i-1, 250MHz	
+	reset_,        			//i-1	
+	gen_en_wr,      		//i-1, to initiate the write transaction.	
 	
 	//Tx Main Signals		
 	tx_mac_aclk, 			//i-1, TX clock.
-	tx_axis_mac_tdata,	   //o-DATA_WIDTH, Write data.
-	tx_axis_mac_tvalid,	   //o-1, Signal to show if the data is valid. 
-	tx_axis_mac_tlast,	   //o-1, Signal to show the last data byte or quadword.
-	tx_axis_mac_tuser,	   //o-1, Error signal.  
-	tx_axis_mac_tstrb,	   //o-8, To show how many bytes of the data is valid. 
-	tx_axis_mac_tready,	   //i-1, Indicates if the slave is ready.  
+	tx_axis_mac_tdata,	   	//o-DATA_WIDTH, Write data.
+	tx_axis_mac_tvalid,	   	//o-1, Signal to show if the data is valid. 
+	tx_axis_mac_tlast,	   	//o-1, Signal to show the last data byte or quadword.
+	tx_axis_mac_tuser,	   	//o-1, Error signal.  
+	tx_axis_mac_tstrb,	   	//o-8, To show how many bytes of the data is valid. 
+	tx_axis_mac_tready,	   	//i-1, Indicates if the slave is ready.  
 	
     //Tx Sideband Signals
 	tx_ifg_delay,			//o-1, Control signal for configurable interframe gap
@@ -59,17 +59,19 @@ module axi_stream_master(
 	rx_axis_mac_tready,		//o-1, If 1, Master is ready to accept data.
 	
     //Rx Sideband Signals
-	rx_statistics_vector,  	 //i-32,A statistics vector that gives information on the last frame transmitted.
-	rx_statistics_valid,	 //i-1, Asserted at end of frame transmission, indicating that the rx_statistics_vector is valid.
+	rx_statistics_vector,  	//i-32,A statistics vector that gives information on the last frame transmitted.
+	rx_statistics_valid,	//i-1, Asserted at end of frame transmission, indicating that the rx_statistics_vector is valid.
 	 
-	rx_pkt_gen_sel,			 //i
+	rx_pkt_gen_sel,			//i
 
-	host_addr,      		 //o-16
-	reg_rd_start,	  		 //o,
-	reg_rd_done_out,		 //i,
-	mac_regdout,	   		 //i-32
-	start,			       	 //i,
-	address,         		 //i-16
+	host_addr,      		//o-16
+	reg_rd_start,	  		//o,
+	reg_rd_done_out,		//i,
+	mac_regdout,	   		//i-32
+	start,			       	//i,
+	address,         		//i-16
+	
+	vld_data_flag,			//i-1, will be used for readmem in the memory_compare.v
 
 	test				
 
@@ -83,23 +85,23 @@ module axi_stream_master(
 	parameter BCNT_WIDTH = 32;
 
 
-	input							clk;			//250MHz		
-	input							reset_;        			
-	input							gen_en_wr;      //i-1, to initiate the write transaction.		
+	input							clk;					//250MHz		
+	input							reset_;        					
+	input							gen_en_wr;      		//i-1, to initiate the write transaction.		
 
-	input							tx_mac_aclk; 	    //i-1, TX clock.		
-	output	[DATA_WIDTH-1 : 0]		tx_axis_mac_tdata;	//o-DATA_WIDTH, Write data.	
-	output	reg						tx_axis_mac_tvalid;	//o-1, Signal to show if the data is valid.	
-	output	reg						tx_axis_mac_tlast;	//o-1, Signal to show the last data byte or quadword.	
-	output							tx_axis_mac_tuser;	//o-1, Error signal.	
-	output	reg [7 : 0]				tx_axis_mac_tstrb;	//o-8, To show how many bytes of the data is valid.	
-	input							tx_axis_mac_tready;	//i-1, Indicates if the slave is ready.	
-	
-    //Tx Sideband Signals
-	output	reg						tx_ifg_delay;		//o-1, Control signal for configurable interframe gap	
-	input							tx_collision;		//i-1, Asserted by the Ethernet MAC core. Any transmission in progress should be aborted. 0 in full-duplex mode.	
-	input							tx_retransmit;		//i-1, Aborted frame to be retransmitted. 0 in full-duplex mode.	
-	input	[31 : 0]				tx_statistics_vector;  //i-32,A statistics vector that gives information on the last frame transmitted. 
+	input							tx_mac_aclk; 	    	//i-1, TX clock.		
+	output	[DATA_WIDTH-1 : 0]		tx_axis_mac_tdata;		//o-DATA_WIDTH, Write data.	
+	output	reg						tx_axis_mac_tvalid;		//o-1, Signal to show if the data is valid.	
+	output	reg						tx_axis_mac_tlast;		//o-1, Signal to show the last data byte or quadword.	
+	output							tx_axis_mac_tuser;		//o-1, Error signal.	
+	output	reg [7 : 0]				tx_axis_mac_tstrb;		//o-8, To show how many bytes of the data is valid.	
+	input							tx_axis_mac_tready;		//i-1, Indicates if the slave is ready.	
+	                                                    	
+    //Tx Sideband Signals                               	
+	output	reg						tx_ifg_delay;			//o-1, Control signal for configurable interframe gap	
+	input							tx_collision;			//i-1, Asserted by the Ethernet MAC core. Any transmission in progress should be aborted. 0 in full-duplex mode.	
+	input							tx_retransmit;			//i-1, Aborted frame to be retransmitted. 0 in full-duplex mode.	
+	input	[31 : 0]				tx_statistics_vector;  	//i-32,A statistics vector that gives information on the last frame transmitted. 
 	input							tx_statistics_valid;	//i-1, Asserted at end of frame transmission, indicating that the tx_statistics_vector is valid.
 	
     //Rx Main Signals	
@@ -117,16 +119,17 @@ module axi_stream_master(
 	
 	input							rx_pkt_gen_sel;			//i
 	
-	output 	  						test;					//o-1, debug  
+	output 	  						test;					//o-1, debug  	
 	
-	
-		input		[15 : 0]			address;			//i-16			
+	input		[15 : 0]			address;				//i-16			
 	output		[15 : 0]			host_addr;       	 	//o-16		
 	output							reg_rd_start;			//o,		
 	input 							start;					//i,		
 	input							reg_rd_done_out;		//i,		
 	input		[31 : 0]			mac_regdout;			//i-32
 	
+	input							vld_data_flag;			//i-1, will be used for readmem in the memory_compare.v
+	                                                                        
 	
 	reg 							wr_done;				  // pulse that indicates write transaction is done.
 	reg 							rd_done;				  // pulse that indicates read transaction is done.
@@ -241,37 +244,37 @@ module axi_stream_master(
 	
 	memory_wr_module memory_wr_module(
 	
-	.tx_mac_aclk		(tx_mac_aclk),				 //i, TX Clock
-	.reset_ 			(reset_),        			 //i, 
+	.tx_mac_aclk		(tx_mac_aclk),				//i, TX Clock
+	.reset_ 			(reset_),        			//i, 
 
 	.mem_axis_wctrl 	(mem_axis_wctrl),      		//o, controls the length and last_qwd_strobe
 	.mem_axis_wdata 	(mem_axis_wdata),       	//o, write data coming from the memory.
 	
-	.mem_wr_address		(mem_wr_address)       	   //i, address to access the memory
+	.mem_wr_address		(mem_wr_address)       	   	//i, address to access the memory
 	
 	);
 		
 
 	memory_rd_8b_module memory_rd_8b_module(
 	
-	.rx_mac_aclk		(rx_mac_aclk),				  //i, RX Clock
-	.reset_				(reset_),        			  //i,
+	.rx_mac_aclk		(rx_mac_aclk),				//i, RX Clock
+	.reset_				(reset_),        			//i,
 	 
      //input from AXI master to select the test cycle
-	.mem_rd_address		(mem_rd_address),			  //i, address to access the memory
+	.mem_rd_address		(mem_rd_address),			//i, address to access the memory
 	
-	.mem_axis_rdata		(mem_axis_rdata),			  //i, read_data to store in a text file
-	.mem_axis_rstrb		(mem_axis_rstrb),			  //i, read_strobe to store in a text file
+	.mem_axis_rdata		(mem_axis_rdata),			//i, read_data to store in a text file
+	.mem_axis_rstrb		(mem_axis_rstrb),			//i, read_strobe to store in a text file
 	
-	.rd_done			(rd_done),					  //i, indicates that the read transaction is done
-	.rx_axis_mac_tvalid	(rx_axis_mac_tvalid),		  //i, to write to memory as long as valid data is high.
-	.rx_axis_mac_tlen	(rx_axis_mac_tlen),			  //i, holds the length of the received data
+	.rd_done			(rd_done),					//i, indicates that the read transaction is done
+	.rx_axis_mac_tvalid	(rx_axis_mac_tvalid),		//i, to write to memory as long as valid data is high.
+	.rx_axis_mac_tlen	(rx_axis_mac_tlen),			//i, holds the length of the received data
 	
-	.rx_pkt_gen_sel		(rx_pkt_gen_sel),			  //i
+	.rx_pkt_gen_sel		(rx_pkt_gen_sel),			//i
 	
-	.mem_rd_start_address (mem_rd_start_address),	   //o
+	.mem_rd_start_address (mem_rd_start_address),	//o
 	
-	.pkt_cnt			(pkt_cnt)					   //o
+	.pkt_cnt			(pkt_cnt)					//o
 	
 	);
 	
@@ -279,14 +282,16 @@ module axi_stream_master(
 	//Memory compare module: Self Check at every read_done state
 	memory_compare_8b memory_compare_8b(
 	
-	.rx_mac_aclk		(rx_mac_aclk),			//i, RX Clock
+	.rx_mac_aclk		(rx_mac_aclk),				//i, RX Clock
 	.reset_				(reset_),             		//i,
 	
-	.axis_rd_done_st 	(axis_rd_done_st),		//i, self check works at every read_done state
+	.axis_rd_done_st 	(axis_rd_done_st),			//i, self check works at every read_done state
 	
-	.pkt_cnt			(pkt_cnt),				//i
+	.vld_data_flag		(vld_data_flag),			//i-1, will be used for readmem in the memory_compare.v
 	
-	.rx_axis_mac_tvalid	(rx_axis_mac_tvalid),	  //i, to write to memory as long as valid data is high.
+	.pkt_cnt			(pkt_cnt),					//i
+	
+	.rx_axis_mac_tvalid	(rx_axis_mac_tvalid),	  	//i, to write to memory as long as valid data is high.
 	.rx_axis_mac_tbcnt	(rx_axis_mac_tbcnt)
 	);
 		
