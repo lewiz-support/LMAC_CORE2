@@ -1,0 +1,6 @@
+b2575caea6fa4349daaed8849ae5fd58  usr/lib/fs/ext2fs/fsimage.so
+163e3ec64c11aa8a65b8a1c869d57684  usr/lib/fs/fat/fsimage.so
+2bf7429127ccba4430ae3d7ec1bf093e  usr/lib/fs/iso9660/fsimage.so
+a1f642db429c3d5745e69c9ca24eb206  usr/lib/fs/reiserfs/fsimage.so
+9dd339f4995efe6eb945e8dd00916385  usr/lib/fs/ufs/fsimage.so
+c8bc66e077e0447dbb3ba4bbcb6a889a  usr/lib/fs/zfs/fsimage.so

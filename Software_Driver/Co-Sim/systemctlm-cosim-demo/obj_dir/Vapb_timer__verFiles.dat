@@ -1,0 +1,12 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "--pins-bv 2 -Wno-fatal --sc --Mdir obj_dir -CFLAGS -DHAVE_VERILOG -CFLAGS -DHAVE_VERILOG_VERILATOR apb_timer.v"
+S   5279832  3416340  1549668544   110404564  1519110675           0 "/usr/bin/verilator_bin"
+S      2651 14161125  1549669162   671812962  1549669162   671812962 "apb_timer.v"
+T     12062 14161700  1549671445   525256054  1549671445   525256054 "obj_dir/Vapb_timer.cpp"
+T      3268 14161699  1549671445   525256054  1549671445   525256054 "obj_dir/Vapb_timer.h"
+T      1550 14161702  1549671445   525256054  1549671445   525256054 "obj_dir/Vapb_timer.mk"
+T       545 14161698  1549671445   525256054  1549671445   525256054 "obj_dir/Vapb_timer__Syms.cpp"
+T       732 14161697  1549671445   525256054  1549671445   525256054 "obj_dir/Vapb_timer__Syms.h"
+T       242 14161703  1549671445   525256054  1549671445   525256054 "obj_dir/Vapb_timer__ver.d"
+T         0        0  1549671445   525256054  1549671445   525256054 "obj_dir/Vapb_timer__verFiles.dat"
+T      1168 14161701  1549671445   525256054  1549671445   525256054 "obj_dir/Vapb_timer_classes.mk"

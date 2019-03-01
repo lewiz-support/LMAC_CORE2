@@ -1,0 +1,9 @@
+/.
+/usr
+/usr/bin
+/usr/bin/dtc
+/usr/bin/fdtdump
+/usr/bin/fdtget
+/usr/bin/fdtput
+/usr/lib
+/usr/lib/libfdt.so.1

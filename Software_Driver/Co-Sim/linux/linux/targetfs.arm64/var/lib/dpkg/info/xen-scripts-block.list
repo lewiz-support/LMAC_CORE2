@@ -1,0 +1,13 @@
+/.
+/etc
+/etc/xen
+/etc/xen/scripts
+/etc/xen/scripts/block
+/etc/xen/scripts/block-common.sh
+/etc/xen/scripts/block-drbd-probe
+/etc/xen/scripts/block-dummy
+/etc/xen/scripts/block-enbd
+/etc/xen/scripts/block-iscsi
+/etc/xen/scripts/block-nbd
+/etc/xen/scripts/block-tap
+/etc/xen/scripts/vscsi

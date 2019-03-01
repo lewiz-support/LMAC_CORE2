@@ -1,0 +1,965 @@
+Package: shadow-securetty
+Status: install ok installed
+Priority: optional
+Section: base utils
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 4.6-r3
+Description: Provider of the machine specific securetty file
+ Provider of the machine specific securetty file.
+OE: shadow-securetty
+PackageArch: qemuarm64
+
+Package: sysvinit-pidof
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 2.88dsf-r14
+Depends: libc6 (>= 2.28), update-alternatives-opkg
+Description: System-V like init
+ This package is required to boot in most configurations.  It provides the
+ /sbin/init program.  This is the first process started on boot, and the
+ last process terminated before the system halts.
+OE: sysvinit
+PackageArch: aarch64
+Homepage: http://savannah.nongnu.org/projects/sysvinit/
+
+Package: libcom-err2
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.44.3-r0
+Provides: libcomerr
+Depends: libc6 (>= 2.28)
+Description: Ext2 Filesystem Utilities
+ The Ext2 Filesystem Utilities (e2fsprogs) contain all of the standard
+ utilities for creating, fixing, configuring , and debugging ext2
+ filesystems.
+OE: e2fsprogs
+PackageArch: aarch64
+Homepage: http://e2fsprogs.sourceforge.net/
+
+Package: libtinfo5
+Status: install ok installed
+Priority: optional
+Section: libs
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 6.1+20180630-r0
+Provides: ncurses-libtinfo
+Depends: libc6 (>= 2.28)
+Recommends: ncurses-terminfo-base
+Suggests: ncurses-terminfo
+Description: ncurses tinfo library
+ ncurses tinfo library
+OE: ncurses
+PackageArch: aarch64
+Homepage: http://www.gnu.org/software/ncurses/ncurses.html
+
+Package: libunistring2
+Status: install ok installed
+Priority: optional
+Section: devel
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 0.9.10-r0
+Provides: libunistring
+Depends: libc6 (>= 2.28)
+Description: Library for manipulating C and Unicode strings
+ Text files are nowadays usually encoded in Unicode, and may consist of
+ very different scripts from Latin letters to Chinese Hanzi with many
+ kinds of special characters accents, right-to-left writing marks,
+ hyphens, Roman numbers, and much more. But the POSIX platform APIs for
+ text do not contain adequate functions for dealing with particular
+ properties of many Unicode characters. In fact, the POSIX APIs for text
+ have several assumptions at their base which don't hold for Unicode text.
+ This library provides functions for manipulating Unicode strings and for
+ manipulating C strings according to the Unicode standard.  This package
+ contains documentation.
+OE: libunistring
+PackageArch: aarch64
+Homepage: http://www.gnu.org/software/libunistring/
+
+Package: eudev
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 3.2.5-r0
+Provides: hotplug, udev
+Depends: libblkid1 (>= 2.32.1), libc6 (>= 2.28), libkmod2 (>= 25+git0+aca4eca103)
+Recommends: update-rc.d
+Description: eudev is a fork of systemd's udev
+ eudev is a fork of systemd's udev.
+OE: eudev
+PackageArch: aarch64
+Homepage: https://wiki.gentoo.org/wiki/Eudev
+
+Package: libattr1
+Status: install ok installed
+Priority: optional
+Section: libs
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 2.4.47-r0
+Provides: libattr
+Depends: libc6 (>= 2.28)
+Description: Utilities for manipulating filesystem extended attributes
+ Utilities for manipulating filesystem extended attributes.
+OE: attr
+PackageArch: aarch64
+Homepage: http://savannah.nongnu.org/projects/attr/
+
+Package: busybox-hwclock
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.29.2-r0
+Recommends: update-rc.d
+Description: Tiny versions of many common UNIX utilities in a single small executable
+ BusyBox combines tiny versions of many common UNIX utilities into a
+ single small executable. It provides minimalist replacements for most of
+ the utilities you usually find in GNU fileutils, shellutils, etc. The
+ utilities in BusyBox generally have fewer options than their full-
+ featured GNU cousins; however, the options that are included provide the
+ expected functionality and behave very much like their GNU counterparts.
+ BusyBox provides a fairly complete POSIX environment for any small or
+ embedded system.
+OE: busybox
+PackageArch: aarch64
+Homepage: http://www.busybox.net
+
+Package: dropbear
+Status: install ok installed
+Priority: optional
+Section: console/network
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 2018.76-r0
+Provides: ssh, sshd
+Depends: libc6 (>= 2.28), libcrypt1 (>= 4.1.1), libz1 (>= 1.2.11), update-alternatives-opkg
+Recommends: update-rc.d
+Description: A lightweight SSH and SCP implementation
+ A lightweight SSH and SCP implementation.
+OE: dropbear
+PackageArch: aarch64
+Homepage: http://matt.ucc.asn.au/dropbear/dropbear.html
+
+Package: liblzma5
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 5.2.4-r0
+Provides: liblzma
+Depends: libc6 (>= 2.28)
+Description: Utilities for managing LZMA compressed files
+ Utilities for managing LZMA compressed files.
+OE: xz
+PackageArch: aarch64
+Homepage: http://tukaani.org/xz/
+
+Package: libidn2-0
+Status: install ok installed
+Priority: optional
+Section: libs
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 2.0.5-r0
+Provides: libidn2
+Depends: libc6 (>= 2.28), libunistring2 (>= 0.9.10)
+Description: Internationalized Domain Name support library
+ Implementation of the Stringprep, Punycode and IDNA specifications
+ defined by the IETF Internationalized Domain Names (IDN) working group.
+OE: libidn2
+PackageArch: aarch64
+Homepage: http://www.gnu.org/software/libidn/
+
+Package: libbz2-1
+Status: install ok installed
+Priority: optional
+Section: console/utils
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.0.6-r5
+Provides: libbz2
+Depends: libc6 (>= 2.28)
+Description: Very high-quality data compression program
+ bzip2 compresses files using the Burrows-Wheeler block-sorting text
+ compression algorithm, and Huffman coding. Compression is generally
+ considerably better than that achieved by more conventional
+ LZ77/LZ78-based compressors, and approaches the performance of the PPM
+ family of statistical compressors.
+OE: bzip2
+PackageArch: aarch64
+Homepage: https://sourceware.org/bzip2/
+
+Package: base-passwd
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 3.5.29-r0
+Description: Base system master password/group files
+ The master copies of the user database files (/etc/passwd and
+ /etc/group).  The update-passwd tool is also provided to keep the system
+ databases synchronized with these master files.
+OE: base-passwd
+PackageArch: aarch64
+
+Package: debianutils
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 4.8.6-r0
+Depends: debianutils-run-parts, libc6 (>= 2.28), update-alternatives-opkg
+Description: Miscellaneous utilities specific to Debian
+ Miscellaneous utilities specific to Debian.
+OE: debianutils
+PackageArch: aarch64
+
+Package: openssl-conf
+Status: install ok installed
+Priority: optional
+Section: libs/network
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.1.1-r0
+Replaces: openssl10-conf
+Provides: openssl10-conf
+Conflicts: openssl10-conf
+Conffiles:
+ /etc/ssl/openssl.cnf newconffile
+Description: Secure Socket Layer
+ Secure Socket Layer (SSL) binary and related cryptographic tools.
+OE: openssl
+PackageArch: aarch64
+Homepage: http://www.openssl.org/
+
+Package: bash
+Status: install ok installed
+Priority: optional
+Section: base/shell
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 4.4.18-r0
+Depends: base-files, libc6 (>= 2.28), libtinfo5 (>= 6.1+20180630), update-alternatives-opkg
+Description: An sh-compatible command language interpreter
+ An sh-compatible command language interpreter.
+OE: bash
+PackageArch: aarch64
+Homepage: http://tiswww.case.edu/php/chet/bash/bashtop.html
+
+Package: libuuid1
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 2.32.1-r0
+Provides: util-linux-libuuid
+Depends: libc6 (>= 2.28)
+Description: util-linux libuuid
+ util-linux libuuid
+OE: util-linux
+PackageArch: aarch64
+Homepage: http://userweb.kernel.org/~kzak/util-linux/
+
+Package: busybox
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.29.2-r0
+Depends: libc6 (>= 2.28), update-alternatives-opkg
+Recommends: busybox-udhcpc
+Description: Tiny versions of many common UNIX utilities in a single small executable
+ BusyBox combines tiny versions of many common UNIX utilities into a
+ single small executable. It provides minimalist replacements for most of
+ the utilities you usually find in GNU fileutils, shellutils, etc. The
+ utilities in BusyBox generally have fewer options than their full-
+ featured GNU cousins; however, the options that are included provide the
+ expected functionality and behave very much like their GNU counterparts.
+ BusyBox provides a fairly complete POSIX environment for any small or
+ embedded system.
+OE: busybox
+PackageArch: aarch64
+Homepage: http://www.busybox.net
+
+Package: initscripts-functions
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.0-r155
+Provides: initd-functions
+Conflicts: lsbinitscripts
+Description: SysV init scripts
+ Initscripts provide the basic system startup initialization scripts for
+ the system.  These scripts include actions such as filesystem mounting,
+ fsck, RTC manipulation and other actions routinely performed at system
+ startup.  In addition, the scripts are also used during system shutdown
+ to reverse the actions performed at startup.
+OE: initscripts
+PackageArch: aarch64
+Homepage: https://github.com/fedora-sysv/initscripts
+
+Package: libcurl4
+Status: install ok installed
+Priority: optional
+Section: console/network
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 7.61.0-r0
+Provides: libcurl
+Depends: libc6 (>= 2.28), libgnutls30 (>= 3.6.3), libidn2-0 (>= 2.0.5), libz1 (>= 1.2.11), nettle (>= 3.4)
+Recommends: ca-certificates
+Description: Command line tool and library for client-side URL transfers
+ Command line tool and library for client-side URL transfers.
+OE: curl
+PackageArch: aarch64
+Homepage: http://curl.haxx.se/
+
+Package: libgnutls30
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 3.6.3-r0
+Provides: gnutls
+Depends: libc6 (>= 2.28), libgmp10 (>= 6.1.2), libidn2-0 (>= 2.0.5), libunistring2 (>= 0.9.10), nettle (>= 3.4)
+Description: GNU Transport Layer Security Library
+ GNU Transport Layer Security Library.
+OE: gnutls
+PackageArch: aarch64
+Homepage: http://www.gnu.org/software/gnutls/
+
+Package: libe2p2
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.44.3-r0
+Provides: libe2p
+Depends: libc6 (>= 2.28)
+Description: Ext2 Filesystem Utilities
+ The Ext2 Filesystem Utilities (e2fsprogs) contain all of the standard
+ utilities for creating, fixing, configuring , and debugging ext2
+ filesystems.
+OE: e2fsprogs
+PackageArch: aarch64
+Homepage: http://e2fsprogs.sourceforge.net/
+
+Package: libc6
+Status: install ok installed
+Priority: optional
+Section: libs
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 2.28-r0
+Provides: eglibc, glibc, rtld__gnu_hash__
+Description: GLIBC (GNU C Library)
+ The GNU C Library is used as the system C library in most systems with
+ the Linux kernel.
+OE: glibc
+PackageArch: aarch64
+Homepage: http://www.gnu.org/software/libc/libc.html
+
+Package: run-postinsts
+Status: install ok installed
+Priority: optional
+Section: devel
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: all
+Multi-Arch: foreign
+Version: 1.0-r10
+Recommends: update-rc.d
+Description: Runs postinstall scripts on first boot of the target device
+ Runs postinstall scripts on first boot of the target device.
+OE: run-postinsts
+PackageArch: all
+
+Package: ncurses-terminfo-base
+Status: install ok installed
+Priority: optional
+Section: libs
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 6.1+20180630-r0
+Description: The New Curses library
+ SVr4 and XSI-Curses compatible curses library and terminfo tools
+ including tic, infocmp, captoinfo. Supports color, multiple highlights,
+ forms-drawing characters, and automatic recognition of keypad and
+ function-key sequences. Extensions include resizable windows and mouse
+ support on both xterm and Linux console using the gpm library.
+OE: ncurses
+PackageArch: aarch64
+Homepage: http://www.gnu.org/software/ncurses/ncurses.html
+
+Package: e2fsprogs-mke2fs
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.44.3-r0
+Depends: libblkid1 (>= 2.32.1), libc6 (>= 2.28), libcom-err2 (>= 1.44.3), libe2p2 (>= 1.44.3), libext2fs2 (>= 1.44.3), libuuid1 (>= 2.32.1), update-alternatives-opkg
+Description: Ext2 Filesystem Utilities
+ The Ext2 Filesystem Utilities (e2fsprogs) contain all of the standard
+ utilities for creating, fixing, configuring , and debugging ext2
+ filesystems.
+OE: e2fsprogs
+PackageArch: aarch64
+Homepage: http://e2fsprogs.sourceforge.net/
+
+Package: shadow-base
+Status: install ok installed
+Priority: optional
+Section: base/utils
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 4.6-r0
+Depends: libc6 (>= 2.28), libcrypt1 (>= 4.1.1), update-alternatives-opkg
+Description: Tools to change and administer password and group data
+ Tools to change and administer password and group data.
+OE: shadow
+PackageArch: aarch64
+Homepage: http://pkg-shadow.alioth.debian.org
+
+Package: nettle
+Status: install ok installed
+Priority: optional
+Section: libs
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 3.4-r0
+Depends: libc6 (>= 2.28), libgmp10 (>= 6.1.2)
+Description: A low level cryptographic library
+ A low level cryptographic library.
+OE: nettle
+PackageArch: aarch64
+Homepage: http://www.lysator.liu.se/~nisse/nettle/
+
+Package: libkmod2
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 25+git0+aca4eca103-r0
+Provides: libkmod
+Depends: libc6 (>= 2.28), libz1 (>= 1.2.11)
+Description: Tools for managing Linux kernel modules
+ kmod is a set of tools to handle common tasks with Linux kernel modules
+ like                insert, remove, list, check properties, resolve
+ dependencies and aliases.
+OE: kmod
+PackageArch: aarch64
+Homepage: http://packages.profusion.mobi/kmod/
+
+Package: libblkid1
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 2.32.1-r0
+Provides: util-linux-libblkid
+Depends: libc6 (>= 2.28), libuuid1 (>= 2.32.1)
+Description: util-linux libblkid
+ util-linux libblkid
+OE: util-linux
+PackageArch: aarch64
+Homepage: http://userweb.kernel.org/~kzak/util-linux/
+
+Package: busybox-syslog
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.29.2-r0
+Depends: busybox, update-alternatives-opkg
+Recommends: update-rc.d
+Conflicts: rsyslog, sysklogd, syslog-ng
+Conffiles:
+ /etc/syslog-startup.conf newconffile
+Description: Tiny versions of many common UNIX utilities in a single small executable
+ BusyBox combines tiny versions of many common UNIX utilities into a
+ single small executable. It provides minimalist replacements for most of
+ the utilities you usually find in GNU fileutils, shellutils, etc. The
+ utilities in BusyBox generally have fewer options than their full-
+ featured GNU cousins; however, the options that are included provide the
+ expected functionality and behave very much like their GNU counterparts.
+ BusyBox provides a fairly complete POSIX environment for any small or
+ embedded system.
+OE: busybox
+PackageArch: aarch64
+Homepage: http://www.busybox.net
+
+Package: perl
+Status: install ok installed
+Priority: optional
+Section: devel
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 5.24.4-r0
+Provides: perl-module-config, perl-module-strict, perl-module-vars, perl-module-warnings, perl-module-warnings-register
+Depends: libc6 (>= 2.28), libperl5 (>= 5.24.4)
+Description: Perl scripting language
+ Perl scripting language.
+OE: perl
+PackageArch: aarch64
+Homepage: http://www.perl.org/
+
+Package: modutils-initscripts
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.0-r7
+Recommends: update-rc.d
+Description: Initscript for auto-loading kernel modules on boot
+ Initscript for auto-loading kernel modules on boot.
+OE: modutils-initscripts
+PackageArch: aarch64
+
+Package: base-files
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 3.0.14-r89
+Conffiles:
+ /etc/fstab newconffile
+ /etc/hostname newconffile
+ /etc/shells newconffile
+ /etc/motd newconffile
+ /etc/nsswitch.conf newconffile
+ /etc/profile newconffile
+Description: Miscellaneous files for the base system
+ The base-files package creates the basic system directory structure and
+ provides a small set of key configuration files for the system.
+OE: base-files
+PackageArch: qemuarm64
+
+Package: libgmp10
+Status: install ok installed
+Priority: optional
+Section: devel
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 6.1.2-r0
+Provides: gmp
+Depends: libc6 (>= 2.28)
+Description: GNU multiprecision arithmetic library
+ GMP is a free library for arbitrary precision arithmetic, operating on
+ signed integers, rational numbers, and floating point numbers
+OE: gmp
+PackageArch: aarch64
+Homepage: http://gmplib.org/
+
+Package: packagegroup-core-boot
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.0-r17
+Depends: base-files, base-passwd, busybox, busybox-hwclock, init-ifupdown, initscripts, modutils-initscripts, netbase, sysvinit, udev, update-alternatives-opkg
+Recommends: busybox-syslog
+Description: Minimal boot requirements
+ The minimal set of packages required to boot the system
+OE: packagegroup-core-boot
+PackageArch: qemuarm64
+
+Package: sysvinit-inittab
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 2.88dsf-r10
+Conffiles:
+ /etc/inittab newconffile
+Description: Inittab configuration for SysVinit
+ Inittab configuration for SysVinit.
+OE: sysvinit-inittab
+PackageArch: qemuarm64
+
+Package: sysvinit
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 2.88dsf-r14
+Depends: initd-functions, libc6 (>= 2.28), sysvinit-inittab, sysvinit-pidof, update-alternatives-opkg
+Description: System-V like init
+ This package is required to boot in most configurations.  It provides the
+ /sbin/init program.  This is the first process started on boot, and the
+ last process terminated before the system halts.
+OE: sysvinit
+PackageArch: aarch64
+Homepage: http://savannah.nongnu.org/projects/sysvinit/
+
+Package: update-alternatives-opkg
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 0.3.6-r0
+Replaces: update-alternatives-cworth
+Provides: update-alternatives, update-alternatives-cworth
+Conflicts: update-alternatives-cworth
+Description: Utility for managing the alternatives system
+ Additional utilities for the opkg package manager.
+OE: opkg-utils
+PackageArch: aarch64
+Homepage: http://git.yoctoproject.org/cgit/cgit.cgi/opkg-utils
+
+Package: libcrypt1
+Status: install ok installed
+Priority: optional
+Section: libs
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 4.1.1-r0
+Provides: libxcrypt
+Depends: libc6 (>= 2.28)
+Description: Extended cryptographic library (from glibc)
+ Forked code from glibc libary to extract only crypto part.
+OE: libxcrypt
+PackageArch: aarch64
+Homepage: https://github.com/besser82/libxcrypt
+
+Package: util-linux-sulogin
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 2.32.1-r0
+Depends: libc6 (>= 2.28), libcrypt1 (>= 4.1.1), update-alternatives-opkg
+Description: A suite of basic system administration utilities
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.
+OE: util-linux
+PackageArch: aarch64
+Homepage: http://userweb.kernel.org/~kzak/util-linux/
+
+Package: debianutils-run-parts
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 4.8.6-r0
+Depends: libc6 (>= 2.28), update-alternatives-opkg
+Description: Miscellaneous utilities specific to Debian
+ Miscellaneous utilities specific to Debian.
+OE: debianutils
+PackageArch: aarch64
+
+Package: dpkg
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.18.24-r0
+Depends: dpkg-start-stop, libbz2-1 (>= 1.0.6), libc6 (>= 2.28), liblzma5 (>= 5.2.4), libz1 (>= 1.2.11), perl, update-alternatives-opkg
+Description: Package maintenance system from Debian
+ Package maintenance system from Debian.
+OE: dpkg
+PackageArch: aarch64
+
+Package: openssl
+Status: install ok installed
+Priority: optional
+Section: libs/network
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.1.1-r0
+Depends: openssl-conf
+Description: Secure Socket Layer
+ Secure Socket Layer (SSL) binary and related cryptographic tools.
+OE: openssl
+PackageArch: aarch64
+Homepage: http://www.openssl.org/
+
+Package: shadow
+Status: install ok installed
+Priority: optional
+Section: base/utils
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 4.6-r0
+Depends: base-passwd, libattr1 (>= 2.4.47), libc6 (>= 2.28), libcrypt1 (>= 4.1.1), shadow-base, shadow-securetty, update-alternatives-opkg, util-linux-sulogin
+Description: Tools to change and administer password and group data
+ Tools to change and administer password and group data.
+OE: shadow
+PackageArch: aarch64
+Homepage: http://pkg-shadow.alioth.debian.org
+
+Package: apt
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.2.24-r0
+Depends: base-files, base-passwd, bash, debianutils, dpkg, libc6 (>= 2.28), libcurl4 (>= 7.61.0), libgcc1 (>= 8.2.0), liblzma5 (>= 5.2.4), libstdc++6 (>= 8.2.0), libz1 (>= 1.2.11), shadow
+Description: Advanced front-end for dpkg
+ Advanced front-end for dpkg.
+OE: apt
+PackageArch: aarch64
+
+Package: libstdc++6
+Status: install ok installed
+Priority: optional
+Section: devel
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 8.2.0-r0
+Provides: libstdc++
+Depends: libc6 (>= 2.28), libgcc1 (>= 8.2.0)
+Description: GNU standard C++ library
+ Runtime libraries from GCC.
+OE: gcc-runtime
+PackageArch: aarch64
+Homepage: http://www.gnu.org/software/gcc/
+
+Package: ethtool
+Status: install ok installed
+Priority: optional
+Section: console/network
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 4.17-r0
+Depends: libc6 (>= 2.28)
+Description: Display or change ethernet card settings
+ A small utility for examining and tuning the settings of your ethernet-
+ based network interfaces.
+OE: ethtool
+PackageArch: aarch64
+Homepage: http://www.kernel.org/pub/software/network/ethtool/
+
+Package: initscripts
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.0-r155
+Depends: initd-functions
+Recommends: initscripts-functions
+Conffiles:
+ /etc/init.d/checkroot.sh newconffile
+Description: SysV init scripts
+ Initscripts provide the basic system startup initialization scripts for
+ the system.  These scripts include actions such as filesystem mounting,
+ fsck, RTC manipulation and other actions routinely performed at system
+ startup.  In addition, the scripts are also used during system shutdown
+ to reverse the actions performed at startup.
+OE: initscripts
+PackageArch: aarch64
+Homepage: https://github.com/fedora-sysv/initscripts
+
+Package: libext2fs2
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.44.3-r0
+Provides: libext2fs
+Depends: libblkid1 (>= 2.32.1), libc6 (>= 2.28), libcom-err2 (>= 1.44.3)
+Description: Ext2 Filesystem Utilities
+ The Ext2 Filesystem Utilities (e2fsprogs) contain all of the standard
+ utilities for creating, fixing, configuring , and debugging ext2
+ filesystems.
+OE: e2fsprogs
+PackageArch: aarch64
+Homepage: http://e2fsprogs.sourceforge.net/
+
+Package: ca-certificates
+Status: install ok installed
+Priority: optional
+Section: misc
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: all
+Multi-Arch: foreign
+Version: 20180409-r0
+Depends: openssl
+Conffiles:
+ /etc/ca-certificates.conf newconffile
+Description: Common CA certificates
+ This package includes PEM files of CA certificates to allow SSL-based
+ applications to check for the authenticity of SSL connections. This
+ derived from Debian's CA Certificates.
+OE: ca-certificates
+PackageArch: all
+Homepage: http://packages.debian.org/sid/ca-certificates
+
+Package: init-ifupdown
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.0-r7
+Depends: netbase
+Recommends: update-rc.d
+Conflicts: netbase (<< 1:5.0)
+Conffiles:
+ /etc/network/interfaces newconffile
+Description: Basic TCP/IP networking init scripts and configuration files
+ This package provides high level tools to configure network interfaces
+OE: init-ifupdown
+PackageArch: qemuarm64
+Homepage: http://packages.debian.org/ifupdown
+
+Package: busybox-udhcpc
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.29.2-r0
+Description: Tiny versions of many common UNIX utilities in a single small executable
+ BusyBox combines tiny versions of many common UNIX utilities into a
+ single small executable. It provides minimalist replacements for most of
+ the utilities you usually find in GNU fileutils, shellutils, etc. The
+ utilities in BusyBox generally have fewer options than their full-
+ featured GNU cousins; however, the options that are included provide the
+ expected functionality and behave very much like their GNU counterparts.
+ BusyBox provides a fairly complete POSIX environment for any small or
+ embedded system.
+OE: busybox
+PackageArch: aarch64
+Homepage: http://www.busybox.net
+
+Package: update-rc.d
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: all
+Multi-Arch: foreign
+Version: 0.8-r0
+Description: manage symlinks in /etc/rcN.d
+ update-rc.d is a utility that allows the management of symlinks to the
+ initscripts in the /etc/rcN.d directory structure.
+OE: update-rc.d
+PackageArch: all
+Homepage: http://github.com/philb/update-rc.d/
+
+Package: libgcc1
+Status: install ok installed
+Priority: optional
+Section: devel
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 8.2.0-r0
+Provides: libgcc
+Depends: libc6 (>= 2.28)
+Description: GNU cc and gcc C compilers
+ GNU cc and gcc C compilers.
+OE: libgcc
+PackageArch: aarch64
+Homepage: http://www.gnu.org/software/gcc/
+
+Package: devmem2
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.0-r7
+Depends: libc6 (>= 2.28)
+Description: Simple program to read/write from/to any location in memory
+ Simple program to read/write from/to any location in memory.
+OE: devmem2
+PackageArch: aarch64
+
+Package: libperl5
+Status: install ok installed
+Priority: optional
+Section: devel
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 5.24.4-r0
+Provides: perl-lib
+Depends: libc6 (>= 2.28), libcrypt1 (>= 4.1.1)
+Description: Perl scripting language
+ Perl scripting language.
+OE: perl
+PackageArch: aarch64
+Homepage: http://www.perl.org/
+
+Package: dpkg-start-stop
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.18.24-r0
+Depends: libc6 (>= 2.28)
+Description: Package maintenance system from Debian
+ Package maintenance system from Debian.
+OE: dpkg
+PackageArch: aarch64
+
+Package: netbase
+Status: install ok installed
+Priority: optional
+Section: base
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1:5.4-r0
+Conffiles:
+ /etc/hosts newconffile
+Description: Basic TCP/IP networking support
+ This package provides the necessary infrastructure for basic TCP/IP based
+ networking
+OE: netbase
+PackageArch: aarch64
+Homepage: http://packages.debian.org/netbase
+
+Package: libz1
+Status: install ok installed
+Priority: optional
+Section: libs
+Maintainer: Poky <poky@yoctoproject.org>
+Architecture: arm64
+Version: 1.2.11-r0
+Provides: zlib
+Depends: libc6 (>= 2.28)
+Description: Zlib Compression Library
+ Zlib is a general-purpose, patent-free, lossless data compression library
+ which is used by many different programs.
+OE: zlib
+PackageArch: aarch64
+Homepage: http://zlib.net/
+

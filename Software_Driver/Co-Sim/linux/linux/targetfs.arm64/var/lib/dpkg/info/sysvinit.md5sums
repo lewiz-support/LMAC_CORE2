@@ -1,0 +1,16 @@
+6b38b06b2f11533a65c851b5552eab15  bin/mountpoint.sysvinit
+901fbde294f8063d3a06e46db9bc667b  etc/default/rcS
+1702eb9b6085684d59e25b4f161563c4  etc/default/volatiles/01_bootlogd
+c2784bc384c07b8c93b75d4347f9bd91  etc/init.d/bootlogd
+94bf928ffb0b2e25ba0e886d49acc8f6  etc/init.d/rc
+aeab9b3f54519f72c7882c72c9f29fd1  etc/init.d/rcS
+e9dcad9a82e3052b3a803b98f4b55a5a  sbin/bootlogd
+e1a82f7e53e44f855b449a39c271cbf1  sbin/fstab-decode
+babffa336bd0214edfd7e6c5c3ffa54f  sbin/halt.sysvinit
+cd9129e3e380b9c3dd61b8441d16ee0c  sbin/init.sysvinit
+682acd33b169e9fa2fcc33660febe33f  sbin/runlevel.sysvinit
+18d18267bd3a61471c30cf26aac89347  sbin/shutdown.sysvinit
+9a4d247c316d10d84f4f05bf4baeb878  usr/bin/last.sysvinit
+e4964fc20b52e0af1de3a0c63219d5f0  usr/bin/mesg.sysvinit
+49ee352c350ba78e43a816c697489f59  usr/bin/utmpdump.sysvinit
+1f4821d325425b7304ca43a523f40392  usr/bin/wall.sysvinit

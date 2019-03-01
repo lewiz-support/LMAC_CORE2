@@ -1,0 +1,11 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+set -e
+if true && type update-rc.d >/dev/null 2>/dev/null; then
+	if [ -n "$D" ]; then
+		OPT="-f -r $D"
+	else
+		OPT="-f"
+	fi
+	update-rc.d $OPT networking remove
+fi

@@ -1,0 +1,8 @@
+/.
+/usr
+/usr/lib
+/usr/lib/libxenforeignmemory.so.1.2
+/usr/share
+/usr/share/pkgconfig
+/usr/share/pkgconfig/xenforeignmemory.pc
+/usr/lib/libxenforeignmemory.so.1

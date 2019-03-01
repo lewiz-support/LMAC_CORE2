@@ -1,0 +1,2 @@
+/usr/bin/lspci
+/bin/busybox.nosuid 50

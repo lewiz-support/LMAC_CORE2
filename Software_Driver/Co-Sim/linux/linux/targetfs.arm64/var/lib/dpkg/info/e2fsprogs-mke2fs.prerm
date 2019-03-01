@@ -1,0 +1,5 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+set -e
+	update-alternatives --remove  mke2fs /sbin/mke2fs.e2fsprogs
+	update-alternatives --remove  mkfs.ext2 /sbin/mkfs.ext2.e2fsprogs

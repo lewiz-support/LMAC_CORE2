@@ -1,0 +1,5 @@
+d46a5ac95a11862dad8a63b86913bcc0  usr/bin/dtc
+92772c7b600729b4b5741d525e118adf  usr/bin/fdtdump
+27ca204bbe514dd4360562f478236f52  usr/bin/fdtget
+b517e7b20d4ca2248041bcabe72ca5f3  usr/bin/fdtput
+b2ad2e4124a14949d6192d95f5c035a3  usr/lib/libfdt.so.1

@@ -1,0 +1,12 @@
+/.
+/bin
+/bin/tempfile.debianutils
+/usr
+/usr/bin
+/usr/bin/ischroot
+/usr/bin/savelog.debianutils
+/usr/bin/which.debianutils
+/usr/sbin
+/usr/sbin/add-shell.debianutils
+/usr/sbin/installkernel.debianutils
+/usr/sbin/remove-shell.debianutils

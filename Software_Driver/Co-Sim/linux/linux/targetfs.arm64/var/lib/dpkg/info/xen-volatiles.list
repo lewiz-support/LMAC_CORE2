@@ -1,0 +1,5 @@
+/.
+/etc
+/etc/default
+/etc/default/volatiles
+/etc/default/volatiles/99_xen

@@ -1,0 +1,9 @@
+/.
+/etc
+/etc/libnl
+/etc/libnl/classid
+/etc/libnl/pktloc
+/usr
+/usr/lib
+/usr/lib/libnl-3.so.200.24.0
+/usr/lib/libnl-3.so.200

@@ -1,0 +1,8 @@
+/.
+/usr
+/usr/lib
+/usr/lib/xen
+/usr/lib/xen/bin
+/usr/lib/xen/bin/xenconsole
+/usr/sbin
+/usr/sbin/xenconsoled

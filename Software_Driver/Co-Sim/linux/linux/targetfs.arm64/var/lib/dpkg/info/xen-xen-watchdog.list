@@ -1,0 +1,7 @@
+/.
+/etc
+/etc/init.d
+/etc/init.d/xen-watchdog
+/usr
+/usr/sbin
+/usr/sbin/xenwatchdogd

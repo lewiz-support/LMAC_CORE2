@@ -1,0 +1,21 @@
+# Aliases for symbols, used by symbol_request().
+alias symbol:stp_proto_unregister stp
+alias symbol:llc_set_station_handler llc
+alias symbol:br_forward bridge
+alias symbol:llc_sap_open llc
+alias symbol:br_multicast_has_querier_anywhere bridge
+alias symbol:br_handle_frame_finish bridge
+alias symbol:br_dev_queue_push_xmit bridge
+alias symbol:llc_add_pack llc
+alias symbol:br_should_route_hook bridge
+alias symbol:br_multicast_list_adjacent bridge
+alias symbol:llc_build_and_send_ui_pkt llc
+alias symbol:llc_remove_pack llc
+alias symbol:llc_sap_list llc
+alias symbol:llc_sap_close llc
+alias symbol:br_multicast_has_querier_adjacent bridge
+alias symbol:br_forward_finish bridge
+alias symbol:nf_br_ops bridge
+alias symbol:stp_proto_register stp
+alias symbol:llc_sap_find llc
+alias symbol:llc_mac_hdr_init llc

@@ -1,0 +1,16 @@
+/.
+/etc
+/etc/default
+/etc/default/dropbear
+/etc/dropbear
+/etc/init.d
+/etc/init.d/dropbear
+/usr
+/usr/bin
+/usr/sbin
+/usr/sbin/dropbearmulti
+/var
+/usr/bin/dbclient
+/usr/sbin/dropbear
+/usr/sbin/dropbearconvert
+/usr/sbin/dropbearkey

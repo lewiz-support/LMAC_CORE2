@@ -1,0 +1,6 @@
+/.
+/lib
+/lib/modules
+/lib/modules/4.10.17-yocto-standard
+/lib/modules/4.10.17-yocto-standard/modules.builtin
+/lib/modules/4.10.17-yocto-standard/modules.order

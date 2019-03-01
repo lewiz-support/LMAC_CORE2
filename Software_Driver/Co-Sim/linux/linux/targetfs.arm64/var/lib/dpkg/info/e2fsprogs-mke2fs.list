@@ -1,0 +1,8 @@
+/.
+/etc
+/etc/mke2fs.conf
+/sbin
+/sbin/mke2fs.e2fsprogs
+/sbin/mkfs.ext2.e2fsprogs
+/sbin/mkfs.ext3
+/sbin/mkfs.ext4

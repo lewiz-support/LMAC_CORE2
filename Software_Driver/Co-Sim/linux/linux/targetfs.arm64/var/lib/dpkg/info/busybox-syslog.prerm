@@ -1,0 +1,14 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+set -e
+	# remove syslog
+	if test "x$D" = "x"; then
+		if test "$1" = "upgrade" -o "$1" = "remove"; then
+			/etc/init.d/syslog stop || :
+		fi
+	fi
+	update-alternatives --remove  klogd /bin/busybox.nosuid
+	update-alternatives --remove  syslogd /bin/busybox.nosuid
+if true && [ -z "$D" -a -x "/etc/init.d/syslog" ]; then
+	/etc/init.d/syslog stop || :
+fi

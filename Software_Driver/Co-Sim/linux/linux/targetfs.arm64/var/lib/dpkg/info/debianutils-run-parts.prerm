@@ -1,0 +1,4 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+set -e
+	update-alternatives --remove  run-parts /bin/run-parts.debianutils

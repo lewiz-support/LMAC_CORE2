@@ -1,0 +1,4 @@
+#!/bin/sh
+# Begin section update-alternatives
+update-alternatives --install /usr/sbin/brctl brctl /usr/sbin/brctl.bridge-utils 100
+# End section update-alternatives

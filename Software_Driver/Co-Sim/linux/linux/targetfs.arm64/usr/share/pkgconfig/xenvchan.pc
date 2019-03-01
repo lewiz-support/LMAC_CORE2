@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=/usr/include
+libdir=/usr/lib
+
+Name: Xenvchan
+Description: The Xenvchan library for Xen hypervisor
+Version: 4.10.0
+Cflags: -I${includedir} 
+Libs: -L${libdir} -lxenvchan
+Requires.private: xentoollog,xenstore,xenevtchn,xengnttab

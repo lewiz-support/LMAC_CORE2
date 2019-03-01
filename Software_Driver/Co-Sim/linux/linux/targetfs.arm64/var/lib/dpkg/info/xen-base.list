@@ -1,0 +1,5 @@
+/.
+/etc
+/etc/xen
+/etc/xen/auto
+/etc/xen/cpupool

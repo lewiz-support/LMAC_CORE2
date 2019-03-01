@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=/usr/include
+libdir=/usr/lib
+
+Name: Xenguest
+Description: The Xenguest library for Xen hypervisor
+Version: 4.10.0
+Cflags: -I${includedir}
+Libs: -L${libdir} -lxenguest
+Requires.private: xentoollog,xencall,xenforeignmemory,xenevtchn

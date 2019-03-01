@@ -1,0 +1,5 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+set -e
+	rm -rf $D/usr/lib/opkg/alternatives
+	rmdir $D/usr/lib/opkg || true

@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/lib
+/usr/lib/fs
+/usr/lib/fs/ext2fs
+/usr/lib/fs/ext2fs/fsimage.so
+/usr/lib/fs/fat
+/usr/lib/fs/fat/fsimage.so
+/usr/lib/fs/iso9660
+/usr/lib/fs/iso9660/fsimage.so
+/usr/lib/fs/reiserfs
+/usr/lib/fs/reiserfs/fsimage.so
+/usr/lib/fs/ufs
+/usr/lib/fs/ufs/fsimage.so
+/usr/lib/fs/zfs
+/usr/lib/fs/zfs/fsimage.so

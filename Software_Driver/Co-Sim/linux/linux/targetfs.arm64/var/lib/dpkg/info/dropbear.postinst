@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+	update-alternatives --install /usr/bin/scp scp /usr/sbin/dropbearmulti 20
+	update-alternatives --install /usr/bin/ssh ssh /usr/sbin/dropbearmulti 20
+if true && type update-rc.d >/dev/null 2>/dev/null; then
+	if [ -n "$D" ]; then
+		OPT="-r $D"
+	else
+		OPT="-s"
+	fi
+	update-rc.d $OPT dropbear defaults 10
+fi

@@ -1,0 +1,11 @@
+/.
+/bin
+/bin/login.shadow
+/bin/su.shadow
+/etc
+/etc/login.defs
+/usr
+/usr/bin
+/usr/bin/groups.shadow
+/usr/bin/newgrp.shadow
+/usr/bin/sg

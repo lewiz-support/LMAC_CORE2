@@ -1,0 +1,7 @@
+/.
+/etc
+/etc/init.d
+/etc/init.d/run-postinsts
+/usr
+/usr/sbin
+/usr/sbin/run-postinsts

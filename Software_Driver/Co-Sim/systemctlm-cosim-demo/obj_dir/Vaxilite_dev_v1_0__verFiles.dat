@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "--pins-bv 2 -Wno-fatal --sc --Mdir obj_dir -CFLAGS -DHAVE_VERILOG -CFLAGS -DHAVE_VERILOG_VERILATOR axilite_dev_v1_0.v"
+S   5279832  3416340  1549668544   110404564  1519110675           0 "/usr/bin/verilator_bin"
+S      2280 14161128  1549669162   671812962  1549669162   671812962 "axilite_dev_v1_0.v"
+S     13968 14161129  1549669162   671812962  1549669162   671812962 "axilite_dev_v1_0_S00_AXI.v"
+T     29154 14161717  1549671447   689254012  1549671447   689254012 "obj_dir/Vaxilite_dev_v1_0.cpp"
+T      5221 14161716  1549671447   689254012  1549671447   689254012 "obj_dir/Vaxilite_dev_v1_0.h"
+T      1585 14161719  1549671447   689254012  1549671447   689254012 "obj_dir/Vaxilite_dev_v1_0.mk"
+T       580 14161715  1549671447   689254012  1549671447   689254012 "obj_dir/Vaxilite_dev_v1_0__Syms.cpp"
+T       781 14161714  1549671447   689254012  1549671447   689254012 "obj_dir/Vaxilite_dev_v1_0__Syms.h"
+T       325 14161720  1549671447   689254012  1549671447   689254012 "obj_dir/Vaxilite_dev_v1_0__ver.d"
+T         0        0  1549671447   689254012  1549671447   689254012 "obj_dir/Vaxilite_dev_v1_0__verFiles.dat"
+T      1189 14161718  1549671447   689254012  1549671447   689254012 "obj_dir/Vaxilite_dev_v1_0_classes.mk"

@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+	update-alternatives --install /sbin/klogd klogd /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/syslogd syslogd /bin/busybox.nosuid 50
+if true && type update-rc.d >/dev/null 2>/dev/null; then
+	if [ -n "$D" ]; then
+		OPT="-r $D"
+	else
+		OPT="-s"
+	fi
+	update-rc.d $OPT syslog defaults
+fi

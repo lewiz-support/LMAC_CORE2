@@ -1,0 +1,4 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+set -e
+	printf "$(grep -v "^/bin/bash$" $D/etc/shells)\n" > $D/etc/shells

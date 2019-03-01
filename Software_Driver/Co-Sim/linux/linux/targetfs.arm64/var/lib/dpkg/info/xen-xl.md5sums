@@ -1,0 +1,5 @@
+f38a5edea4b7a35ce89b9fd6f27628d6  etc/bash_completion.d/xl.sh
+9cc5a37863414c8f2c634c8df6b50ec2  etc/xen/xl.conf
+6b07f7f4ed95d65d8deb74f4b5f2cb9e  usr/lib/xen/bin/libxl-save-helper
+7807e7cc7310f53329270461f02c43b1  usr/lib/xen/bin/xen-init-dom0
+bba2419fa9261c3800d502ae48b25e24  usr/sbin/xl

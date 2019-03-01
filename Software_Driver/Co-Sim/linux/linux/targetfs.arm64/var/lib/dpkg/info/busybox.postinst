@@ -1,0 +1,205 @@
+#!/bin/sh
+set -e
+	# This part of code is dedicated to the on target upgrade problem.
+	# It's known that if we don't make appropriate symlinks before update-alternatives calls,
+	# there will be errors indicating missing commands such as 'sed'.
+	# These symlinks will later be updated by update-alternatives calls.
+	test -n 2 > /dev/null || alias test='busybox test'
+	if test "x$D" = "x"; then
+		# Remove busybox.nosuid if it's a symlink, because this situation indicates
+		# that we're installing or upgrading to a one-binary busybox.
+		if test -h /bin/busybox.nosuid; then
+			rm -f /bin/busybox.nosuid
+		fi
+		for suffix in "" ".nosuid" ".suid"; do
+			if test -e /etc/busybox.links$suffix; then
+				while read link; do
+					if test ! -e "$link"; then
+						# we can use busybox here because even if we are using splitted busybox
+						# we've made a symlink from /bin/busybox to /bin/busybox.nosuid.
+						busybox rm -f $link
+						busybox ln -s "/bin/busybox$suffix" $link
+					fi
+				done < /etc/busybox.links$suffix
+			fi
+		done
+	fi
+	if grep -q "^/bin/bash$" $D/etc/busybox.links*; then
+		grep -q "^/bin/bash$" $D/etc/shells || echo /bin/bash >> $D/etc/shells
+	fi
+	update-alternatives --install /bin/gunzip gunzip /bin/busybox.nosuid 50
+	update-alternatives --install /bin/zcat zcat /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/bunzip2 bunzip2 /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/bzcat bzcat /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/lzcat lzcat /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/xzcat xzcat /bin/busybox.nosuid 50
+	update-alternatives --install /bin/cpio cpio /bin/busybox.nosuid 50
+	update-alternatives --install /bin/gzip gzip /bin/busybox.nosuid 50
+	update-alternatives --install /bin/tar tar /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/unzip unzip /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/chvt chvt /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/clear clear /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/deallocvt deallocvt /bin/busybox.nosuid 50
+	update-alternatives --install /bin/dumpkmap dumpkmap /bin/busybox.nosuid 50
+	update-alternatives --install /usr/sbin/loadfont loadfont /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/loadkmap loadkmap /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/openvt openvt /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/reset reset /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/resize resize /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/setconsole setconsole /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/basename basename /bin/busybox.nosuid 50
+	update-alternatives --install /bin/cat cat /bin/busybox.nosuid 50
+	update-alternatives --install /bin/chgrp chgrp /bin/busybox.nosuid 50
+	update-alternatives --install /bin/chmod chmod /bin/busybox.nosuid 50
+	update-alternatives --install /bin/chown chown /bin/busybox.nosuid 50
+	update-alternatives --install /usr/sbin/chroot chroot /bin/busybox.nosuid 50
+	update-alternatives --install /bin/cp cp /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/cut cut /bin/busybox.nosuid 50
+	update-alternatives --install /bin/date date /bin/busybox.nosuid 50
+	update-alternatives --install /bin/dd dd /bin/busybox.nosuid 50
+	update-alternatives --install /bin/df df /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/dirname dirname /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/du du /bin/busybox.nosuid 50
+	update-alternatives --install /bin/echo echo /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/env env /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/expr expr /bin/busybox.nosuid 50
+	update-alternatives --install /bin/false false /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/head head /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/groups groups /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/id id /bin/busybox.nosuid 50
+	update-alternatives --install /bin/ln ln /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/logname logname /bin/busybox.nosuid 50
+	update-alternatives --install /bin/ls ls /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/md5sum md5sum /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/sha1sum sha1sum /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/sha256sum sha256sum /bin/busybox.nosuid 50
+	update-alternatives --install /bin/mkdir mkdir /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/mkfifo mkfifo /bin/busybox.nosuid 50
+	update-alternatives --install /bin/mknod mknod /bin/busybox.nosuid 50
+	update-alternatives --install /bin/mktemp mktemp /bin/busybox.nosuid 50
+	update-alternatives --install /bin/mv mv /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/nohup nohup /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/nproc nproc /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/od od /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/printf printf /bin/busybox.nosuid 50
+	update-alternatives --install /bin/pwd pwd /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/readlink readlink /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/realpath realpath /bin/busybox.nosuid 50
+	update-alternatives --install /bin/rm rm /bin/busybox.nosuid 50
+	update-alternatives --install /bin/rmdir rmdir /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/seq seq /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/shuf shuf /bin/busybox.nosuid 50
+	update-alternatives --install /bin/sleep sleep /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/sort sort /bin/busybox.nosuid 50
+	update-alternatives --install /bin/stat stat /bin/busybox.nosuid 50
+	update-alternatives --install /bin/stty stty /bin/busybox.nosuid 50
+	update-alternatives --install /bin/sync sync /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/tail tail /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/tee tee /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/test test /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/[ lbracket /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/[[ [[ /bin/busybox.nosuid 50
+	update-alternatives --install /bin/touch touch /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/tr tr /bin/busybox.nosuid 50
+	update-alternatives --install /bin/true true /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/tty tty /bin/busybox.nosuid 50
+	update-alternatives --install /bin/uname uname /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/uniq uniq /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/unlink unlink /bin/busybox.nosuid 50
+	update-alternatives --install /bin/usleep usleep /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/wc wc /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/users users /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/who who /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/whoami whoami /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/yes yes /bin/busybox.nosuid 50
+	update-alternatives --install /bin/run-parts run-parts /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/start-stop-daemon start-stop-daemon /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/which which /bin/busybox.nosuid 50
+	update-alternatives --install /bin/chattr chattr /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/fsck fsck /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/awk awk /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/cmp cmp /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/diff diff /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/patch patch /bin/busybox.nosuid 50
+	update-alternatives --install /bin/sed sed /bin/busybox.nosuid 50
+	update-alternatives --install /bin/vi vi /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/find find /bin/busybox.nosuid 50
+	update-alternatives --install /bin/grep grep /bin/busybox.nosuid 50
+	update-alternatives --install /bin/egrep egrep /bin/busybox.nosuid 50
+	update-alternatives --install /bin/fgrep fgrep /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/xargs xargs /bin/busybox.nosuid 50
+	update-alternatives --install /usr/sbin/addgroup addgroup /bin/busybox.nosuid 50
+	update-alternatives --install /usr/sbin/adduser adduser /bin/busybox.nosuid 50
+	update-alternatives --install /usr/sbin/deluser deluser /bin/busybox.nosuid 50
+	update-alternatives --install /usr/sbin/delgroup delgroup /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/getty getty /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/sulogin sulogin /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/dc dc /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/less less /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/microcom microcom /bin/busybox.nosuid 50
+	update-alternatives --install /usr/sbin/rfkill rfkill /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/strings strings /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/time time /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/depmod depmod /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/insmod insmod /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/lsmod lsmod /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/modprobe modprobe /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/rmmod rmmod /bin/busybox.nosuid 50
+	update-alternatives --install /bin/dnsdomainname dnsdomainname /bin/busybox.nosuid 50
+	update-alternatives --install /bin/hostname hostname /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/ifconfig ifconfig /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/ifup ifup /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/ifdown ifdown /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/ip ip /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/nc nc /bin/busybox.nosuid 50
+	update-alternatives --install /bin/netstat netstat /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/nslookup nslookup /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/route route /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/telnet telnet /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/tftp tftp /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/wget wget /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/free free /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/fuser fuser /bin/busybox.nosuid 50
+	update-alternatives --install /bin/kill kill /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/killall killall /bin/busybox.nosuid 50
+	update-alternatives --install /bin/pidof pidof /bin/busybox.nosuid 50
+	update-alternatives --install /bin/ps ps /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/sysctl sysctl /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/top top /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/uptime uptime /bin/busybox.nosuid 50
+	update-alternatives --install /bin/watch watch /bin/busybox.nosuid 50
+	update-alternatives --install /bin/ash ash /bin/busybox.nosuid 50
+	update-alternatives --install /bin/sh sh /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/logger logger /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/logread logread /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/blkid blkid /bin/busybox.nosuid 50
+	update-alternatives --install /bin/dmesg dmesg /bin/busybox.nosuid 50
+	update-alternatives --install /usr/sbin/fbset fbset /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/fdisk fdisk /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/flock flock /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/fstrim fstrim /bin/busybox.nosuid 50
+	update-alternatives --install /bin/getopt getopt /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/hexdump hexdump /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/hwclock hwclock /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/losetup losetup /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/mesg mesg /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/mkswap mkswap /bin/busybox.nosuid 50
+	update-alternatives --install /bin/more more /bin/busybox.nosuid 50
+	update-alternatives --install /bin/mount mount /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/pivot_root pivot_root /bin/busybox.nosuid 50
+	update-alternatives --install /usr/sbin/rdate rdate /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/renice renice /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/swapon swapon /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/swapoff swapoff /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/switch_root switch_root /bin/busybox.nosuid 50
+	update-alternatives --install /bin/umount umount /bin/busybox.nosuid 50
+	update-alternatives --install /sbin/udhcpc udhcpc /bin/busybox.nosuid 50
+	update-alternatives --install /usr/sbin/udhcpd udhcpd /bin/busybox.nosuid 50
+	update-alternatives --install /usr/bin/dumpleases dumpleases /bin/busybox.nosuid 50
+	update-alternatives --install /bin/login login /bin/busybox.suid 50
+	update-alternatives --install /usr/bin/passwd passwd /bin/busybox.suid 50
+	update-alternatives --install /bin/su su /bin/busybox.suid 50
+	update-alternatives --install /usr/bin/vlock vlock /bin/busybox.suid 50
+	update-alternatives --install /bin/ping ping /bin/busybox.suid 50
+	update-alternatives --install /bin/ping6 ping6 /bin/busybox.suid 50
+	update-alternatives --install /usr/bin/traceroute traceroute /bin/busybox.suid 50

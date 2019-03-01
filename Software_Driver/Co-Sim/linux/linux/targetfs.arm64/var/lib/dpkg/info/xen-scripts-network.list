@@ -1,0 +1,12 @@
+/.
+/etc
+/etc/xen
+/etc/xen/scripts
+/etc/xen/scripts/colo-proxy-setup
+/etc/xen/scripts/vif-bridge
+/etc/xen/scripts/vif-common.sh
+/etc/xen/scripts/vif-nat
+/etc/xen/scripts/vif-openvswitch
+/etc/xen/scripts/vif-route
+/etc/xen/scripts/vif-setup
+/etc/xen/scripts/vif2

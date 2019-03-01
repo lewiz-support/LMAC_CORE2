@@ -1,0 +1,15 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+set -e
+	update-alternatives --remove  init /sbin/init.sysvinit
+	update-alternatives --remove  mountpoint /bin/mountpoint.sysvinit
+	update-alternatives --remove  halt /sbin/halt.sysvinit
+	update-alternatives --remove  reboot /sbin/reboot.sysvinit
+	update-alternatives --remove  runlevel /sbin/runlevel.sysvinit
+	update-alternatives --remove  shutdown /sbin/shutdown.sysvinit
+	update-alternatives --remove  poweroff /sbin/poweroff.sysvinit
+	update-alternatives --remove  last /usr/bin/last.sysvinit
+	update-alternatives --remove  lastb /usr/bin/lastb.sysvinit
+	update-alternatives --remove  mesg /usr/bin/mesg.sysvinit
+	update-alternatives --remove  utmpdump /usr/bin/utmpdump.sysvinit
+	update-alternatives --remove  wall /usr/bin/wall.sysvinit

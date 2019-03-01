@@ -1,0 +1,9 @@
+80a7a4696c50bc72f5df81e63e7cc873  etc/xen/scripts/block
+79fbb3d0c5c4d6a724d1729433065b5f  etc/xen/scripts/block-common.sh
+f2b9eca3c20ef0c3265ed99b731935f0  etc/xen/scripts/block-drbd-probe
+868084672960cab1e88c3ce8e3a965a8  etc/xen/scripts/block-dummy
+c4f8e069e14476111529d6ee764f318f  etc/xen/scripts/block-enbd
+89fb7466c9fc4a228dcbf3287132d871  etc/xen/scripts/block-iscsi
+701f8d04194c77ccae7ef275ee9ac2a0  etc/xen/scripts/block-nbd
+d05c0eaad540b45c52adefa8f30ae9f1  etc/xen/scripts/block-tap
+ed8f791bb1b2ca48b5c4aa1bd49b672d  etc/xen/scripts/vscsi

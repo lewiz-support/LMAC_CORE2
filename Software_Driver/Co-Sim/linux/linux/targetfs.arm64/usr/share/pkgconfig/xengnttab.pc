@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=/usr/include
+libdir=/usr/lib
+
+Name: Xengnttab
+Description: The Xengnttab library for Xen hypervisor
+Version: 1.1
+Cflags: -I${includedir} 
+Libs: -L${libdir} -lxengnttab
+Requires.private: xentoollog,xentoolcore

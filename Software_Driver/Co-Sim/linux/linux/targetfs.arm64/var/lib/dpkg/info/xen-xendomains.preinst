@@ -1,0 +1,12 @@
+#!/bin/sh
+if true && [ -z "$D" -a -f "/etc/init.d/xendomains" ]; then
+	/etc/init.d/xendomains stop || :
+fi
+if true && type update-rc.d >/dev/null 2>/dev/null; then
+	if [ -n "$D" ]; then
+		OPT="-f -r $D"
+	else
+		OPT="-f"
+	fi
+	update-rc.d $OPT xendomains remove
+fi

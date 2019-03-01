@@ -1,0 +1,8 @@
+d root root 0755 /var/run/xenstored none
+d root root 0755 /var/run/xend none
+d root root 0755 /var/run/xend/boot none
+d root root 0755 /var/run/xen none
+d root root 0755 /var/log/xen none
+d root root 0755 /var/lock/xen none
+d root root 0755 /var/lock/subsys none
+d root root 0755 /var/lib/xen none

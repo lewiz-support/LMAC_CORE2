@@ -1,0 +1,15 @@
+1e43e61b0e4fba70d63b5b6d3dce2a7c  etc/terminfo/a/ansi
+ca3b114f0727da81a9b957b553a9915d  etc/terminfo/d/dumb
+0c55d2180ecfd630cb560bdffabaa774  etc/terminfo/l/linux
+b516aff96d9fd97b7c86c927b99c1860  etc/terminfo/r/rxvt
+df70f2b05a13d57f8fd22c40d7832f5a  etc/terminfo/s/screen
+1116f39912c3013203cac076c96f9469  etc/terminfo/s/screen-256color
+430390b5b3a52aef2cf94d6f7a6aa000  etc/terminfo/s/sun
+ca66d5ec11204d1447fab82d32b92d6a  etc/terminfo/v/vt100
+d9fb1c35acf51f30b3eb0104dcc50540  etc/terminfo/v/vt102
+2ddfb8c20a7ca55ff6c906911a857148  etc/terminfo/v/vt200
+2ddfb8c20a7ca55ff6c906911a857148  etc/terminfo/v/vt220
+6e65ffb200cc900f6e7cca79bdb44444  etc/terminfo/v/vt52
+2dbb400f1e0cddf73d29431573d0b668  etc/terminfo/x/xterm-256color
+d3be0607500338711912112f0cb3d690  etc/terminfo/x/xterm-color
+81cf06379072d0717eeea3dc019d2efa  etc/terminfo/x/xterm-xfree86

@@ -1,0 +1,8 @@
+e4eaca6ac72e1510bcc31bf5d8a69858  etc/xen/scripts/external-device-migrate
+18b2056ec0a113e9c3bc5f0bce1b6137  etc/xen/scripts/hotplugpath.sh
+71b2021d5e8d2045be8fe418c1773d35  etc/xen/scripts/locking.sh
+0a6fbb675e185f2133f111f9d3f1c0d5  etc/xen/scripts/logging.sh
+225975a49055bdff55f9bccfa57ee2b7  etc/xen/scripts/xen-hotplug-cleanup
+7a5fe62640ae9a3984794a6a49c660af  etc/xen/scripts/xen-hotplug-common.sh
+e717d4e2498055008720535bbc8d1670  etc/xen/scripts/xen-network-common.sh
+9fb804d7c1bed7ed0e9dbbc1bb3e6bdb  etc/xen/scripts/xen-script-common.sh

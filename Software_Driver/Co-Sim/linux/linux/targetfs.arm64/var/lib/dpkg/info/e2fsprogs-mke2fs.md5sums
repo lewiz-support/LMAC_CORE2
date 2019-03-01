@@ -1,0 +1,5 @@
+c81c32f248af57894f1122d3337ee62d  etc/mke2fs.conf
+5cf4a0e205fc47ba59179d84d475f542  sbin/mke2fs.e2fsprogs
+5cf4a0e205fc47ba59179d84d475f542  sbin/mkfs.ext2.e2fsprogs
+5cf4a0e205fc47ba59179d84d475f542  sbin/mkfs.ext3
+5cf4a0e205fc47ba59179d84d475f542  sbin/mkfs.ext4

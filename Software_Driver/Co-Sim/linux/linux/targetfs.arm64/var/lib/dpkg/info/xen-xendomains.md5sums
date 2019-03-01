@@ -1,0 +1,3 @@
+9b9ad1a743bea91aaf3d2ac086fc5e12  etc/default/xendomains
+6d47ee36d9a82bb9fa690729dafe80b8  etc/init.d/xendomains
+956cf24be57d7e6b764d8632fbfdf58d  usr/lib/xen/bin/xendomains

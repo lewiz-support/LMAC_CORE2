@@ -1,0 +1,8 @@
+/.
+/lib
+/lib/modules
+/lib/modules/4.10.17-yocto-standard
+/lib/modules/4.10.17-yocto-standard/kernel
+/lib/modules/4.10.17-yocto-standard/kernel/net
+/lib/modules/4.10.17-yocto-standard/kernel/net/llc
+/lib/modules/4.10.17-yocto-standard/kernel/net/llc/llc.ko

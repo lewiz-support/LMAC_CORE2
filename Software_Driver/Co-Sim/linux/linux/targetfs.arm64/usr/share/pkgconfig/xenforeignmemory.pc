@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=/usr/include
+libdir=/usr/lib
+
+Name: Xenforeignmemory
+Description: The Xenforeignmemory library for Xen hypervisor
+Version: 1.2
+Cflags: -I${includedir} 
+Libs: -L${libdir} -lxenforeignmemory
+Requires.private: xentoollog,xentoolcore

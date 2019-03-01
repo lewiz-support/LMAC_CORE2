@@ -1,0 +1,13 @@
+# DESCRIPTION: Verilator output: Timestamp data for --skip-identical.  Delete at will.
+C "--pins-bv 2 -Wno-fatal --sc --Mdir obj_dir -CFLAGS -DHAVE_VERILOG -CFLAGS -DHAVE_VERILOG_VERILATOR axifull_dev_v1_0.v"
+S   5279832  3416340  1549668544   110404564  1519110675           0 "/usr/bin/verilator_bin"
+S      4669 14161126  1549669162   671812962  1549669162   671812962 "axifull_dev_v1_0.v"
+S     21661 14161127  1549669162   671812962  1549669162   671812962 "axifull_dev_v1_0_S00_AXI.v"
+T    110224 14161732  1549671449   357252430  1549671449   357252430 "obj_dir/Vaxifull_dev_v1_0.cpp"
+T     10204 14161731  1549671449   353252435  1549671449   353252435 "obj_dir/Vaxifull_dev_v1_0.h"
+T      1585 14161734  1549671449   357252430  1549671449   357252430 "obj_dir/Vaxifull_dev_v1_0.mk"
+T       580 14161730  1549671449   353252435  1549671449   353252435 "obj_dir/Vaxifull_dev_v1_0__Syms.cpp"
+T       781 14161729  1549671449   353252435  1549671449   353252435 "obj_dir/Vaxifull_dev_v1_0__Syms.h"
+T       325 14161735  1549671449   357252430  1549671449   357252430 "obj_dir/Vaxifull_dev_v1_0__ver.d"
+T         0        0  1549671449   357252430  1549671449   357252430 "obj_dir/Vaxifull_dev_v1_0__verFiles.dat"
+T      1189 14161733  1549671449   357252430  1549671449   357252430 "obj_dir/Vaxifull_dev_v1_0_classes.mk"

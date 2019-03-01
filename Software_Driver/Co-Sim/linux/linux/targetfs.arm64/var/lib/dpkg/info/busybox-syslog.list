@@ -1,0 +1,6 @@
+/.
+/etc
+/etc/init.d
+/etc/init.d/syslog
+/etc/syslog-startup.conf
+/etc/syslog.conf

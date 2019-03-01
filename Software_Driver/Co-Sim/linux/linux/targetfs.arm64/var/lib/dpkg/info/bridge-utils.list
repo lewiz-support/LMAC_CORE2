@@ -1,0 +1,10 @@
+/.
+/etc
+/etc/network
+/etc/network/if-post-down.d
+/etc/network/if-pre-up.d
+/usr
+/usr/sbin
+/usr/sbin/brctl.bridge-utils
+/usr/share
+/usr/share/bridge-utils

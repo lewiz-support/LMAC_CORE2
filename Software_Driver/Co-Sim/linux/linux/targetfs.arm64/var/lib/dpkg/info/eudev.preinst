@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+if true && [ -z "$D" -a -f "/etc/init.d/udev" ]; then
+	/etc/init.d/udev stop || :
+fi
+if true && type update-rc.d >/dev/null 2>/dev/null; then
+	if [ -n "$D" ]; then
+		OPT="-f -r $D"
+	else
+		OPT="-f"
+	fi
+	update-rc.d $OPT udev remove
+fi

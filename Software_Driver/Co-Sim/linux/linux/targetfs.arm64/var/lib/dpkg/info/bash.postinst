@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+	grep -q "^/bin/bash$" $D/etc/shells || echo /bin/bash >> $D/etc/shells
+	update-alternatives --install /bin/bash bash /bin/bash.bash 100
+	update-alternatives --install /bin/sh sh /bin/bash.bash 100

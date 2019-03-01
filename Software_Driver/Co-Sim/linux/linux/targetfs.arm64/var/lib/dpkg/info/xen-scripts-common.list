@@ -1,0 +1,12 @@
+/.
+/etc
+/etc/xen
+/etc/xen/scripts
+/etc/xen/scripts/external-device-migrate
+/etc/xen/scripts/hotplugpath.sh
+/etc/xen/scripts/locking.sh
+/etc/xen/scripts/logging.sh
+/etc/xen/scripts/xen-hotplug-cleanup
+/etc/xen/scripts/xen-hotplug-common.sh
+/etc/xen/scripts/xen-network-common.sh
+/etc/xen/scripts/xen-script-common.sh

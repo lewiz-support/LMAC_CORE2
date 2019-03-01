@@ -1,0 +1,7 @@
+/.
+/usr
+/usr/sbin
+/usr/sbin/xenstored
+/var
+/var/lib
+/var/lib/xenstored

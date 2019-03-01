@@ -1,0 +1,6 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+set -e
+if true && [ -z "$D" -a -x "/etc/init.d/hwclock.sh" ]; then
+	/etc/init.d/hwclock.sh stop || :
+fi

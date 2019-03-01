@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ ! -e "$D/lib/modules/4.10.17-yocto-standard" ]; then
+		mkdir -p $D/lib/modules/4.10.17-yocto-standard
+	fi
+	if [ -n "$D" ]; then
+		depmodwrapper -a -b $D 4.10.17-yocto-standard
+	else
+		depmod -a 4.10.17-yocto-standard
+	fi

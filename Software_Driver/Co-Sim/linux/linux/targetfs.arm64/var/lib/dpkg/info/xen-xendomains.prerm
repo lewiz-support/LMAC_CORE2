@@ -1,0 +1,7 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+# Begin section update-rc.d
+if true && [ -z "$D" -a -x "/etc/init.d/xendomains" ]; then
+	/etc/init.d/xendomains stop || :
+fi
+# End section update-rc.d

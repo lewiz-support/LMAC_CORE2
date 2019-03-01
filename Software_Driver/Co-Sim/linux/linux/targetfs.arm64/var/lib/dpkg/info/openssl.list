@@ -1,0 +1,14 @@
+/.
+/etc
+/etc/ssl
+/etc/ssl/certs
+/etc/ssl/private
+/usr
+/usr/lib
+/usr/lib/ssl-1.1
+/usr/lib/ssl-1.1/ct_log_list.cnf
+/usr/lib/ssl-1.1/ct_log_list.cnf.dist
+/usr/lib/ssl-1.1/openssl.cnf.dist
+/usr/lib/ssl-1.1/certs
+/usr/lib/ssl-1.1/openssl.cnf
+/usr/lib/ssl-1.1/private

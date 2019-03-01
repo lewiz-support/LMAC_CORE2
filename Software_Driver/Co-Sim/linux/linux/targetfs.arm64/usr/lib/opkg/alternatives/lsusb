@@ -1,0 +1,2 @@
+/usr/bin/lsusb
+/bin/busybox.nosuid 50

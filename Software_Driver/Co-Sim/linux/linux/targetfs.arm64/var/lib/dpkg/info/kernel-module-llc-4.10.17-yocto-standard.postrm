@@ -1,0 +1,7 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+if [ -z "$D" ]; then
+	depmod -a 4.10.17-yocto-standard
+else
+	depmodwrapper -a -b $D 4.10.17-yocto-standard
+fi

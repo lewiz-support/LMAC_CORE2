@@ -1,0 +1,7 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+set -e
+	update-alternatives --remove  newgrp /usr/bin/newgrp.shadow
+	update-alternatives --remove  groups /usr/bin/groups.shadow
+	update-alternatives --remove  login /bin/login.shadow
+	update-alternatives --remove  su /bin/su.shadow

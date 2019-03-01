@@ -1,0 +1,7 @@
+/.
+/lib
+/lib/libext2fs.so.2.4
+/usr
+/usr/lib
+/usr/lib/e2initrd_helper
+/lib/libext2fs.so.2

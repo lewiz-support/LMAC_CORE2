@@ -1,0 +1,97 @@
+## Path: System/Virtualization
+## Type: string
+## Default: "none"
+#
+# Log xenconsoled messages (cf xl dmesg)
+#XENCONSOLED_TRACE=[none|guest|hv|all]
+
+## Type: string
+## Default: daemon
+#
+# Select type of xentore service.
+#
+# This can be either of:
+#  * daemon
+#  * domain
+#
+# Changing this requires a reboot to take effect.
+#
+#XENSTORETYPE=daemon
+
+## Type: string
+## Default: xenstored
+#
+# Select xenstore implementation, this can be either
+# of these below.
+# Only evaluated if XENSTORETYPE is "daemon".
+#
+# This can be either of:
+#  * /usr/sbin/oxenstored
+#  * /usr/sbin/xenstored
+#
+# Changing this requires a reboot to take effect.
+#XENSTORED=/usr/sbin/xenstored
+
+## Type: string
+## Default: ""
+#
+# Additional commandline arguments to start xenstored,
+# like "--trace-file /var/log/xen/xenstored-trace.log"
+# See "/usr/sbin/xenstored --help" for possible options.
+# Only evaluated if XENSTORETYPE is "daemon".
+XENSTORED_ARGS=
+
+## Type: string
+## Default: Not defined, tracing off
+#
+# Log xenstored messages
+# Only evaluated if XENSTORETYPE is "daemon".
+#XENSTORED_TRACE=[yes|on|1]
+
+## Type: string
+## Default: "/var/lib/xenstored"
+#
+# Running xenstored on XENSTORED_ROOTDIR
+# Only evaluated if XENSTORETYPE is "daemon".
+#XENSTORED_ROOTDIR=/var/lib/xenstored
+
+## Type: string
+## Default: /usr/lib/xen/boot/xenstore-stubdom.gz
+#
+# xenstore domain kernel.
+# Only evaluated if XENSTORETYPE is "domain".
+#XENSTORE_DOMAIN_KERNEL=/usr/lib/xen/boot/xenstore-stubdom.gz
+
+## Type: integer
+## Default: 8
+#
+# xenstore domain memory size in MiB.
+# Only evaluated if XENSTORETYPE is "domain".
+#XENSTORE_DOMAIN_SIZE=8
+
+## Type: string
+## Default: not set, no autoballooning of xenstore domain
+#
+# Maximum xenstore domain memory size. Can be specified as:
+# - plain integer value for max size in MiB
+# - fraction of host memory, e.g. 1/100
+# - combination of both in form of <val>:<frac> (e.g. 8:1/100), resulting
+#   value will be the higher of both specifications
+# Only evaluated if XENSTORETYPE is "domain".
+#XENSTORE_MAX_DOMAIN_SIZE=
+
+## Type: string
+## Default: ""
+#
+# Additional arguments for starting the xenstore domain.
+# Only evaluated if XENSTORETYPE is "domain".
+XENSTORE_DOMAIN_ARGS=
+
+## Type: string
+## Default: Not defined, xenbackendd debug mode off
+#
+# Running xenbackendd in debug mode
+#XENBACKENDD_DEBUG=[yes|on|1]
+
+# qemu path
+#QEMU_XEN=/usr/bin/qemu-system-i386

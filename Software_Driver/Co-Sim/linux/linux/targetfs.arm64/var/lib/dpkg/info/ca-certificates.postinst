@@ -1,0 +1,3 @@
+#!/bin/sh
+set -e
+    SYSROOT="$D" $D/usr/sbin/update-ca-certificates

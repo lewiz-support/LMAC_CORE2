@@ -1,0 +1,14 @@
+/.
+/etc
+/etc/bash_completion.d
+/etc/bash_completion.d/xl.sh
+/etc/xen
+/etc/xen/xl.conf
+/usr
+/usr/lib
+/usr/lib/xen
+/usr/lib/xen/bin
+/usr/lib/xen/bin/libxl-save-helper
+/usr/lib/xen/bin/xen-init-dom0
+/usr/sbin
+/usr/sbin/xl

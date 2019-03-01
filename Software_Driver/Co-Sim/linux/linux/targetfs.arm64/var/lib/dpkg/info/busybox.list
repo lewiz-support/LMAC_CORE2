@@ -1,0 +1,9 @@
+/.
+/bin
+/bin/busybox.nosuid
+/bin/busybox.suid
+/etc
+/etc/busybox.links.nosuid
+/etc/busybox.links.suid
+/bin/busybox
+/bin/sh

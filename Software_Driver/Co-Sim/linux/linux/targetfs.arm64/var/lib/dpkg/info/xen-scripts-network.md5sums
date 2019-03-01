@@ -1,0 +1,8 @@
+bbcdab929b9abeb50bf29a4dee691f49  etc/xen/scripts/colo-proxy-setup
+c60a79fefea0f9333077ecef79284fac  etc/xen/scripts/vif-bridge
+f342592bab30b4f946e0fc599da0aded  etc/xen/scripts/vif-common.sh
+e3037907eb54d912ead456487a5367ac  etc/xen/scripts/vif-nat
+7bcf63a7789b3299a5c439c97ec76642  etc/xen/scripts/vif-openvswitch
+8df5b66256b70376aeddf4f704c5745f  etc/xen/scripts/vif-route
+96d12dbf85c3823b2a644e58bf3fbc73  etc/xen/scripts/vif-setup
+99d0e975ba05ef155c185fe1df81a543  etc/xen/scripts/vif2

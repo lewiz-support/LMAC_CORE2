@@ -1,0 +1,4 @@
+/.
+/lib
+/lib/libthread_db-1.0.so
+/lib/libthread_db.so.1

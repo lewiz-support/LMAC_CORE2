@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/bin
+/usr/bin/perl5.24.4
+/usr/lib
+/usr/lib/perl
+/usr/lib/perl/5.24.4
+/usr/lib/perl/5.24.4/Config.pm
+/usr/lib/perl/5.24.4/strict.pm
+/usr/lib/perl/5.24.4/vars.pm
+/usr/lib/perl/5.24.4/warnings
+/usr/lib/perl/5.24.4/warnings/register.pm
+/usr/lib/perl/5.24.4/warnings.pm
+/usr/bin/perl

@@ -1,0 +1,8 @@
+/.
+/etc
+/etc/udhcpc.d
+/etc/udhcpc.d/50default
+/usr
+/usr/share
+/usr/share/udhcpc
+/usr/share/udhcpc/default.script

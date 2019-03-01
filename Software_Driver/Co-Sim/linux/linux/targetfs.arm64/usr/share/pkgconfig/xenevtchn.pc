@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=/usr/include
+libdir=/usr/lib
+
+Name: Xenevtchn
+Description: The Xenevtchn library for Xen hypervisor
+Version: 1.1
+Cflags: -I${includedir}
+Libs: -L${libdir} -lxenevtchn
+Requires.private: xentoollog

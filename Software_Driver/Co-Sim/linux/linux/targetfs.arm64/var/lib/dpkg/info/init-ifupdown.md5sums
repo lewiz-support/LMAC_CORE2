@@ -1,0 +1,4 @@
+b10bc83587a54c924c2f3981e93f7c2a  etc/init.d/networking
+860854f45d519a51115e57ca385cfdab  etc/network/if-pre-up.d/nfsroot
+e24051e3e416605c533342efb3177b4d  etc/network/interfaces
+d41d8cd98f00b204e9800998ecf8427e  etc/network/nm-disabled-eth0

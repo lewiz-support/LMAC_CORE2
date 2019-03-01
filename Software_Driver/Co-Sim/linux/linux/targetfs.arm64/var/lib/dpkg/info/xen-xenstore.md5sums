@@ -1,0 +1,10 @@
+d7146c85c709bacdfbb2df06235b499d  usr/bin/xenstore
+d7146c85c709bacdfbb2df06235b499d  usr/bin/xenstore-chmod
+1aacc753c560bfbdc8b7c3bb74a34322  usr/bin/xenstore-control
+d7146c85c709bacdfbb2df06235b499d  usr/bin/xenstore-exists
+d7146c85c709bacdfbb2df06235b499d  usr/bin/xenstore-list
+d7146c85c709bacdfbb2df06235b499d  usr/bin/xenstore-ls
+d7146c85c709bacdfbb2df06235b499d  usr/bin/xenstore-read
+d7146c85c709bacdfbb2df06235b499d  usr/bin/xenstore-rm
+d7146c85c709bacdfbb2df06235b499d  usr/bin/xenstore-watch
+d7146c85c709bacdfbb2df06235b499d  usr/bin/xenstore-write

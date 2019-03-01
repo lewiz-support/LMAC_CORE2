@@ -1,0 +1,11 @@
+#
+# LeWiz device configuration
+#
+config LEWIZ_LMAC2
+	tristate "LeWiz LMAC2 support"
+	depends on ARM || ARM64
+	select CRC32
+	select MII
+	---help---
+	  Support for LeWiz LMAC2 Ethernet MAC.
+

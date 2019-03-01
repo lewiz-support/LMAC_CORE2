@@ -1,0 +1,3 @@
+kernel/net/802/stp.ko: kernel/net/llc/llc.ko
+kernel/net/llc/llc.ko:
+kernel/net/bridge/bridge.ko: kernel/net/802/stp.ko kernel/net/llc/llc.ko

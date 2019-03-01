@@ -1,0 +1,9 @@
+/.
+/etc
+/etc/default
+/etc/default/xencommons
+/etc/init.d
+/etc/init.d/xencommons
+/etc/xen
+/etc/xen/scripts
+/etc/xen/scripts/launch-xenstore

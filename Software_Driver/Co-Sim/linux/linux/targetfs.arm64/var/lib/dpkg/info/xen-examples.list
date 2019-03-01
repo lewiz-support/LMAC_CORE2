@@ -1,0 +1,8 @@
+/.
+/etc
+/etc/xen
+/etc/xen/example-doom.cfg
+/etc/xen/example1.cfg
+/etc/xen/example2.cfg
+/etc/xen/example3.cfg
+/etc/xen/xen-partial.dtb

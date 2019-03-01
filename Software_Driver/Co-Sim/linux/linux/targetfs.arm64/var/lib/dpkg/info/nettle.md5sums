@@ -1,0 +1,7 @@
+8444ff3a9f291e7ad17edfc12052193b  usr/bin/nettle-hash
+d40938b373edf2a487ad09b18cc0f155  usr/bin/nettle-lfib-stream
+04d572113842c300cfd9499e57bc64da  usr/bin/nettle-pbkdf2
+05a3aa17e4d4bb32307e368363f55be2  usr/bin/pkcs1-conv
+bdd47ae217755b019ccb036d5fdeb6e4  usr/bin/sexp-conv
+ddf517dc397815570d3a951e28852495  usr/lib/libhogweed.so.4.4
+80abd3fb16874bf6228d21e4df3826b0  usr/lib/libnettle.so.6.4

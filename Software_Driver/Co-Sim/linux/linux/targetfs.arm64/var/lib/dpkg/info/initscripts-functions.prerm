@@ -1,0 +1,5 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+# Begin section update-alternatives
+update-alternatives --remove  functions /etc/init.d/functions.initscripts
+# End section update-alternatives

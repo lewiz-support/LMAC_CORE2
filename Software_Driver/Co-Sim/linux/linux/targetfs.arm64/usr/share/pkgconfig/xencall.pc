@@ -1,0 +1,10 @@
+prefix=/usr
+includedir=/usr/include
+libdir=/usr/lib
+
+Name: Xencall
+Description: The Xencall library for Xen hypervisor
+Version: 1.0
+Cflags: -I${includedir} 
+Libs: -L${libdir} -lxencall
+Requires.private: xentoollog,xentoolcore

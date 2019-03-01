@@ -1,0 +1,2 @@
+# Aliases extracted from modules themselves.
+alias rtnl-link-bridge bridge

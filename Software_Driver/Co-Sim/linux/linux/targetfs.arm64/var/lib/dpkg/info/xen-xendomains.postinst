@@ -1,0 +1,11 @@
+#!/bin/sh
+# Begin section update-rc.d
+if true && type update-rc.d >/dev/null 2>/dev/null; then
+	if [ -n "$D" ]; then
+		OPT="-r $D"
+	else
+		OPT="-s"
+	fi
+	update-rc.d $OPT xendomains defaults 83
+fi
+# End section update-rc.d

@@ -1,0 +1,13 @@
+/.
+/etc
+/etc/default
+/etc/default/xendomains
+/etc/init.d
+/etc/init.d/xendomains
+/etc/sysconfig
+/usr
+/usr/lib
+/usr/lib/xen
+/usr/lib/xen/bin
+/usr/lib/xen/bin/xendomains
+/etc/sysconfig/xendomains

@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+	update-alternatives --install /usr/sbin/add-shell add-shell /usr/sbin/add-shell.debianutils 30
+	update-alternatives --install /usr/sbin/installkernel installkernel /usr/sbin/installkernel.debianutils 30
+	update-alternatives --install /usr/sbin/remove-shell remove-shell /usr/sbin/remove-shell.debianutils 30
+	update-alternatives --install /usr/bin/savelog savelog /usr/bin/savelog.debianutils 30
+	update-alternatives --install /bin/tempfile tempfile /bin/tempfile.debianutils 30
+	update-alternatives --install /usr/bin/which which /usr/bin/which.debianutils 30

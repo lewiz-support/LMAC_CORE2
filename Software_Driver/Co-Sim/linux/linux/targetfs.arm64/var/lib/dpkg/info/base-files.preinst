@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+    #!/bin/sh -e
+    if [ x"$D" = "x" ]; then
+        if [ -h "/var/lock" ]; then
+            # Remove the symbolic link
+            rm -f /var/lock
+        fi
+
+        if [ -h "/run" ]; then
+            # Remove the symbolic link
+            rm -f /run
+        fi
+    fi

@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/bin
+/usr/bin/nettle-hash
+/usr/bin/nettle-lfib-stream
+/usr/bin/nettle-pbkdf2
+/usr/bin/pkcs1-conv
+/usr/bin/sexp-conv
+/usr/lib
+/usr/lib/libhogweed.so.4.4
+/usr/lib/libnettle.so.6.4
+/usr/lib/libhogweed.so.4
+/usr/lib/libnettle.so.6

@@ -1,0 +1,5 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+# Begin section update-alternatives
+update-alternatives --remove  brctl /usr/sbin/brctl.bridge-utils
+# End section update-alternatives

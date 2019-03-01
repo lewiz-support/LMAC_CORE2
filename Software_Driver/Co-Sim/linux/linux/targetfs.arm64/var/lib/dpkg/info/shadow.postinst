@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+	if [ "x$D" != "x" ]; then
+	  rootarg="--root $D"
+	else
+	  rootarg=""
+	fi
+
+	pwconv $rootarg || exit 1
+	grpconv $rootarg || exit 1
+	update-alternatives --install /usr/bin/passwd passwd /usr/bin/passwd.shadow 200
+	update-alternatives --install /usr/bin/chfn chfn /usr/bin/chfn.shadow 200
+	update-alternatives --install /usr/bin/chsh chsh /usr/bin/chsh.shadow 200
+	update-alternatives --install /usr/sbin/chpasswd chpasswd /usr/sbin/chpasswd.shadow 200
+	update-alternatives --install /sbin/vipw vipw /sbin/vipw.shadow 200
+	update-alternatives --install /sbin/vigr vigr /sbin/vigr.shadow 200
+	update-alternatives --install /sbin/nologin nologin /sbin/nologin.shadow 200
