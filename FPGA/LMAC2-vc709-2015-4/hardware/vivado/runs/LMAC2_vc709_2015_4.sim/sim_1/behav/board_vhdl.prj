@@ -1,0 +1,20 @@
+# compile vhdl design source files
+vhdl fifo_generator_v13_0_1  "../../../LMAC2_vc709_2015_4.ip_user_files/ipstatic/fifo_generator_v13_0_1/simulation/fifo_generator_vhdl_beh.vhd"
+vhdl fifo_generator_v13_0_1  "../../../LMAC2_vc709_2015_4.ip_user_files/ipstatic/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_rfs.vhd"
+vhdl xil_defaultlib  "../../../LMAC2_vc709_2015_4.srcs/sources_1/ip/br_sfifo_ip_4x32/sim/br_sfifo_ip_4x32.vhd"
+vhdl xil_defaultlib  "../../../LMAC2_vc709_2015_4.srcs/sources_1/ip/pktctrl_fifo_ip/sim/pktctrl_fifo_ip.vhd"
+vhdl xil_defaultlib  "../../../LMAC2_vc709_2015_4.srcs/sources_1/ip/rxfifo_ip_4Kx64/sim/rxfifo_ip_4Kx64.vhd"
+vhdl xil_defaultlib  "../../../LMAC2_vc709_2015_4.srcs/sources_1/ip/ipcs_fifo_ip/sim/ipcs_fifo_ip.vhd"
+vhdl xil_defaultlib  "../../../LMAC2_vc709_2015_4.srcs/sources_1/ip/gigerx_bcnt_fifo_ip_256x16/sim/gigerx_bcnt_fifo_ip_256x16.vhd"
+vhdl xil_defaultlib  "../../../LMAC2_vc709_2015_4.srcs/sources_1/ip/gigerx_fifo_ip_256x8/sim/gigerx_fifo_ip_256x8.vhd"
+vhdl xil_defaultlib  "../../../LMAC2_vc709_2015_4.srcs/sources_1/ip/gigerx_fifo_ip_256x64/sim/gigerx_fifo_ip_256x64.vhd"
+vhdl xil_defaultlib  "../../../LMAC2_vc709_2015_4.srcs/sources_1/ip/txfifo_ip_1024x64/sim/txfifo_ip_1024x64.vhd"
+vhdl xil_defaultlib  "../../../../../sources/hdl/pvtmon/kcpsm6.vhd"
+vhdl xil_defaultlib  "../../../../../sources/hdl/pvtmon/power_test_control.vhd"
+vhdl xil_defaultlib  "../../../../../sources/hdl/pvtmon/vc709_power_test.vhd"
+vhdl xil_defaultlib  "../../../../../sources/hdl/pvtmon/power_test_control_program.vhd"
+vhdl xil_defaultlib  "../../../../../sources/hdl/clock_control/clock_control.vhd"
+vhdl xil_defaultlib  "../../../../../sources/hdl/clock_control/clock_control_program.vhd"
+
+# Do not sort compile order
+nosort

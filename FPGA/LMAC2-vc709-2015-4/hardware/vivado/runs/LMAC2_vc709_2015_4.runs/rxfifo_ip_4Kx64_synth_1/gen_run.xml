@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="rxfifo_ip_4Kx64_synth_1" LaunchPart="xc7vx690tffg1761-2" LaunchTime="1484846825">
+  <File Type="RDS-DCP" Name="rxfifo_ip_4Kx64.dcp"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/rxfifo_ip_4Kx64_synth_1/constrs_in.xml"/>
+  <File Type="RDS-UTIL-PB" Name="rxfifo_ip_4Kx64_utilization_synth.pb"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/rxfifo_ip_4Kx64_synth_1/sources.xml"/>
+  <File Type="RDS-PROPCONSTRS" Name="rxfifo_ip_4Kx64_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="rxfifo_ip_4Kx64.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/rxfifo_ip_4Kx64_synth_1/rxfifo_ip_4Kx64_synth_1.psg"/>
+  <File Type="RDS-RDS" Name="rxfifo_ip_4Kx64.vds"/>
+  <File Type="RDS-UTIL" Name="rxfifo_ip_4Kx64_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="rxfifo_ip_4Kx64_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="rxfifo_ip_4Kx64_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/rxfifo_ip_4Kx64">
+    <File Path="$PSRCDIR/sources_1/ip/rxfifo_ip_4Kx64/rxfifo_ip_4Kx64.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="rxfifo_ip_4Kx64"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/rxfifo_ip_4Kx64">
+    <File Path="$PSRCDIR/sources_1/ip/rxfifo_ip_4Kx64/rxfifo_ip_4Kx64.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="rxfifo_ip_4Kx64"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

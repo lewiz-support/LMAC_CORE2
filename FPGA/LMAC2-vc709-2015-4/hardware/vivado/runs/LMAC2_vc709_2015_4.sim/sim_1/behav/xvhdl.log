@@ -1,0 +1,67 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.ip_user_files/ipstatic/fifo_generator_v13_0_1/simulation/fifo_generator_vhdl_beh.vhd" into library fifo_generator_v13_0_1
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_bhv_as
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_bhv_ss
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_bhv_preload0
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_conv
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_axic_reg_slice
+INFO: [VRFC 10-307] analyzing entity fifo_generator_vhdl_beh
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.ip_user_files/ipstatic/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_rfs.vhd" into library fifo_generator_v13_0_1
+INFO: [VRFC 10-307] analyzing entity input_blk
+INFO: [VRFC 10-307] analyzing entity output_blk
+INFO: [VRFC 10-307] analyzing entity shft_wrapper
+INFO: [VRFC 10-307] analyzing entity shft_ram
+INFO: [VRFC 10-307] analyzing entity wr_pf_as
+INFO: [VRFC 10-307] analyzing entity wr_pf_ss
+INFO: [VRFC 10-307] analyzing entity rd_pe_as
+INFO: [VRFC 10-307] analyzing entity rd_pe_ss
+INFO: [VRFC 10-307] analyzing entity synchronizer_ff
+INFO: [VRFC 10-307] analyzing entity delay
+INFO: [VRFC 10-307] analyzing entity bin_cntr
+INFO: [VRFC 10-307] analyzing entity clk_x_pntrs_builtin
+INFO: [VRFC 10-307] analyzing entity logic_builtin
+INFO: [VRFC 10-307] analyzing entity builtin_prim
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth
+INFO: [VRFC 10-307] analyzing entity builtin_top
+INFO: [VRFC 10-307] analyzing entity reset_builtin
+INFO: [VRFC 10-307] analyzing entity builtin_prim_v6
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth_v6
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth_low_latency
+INFO: [VRFC 10-307] analyzing entity builtin_top_v6
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_builtin
+INFO: [VRFC 10-307] analyzing entity bram_sync_reg
+INFO: [VRFC 10-307] analyzing entity bram_fifo_rstlogic
+INFO: [VRFC 10-307] analyzing entity reset_blk_ramfifo
+INFO: [VRFC 10-307] analyzing entity axi_reg_slice
+INFO: [VRFC 10-307] analyzing entity fifo_generator_top
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_synth
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/br_sfifo_ip_4x32/sim/br_sfifo_ip_4x32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity br_sfifo_ip_4x32
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/pktctrl_fifo_ip/sim/pktctrl_fifo_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity pktctrl_fifo_ip
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/rxfifo_ip_4Kx64/sim/rxfifo_ip_4Kx64.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rxfifo_ip_4Kx64
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/ipcs_fifo_ip/sim/ipcs_fifo_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ipcs_fifo_ip
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/gigerx_bcnt_fifo_ip_256x16/sim/gigerx_bcnt_fifo_ip_256x16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity gigerx_bcnt_fifo_ip_256x16
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/gigerx_fifo_ip_256x8/sim/gigerx_fifo_ip_256x8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity gigerx_fifo_ip_256x8
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/gigerx_fifo_ip_256x64/sim/gigerx_fifo_ip_256x64.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity gigerx_fifo_ip_256x64
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/txfifo_ip_1024x64/sim/txfifo_ip_1024x64.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity txfifo_ip_1024x64
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/pvtmon/kcpsm6.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity kcpsm6
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/pvtmon/power_test_control.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity power_test_control
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/pvtmon/vc709_power_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vc709_power_test
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/pvtmon/power_test_control_program.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity power_test_control_program
+INFO: [VRFC 10-307] analyzing entity jtag_loader_6
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/clock_control/clock_control.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_control
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/clock_control/clock_control_program.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_control_program
+INFO: [VRFC 10-307] analyzing entity jtag_loader_6

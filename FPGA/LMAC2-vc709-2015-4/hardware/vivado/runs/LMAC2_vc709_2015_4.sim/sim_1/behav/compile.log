@@ -1,0 +1,296 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.ip_user_files/ipstatic/ten_gig_eth_pcs_pma_v6_0_3/hdl/ten_gig_eth_pcs_pma_v6_0_rfs.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_baser_gen
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_kr_gen
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_wrapper
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_an_rx
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_an_top
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_sim_speedup_controller
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_an_tx
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_asynch_fifo
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_basekr_ieee_registers
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_CC2CE
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_CC8CE
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_coherent_resyncs
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_coherent_resyncs_en
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_combine_status
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_common_ieee_registers
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_cs_ipif_access
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_decimate_config
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_distributed_dp_ram
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_dp_ram
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_drp_arbiter
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_drp_ipif
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_elastic_buffer
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_elastic_buffer_wrapper
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_err_track_ERR_PAT40875
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_err_track_ERR_PAT66
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_err_track_ERR_PAT1
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_err_track_ERR_PAT20
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_err_track_ERR_PAT34
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_err_track_ERR_PAT43
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_err_track_ERR_PAT65
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_err_track_ERR_PAT40853
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_fastxor2_12
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_fastxor2_18
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_fec_block_sync
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_fec_dec
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_fec_enc
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_fec_enc_parity
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_fec_err_pattgen_corr
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_fec_err_pcs
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_fec_pn2112
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_fec_syndrome
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_fec_top
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_g_register
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_g_resyncs
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_g_resyncs_en
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_handoff
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_latency_drp_read
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_seq_counter
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_ui_to_ns_convert
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_timer_rx_latency_correct
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_cf_timer_rx_latency_correct
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_1588_top
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_idle_delete
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_idle_detect
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_idle_insert
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_ieee_counters
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_ieee_registers
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_ipif_access
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_management_cs
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_management_mdio
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_management_top
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_mdio_interface
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_pcs_descramble
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_pcs_scramble
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_pcs_top
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_pcs_txrx_codec
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_prbs11
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_pulse_synchronizer
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_pulse_synchronizer_double
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_ber_mon_fsm
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_block_lock_fsm
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_decoder
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_pcs
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_pcs_fsm
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_pcs_test
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rxratecounter
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rxusrclk2_coreclk_counter_resync
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_seq_detect
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_synchronizer
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_synchronizer_rst
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_synchronizer_enable
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_toggle_detect
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_kr_top
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_baser_top
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_training_coeff_fsm
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_training_gt_update_drp
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_training_frame_lock
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_training_framer
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_training_fsm
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_training_output
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_training_rx_decode
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_training_top
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_training_tx_encode
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_tx_encoder
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_tx_pcs
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_tx_pcs_fsm
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_txratefifo
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_toggle_synchronizer
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_elastic_buffer_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_asynch_fifo_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_elastic_buffer_wrapper_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_idle_delete_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_idle_insert_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_pcs_descramble_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_pcs_scramble_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_pcs_top_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_ber_mon_fsm_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_block_lock_fsm_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_decoder_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_pcs_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_pcs_fsm_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rx_pcs_test_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rxratecounter_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_rxratecounter_uscale_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_baser_top_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_tx_encoder_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_tx_pcs_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_tx_pcs_fsm_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_txratefifo_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_txratefifo_uscale_32
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_v6_0_3_baser_top_25
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_gtwizard_gth_10gbaser_gt.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_gtwizard_gth_10gbaser_GT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_gtwizard_gth_10gbaser_multi_gt.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_gtwizard_gth_10gbaser_multi_GT
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_ff_synchronizer_rst.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_ff_synchronizer_rst
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_ff_synchronizer.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_ff_synchronizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_local_clock_and_reset.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_local_clock_and_reset
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_sim_speedup_controller.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_sim_speedup_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_cable_pull_logic.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_cable_pull_logic
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_block.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_block
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_support.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_support
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_shared_clock_and_reset.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_shared_clock_and_reset
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_gt_common.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_gt_common
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_ff_synchronizer_rst2.v" into library ten_gig_eth_pcs_pma_v6_0_3
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core_ff_synchronizer_rst2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/ip_catalog/ten_gig_eth_pcs_pma_ip_shared_logic_in_core/synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ten_gig_eth_pcs_pma_ip_shared_logic_in_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/common/synchronizer_simple.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module synchronizer_simple
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/network_path/network_path_shared.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module network_path_shared
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC2_vc709_2015_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LMAC2_vc709_2015_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_SYNTH/LMAC_SYNTH.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LMAC_SYNTH
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LPBK_MODULE/LPBK_MODULE.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LPBK_MODULE
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/tcore_fmac_core_LE2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tcore_fmac_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/crc32_d64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crc32_d64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/eth_crc32_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth_crc32_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/tx_encap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tx_encap
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/gige_crc32x64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gige_crc32x64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/crc32_d16s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crc32_d16s
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/bsh32_dn_88.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bsh32_dn_88
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/fmac_fifo512x64_2clk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fmac_fifo512x64_2clk
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/bsh8_dn_64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bsh8_dn_64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/gigerx_fifo256x64_2clk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gigerx_fifo256x64_2clk
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/crc32_d8s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crc32_d8s
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/LMAC_CORE_TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LMAC_CORE_TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/gige_tx_encap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gige_tx_encap
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/byte_reordering.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tcore_byte_reordering
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/tx_1G_wrap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tx_1G_wrap
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/gige_tx_gmii.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gige_tx_gmii
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/rx_5G.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rx_5g
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/tx_mac10g_crc32x64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tx_mac10g_crc32x64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/g2x_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module g2x_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/gigerx_fifo256x8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gigerx_fifo256x8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/rx_decap_LE2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rx_decap
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/tx_10G_wrap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tx_10G_wrap
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/txfifo_1024x64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module txfifo_1024x64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/gige_s2p.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gige_s2p
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/fmac_register_if_LE2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fmac_register_if
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/ctrl_2G_5G.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrl_2g_5g
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/fmac_fifo4Kx64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fmac_fifo4Kx64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/tx_xgmii_LE2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tx_xgmii
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/br_sfifo4x32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module br_sfifo4x32
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/crc32_d24s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crc32_d24s
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/fmac_fifo4Kx8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fmac_fifo4Kx8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/rx_xgmii_LE2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tcore_rx_xgmii
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/LMAC_RTL/LMAC_CORE_TOP/gigerx_bcnt_fifo256x16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gigerx_bcnt_fifo256x16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/testbench/board.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module board
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.ip_user_files/ipstatic/fifo_generator_v13_0_1/simulation/fifo_generator_vhdl_beh.vhd" into library fifo_generator_v13_0_1
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_bhv_as
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_bhv_ss
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_bhv_preload0
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_conv
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_axic_reg_slice
+INFO: [VRFC 10-307] analyzing entity fifo_generator_vhdl_beh
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.ip_user_files/ipstatic/fifo_generator_v13_0_1/hdl/fifo_generator_v13_0_rfs.vhd" into library fifo_generator_v13_0_1
+INFO: [VRFC 10-307] analyzing entity input_blk
+INFO: [VRFC 10-307] analyzing entity output_blk
+INFO: [VRFC 10-307] analyzing entity shft_wrapper
+INFO: [VRFC 10-307] analyzing entity shft_ram
+INFO: [VRFC 10-307] analyzing entity wr_pf_as
+INFO: [VRFC 10-307] analyzing entity wr_pf_ss
+INFO: [VRFC 10-307] analyzing entity rd_pe_as
+INFO: [VRFC 10-307] analyzing entity rd_pe_ss
+INFO: [VRFC 10-307] analyzing entity synchronizer_ff
+INFO: [VRFC 10-307] analyzing entity delay
+INFO: [VRFC 10-307] analyzing entity bin_cntr
+INFO: [VRFC 10-307] analyzing entity clk_x_pntrs_builtin
+INFO: [VRFC 10-307] analyzing entity logic_builtin
+INFO: [VRFC 10-307] analyzing entity builtin_prim
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth
+INFO: [VRFC 10-307] analyzing entity builtin_top
+INFO: [VRFC 10-307] analyzing entity reset_builtin
+INFO: [VRFC 10-307] analyzing entity builtin_prim_v6
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth_v6
+INFO: [VRFC 10-307] analyzing entity builtin_extdepth_low_latency
+INFO: [VRFC 10-307] analyzing entity builtin_top_v6
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_builtin
+INFO: [VRFC 10-307] analyzing entity bram_sync_reg
+INFO: [VRFC 10-307] analyzing entity bram_fifo_rstlogic
+INFO: [VRFC 10-307] analyzing entity reset_blk_ramfifo
+INFO: [VRFC 10-307] analyzing entity axi_reg_slice
+INFO: [VRFC 10-307] analyzing entity fifo_generator_top
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1_synth
+INFO: [VRFC 10-307] analyzing entity fifo_generator_v13_0_1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/br_sfifo_ip_4x32/sim/br_sfifo_ip_4x32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity br_sfifo_ip_4x32
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/pktctrl_fifo_ip/sim/pktctrl_fifo_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity pktctrl_fifo_ip
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/rxfifo_ip_4Kx64/sim/rxfifo_ip_4Kx64.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity rxfifo_ip_4Kx64
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/ipcs_fifo_ip/sim/ipcs_fifo_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ipcs_fifo_ip
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/gigerx_bcnt_fifo_ip_256x16/sim/gigerx_bcnt_fifo_ip_256x16.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity gigerx_bcnt_fifo_ip_256x16
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/gigerx_fifo_ip_256x8/sim/gigerx_fifo_ip_256x8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity gigerx_fifo_ip_256x8
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/gigerx_fifo_ip_256x64/sim/gigerx_fifo_ip_256x64.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity gigerx_fifo_ip_256x64
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.srcs/sources_1/ip/txfifo_ip_1024x64/sim/txfifo_ip_1024x64.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity txfifo_ip_1024x64
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/pvtmon/kcpsm6.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity kcpsm6
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/pvtmon/power_test_control.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity power_test_control
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/pvtmon/vc709_power_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vc709_power_test
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/pvtmon/power_test_control_program.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity power_test_control_program
+INFO: [VRFC 10-307] analyzing entity jtag_loader_6
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/clock_control/clock_control.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_control
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4/hardware/sources/hdl/clock_control/clock_control_program.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_control_program
+INFO: [VRFC 10-307] analyzing entity jtag_loader_6

@@ -1,0 +1,59 @@
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {0707070707070707 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {ff 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {d5555555555555fb 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {01 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {ffff0000005e0001 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {01000081ffffffff 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {11400040d6fc4d05 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {a8c06508a8c0d1a6 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {3905c5f4a1004208 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {01022d058230f7b0 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {03020001020e3003 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {0102030104e3ff00 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {800d043530370403 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {30f999e180881f00 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {022701025b27ae21 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {6d64410504fa0102 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {b296f7fd0c046e69 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {8d68731a0e3994a3 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {ddca961c0d740804 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {00 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {fdc4c3c2c1635931 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {80 0ns}
+run 6.4ns
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} -radix hex {0707070707070707 0ns}
+add_force {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} -radix hex {ff 0ns}
+run 6.4ns
+remove_forces { {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxd} }
+remove_forces { {/board/dut/network_path_inst_0/LMAC_SYNTH/xgmii_rxc} }

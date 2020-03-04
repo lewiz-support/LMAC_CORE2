@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Jan 19 09:59:22 2017
+# Process ID: 38128
+# Current directory: C:/SUNNY2/LMAC2-vc709-2015-4-gate_level/hardware/vivado/runs/LMAC2_vc709_2015_4.runs/synth_1
+# Command line: vivado.exe -log LMAC2_vc709_2015_4.vds -mode batch -messageDb vivado.pb -notrace -source LMAC2_vc709_2015_4.tcl
+# Log file: C:/SUNNY2/LMAC2-vc709-2015-4-gate_level/hardware/vivado/runs/LMAC2_vc709_2015_4.runs/synth_1/LMAC2_vc709_2015_4.vds
+# Journal file: C:/SUNNY2/LMAC2-vc709-2015-4-gate_level/hardware/vivado/runs/LMAC2_vc709_2015_4.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source LMAC2_vc709_2015_4.tcl -notrace
+Command: synth_design -top LMAC2_vc709_2015_4 -part xc7vx690tffg1761-2 -fanout_limit 400 -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-86] Your Synthesis license expires in 16 day(s)
+INFO: [Common 17-1223] The version limit for your license is '2016.12' and will expire in -19 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+ERROR: [Synth 8-3431] Verilog file was generated for simulation and is not permitted as input to synthesis [C:/SUNNY2/LMAC2-vc709-2015-4-gate_level/hardware/sources/hdl/LMAC2-vc709-2015-4.v:20]
+Failed to read verilog 'C:/SUNNY2/LMAC2-vc709-2015-4-gate_level/hardware/sources/hdl/LMAC2-vc709-2015-4.v'
+INFO: [Common 17-83] Releasing license: Synthesis
+4 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 19 09:59:28 2017...

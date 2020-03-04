@@ -1,0 +1,550 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2015.4 (win64) Build 1412921 Wed Nov 18 09:43:45 MST 2015
+| Date             : Thu Jan 19 09:38:28 2017
+| Host             : MANTA-RAY running 64-bit major release  (build 9200)
+| Command          : 
+| Design           : LMAC2_vc709_2015_4
+| Device           : xc7vx690tffg1761-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------+
+| Total On-Chip Power (W)  | 0.831 |
+| Dynamic (W)              | 0.461 |
+| Device Static (W)        | 0.370 |
+| Effective TJA (C/W)      | 1.1   |
+| Max Ambient (C)          | 84.1  |
+| Junction Temperature (C) | 25.9  |
+| Confidence Level         | Low   |
+| Setting File             | ---   |
+| Simulation Activity File | ---   |
+| Design Nets Matched      | NA    |
++--------------------------+-------+
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.056 |        7 |       --- |             --- |
+| Slice Logic              |     0.020 |    13506 |       --- |             --- |
+|   LUT as Logic           |     0.018 |     6335 |    433200 |            1.46 |
+|   Register               |     0.001 |     5991 |    866400 |            0.69 |
+|   CARRY4                 |    <0.001 |      213 |    108300 |            0.20 |
+|   LUT as Distributed RAM |    <0.001 |      120 |    174200 |            0.07 |
+|   F7/F8 Muxes            |    <0.001 |      147 |    433200 |            0.03 |
+|   Others                 |     0.000 |      421 |       --- |             --- |
+| Signals                  |     0.024 |    10086 |       --- |             --- |
+| Block RAM                |     0.015 |     13.5 |      1470 |            0.92 |
+| I/O                      |     0.007 |       21 |       850 |            2.47 |
+| GTH                      |     0.339 |        1 |       --- |             --- |
+| Static Power             |     0.370 |          |           |                 |
+| Total                    |     0.831 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.355 |       0.162 |      0.193 |
+| Vccaux    |       1.800 |     0.056 |       0.003 |      0.053 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |
+| Vcco15    |       1.500 |     0.001 |       0.000 |      0.001 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.006 |       0.001 |      0.005 |
+| MGTAVcc   |       1.000 |     0.225 |       0.197 |      0.028 |
+| MGTAVtt   |       1.200 |     0.071 |       0.064 |      0.008 |
+| MGTVccaux |       1.800 |     0.010 |       0.010 |      0.000 |
+| MGTZVccl  |       1.075 |     0.000 |       0.000 |      0.000 |
+| MGTZAVcc  |       1.075 |     0.000 |       0.000 |      0.000 |
+| MGTZVcch  |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.1                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 2.2                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                       | Domain                                                                                                                                              | Constraint (ns) |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| clk50                                                                                                                                                       | clk_divide[1]                                                                                                                                       |            20.0 |
+| mcb_clk_ref                                                                                                                                                 | clk_ref_p                                                                                                                                           |             5.0 |
+| network_path_inst_0/ten_gig_eth_pcs_pma_inst/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/gthe2_i/RXOUTCLK | network_path_inst_0/ten_gig_eth_pcs_pma_inst/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/rxoutclk |             3.1 |
+| network_path_inst_0/ten_gig_eth_pcs_pma_inst/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/gthe2_i/TXOUTCLK | network_path_inst_0/ten_gig_eth_pcs_pma_inst/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/txoutclk |             3.1 |
+| xphy_refclk_clk_p                                                                                                                                           | xphy_refclk_clk_p                                                                                                                                   |             6.4 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------------------------------------------------------+-----------+
+| Name                                                                          | Power (W) |
++-------------------------------------------------------------------------------+-----------+
+| LMAC2_vc709_2015_4                                                            |     0.461 |
+|   cc_inst                                                                     |     0.002 |
+|     processor                                                                 |     0.002 |
+|       active_interrupt_lut                                                    |    <0.001 |
+|       address_loop[0].output_data.pc_vector_mux_lut                           |    <0.001 |
+|       address_loop[10].output_data.pc_vector_mux_lut                          |    <0.001 |
+|       address_loop[2].output_data.pc_vector_mux_lut                           |    <0.001 |
+|       address_loop[4].output_data.pc_vector_mux_lut                           |    <0.001 |
+|       address_loop[6].output_data.pc_vector_mux_lut                           |    <0.001 |
+|       address_loop[8].output_data.pc_vector_mux_lut                           |    <0.001 |
+|       alu_decode0_lut                                                         |     0.000 |
+|       alu_decode1_lut                                                         |     0.000 |
+|       alu_decode2_lut                                                         |     0.000 |
+|       carry_flag_lut                                                          |    <0.001 |
+|       data_path_loop[0].arith_logical_lut                                     |    <0.001 |
+|       data_path_loop[0].lsb_shift_rotate.shift_rotate_lut                     |    <0.001 |
+|       data_path_loop[0].output_data.sy_kk_mux_lut                             |    <0.001 |
+|       data_path_loop[0].second_operand.out_port_lut                           |    <0.001 |
+|       data_path_loop[0].small_spm.small_spm_ram.spm_ram                       |    <0.001 |
+|       data_path_loop[1].arith_logical_lut                                     |    <0.001 |
+|       data_path_loop[2].arith_logical_lut                                     |    <0.001 |
+|       data_path_loop[2].mid_shift_rotate.shift_rotate_lut                     |    <0.001 |
+|       data_path_loop[2].output_data.sy_kk_mux_lut                             |    <0.001 |
+|       data_path_loop[3].arith_logical_lut                                     |    <0.001 |
+|       data_path_loop[4].arith_logical_lut                                     |    <0.001 |
+|       data_path_loop[4].mid_shift_rotate.shift_rotate_lut                     |    <0.001 |
+|       data_path_loop[4].output_data.sy_kk_mux_lut                             |    <0.001 |
+|       data_path_loop[4].small_spm.small_spm_ram.spm_ram                       |    <0.001 |
+|       data_path_loop[5].arith_logical_lut                                     |    <0.001 |
+|       data_path_loop[6].arith_logical_lut                                     |    <0.001 |
+|       data_path_loop[6].msb_shift_rotate.shift_rotate_lut                     |    <0.001 |
+|       data_path_loop[6].output_data.sy_kk_mux_lut                             |    <0.001 |
+|       data_path_loop[7].arith_logical_lut                                     |    <0.001 |
+|       int_enable_type_lut                                                     |     0.000 |
+|       lower_reg_banks                                                         |    <0.001 |
+|       move_type_lut                                                           |     0.000 |
+|       pc_mode1_lut                                                            |     0.000 |
+|       push_pop_lut                                                            |     0.000 |
+|       register_enable_lut                                                     |     0.000 |
+|       register_enable_type_lut                                                |     0.000 |
+|       reset_lut                                                               |    <0.001 |
+|       stack_ram_high                                                          |    <0.001 |
+|       stack_ram_low                                                           |    <0.001 |
+|       t_state_lut                                                             |    <0.001 |
+|       upper_reg_banks                                                         |    <0.001 |
+|       use_zero_flag_lut                                                       |     0.000 |
+|     program_rom                                                               |    <0.001 |
+|   i2c_clk_IOBUF_inst                                                          |    <0.001 |
+|   i2c_data_IOBUF_inst                                                         |    <0.001 |
+|   network_path_inst_0                                                         |     0.451 |
+|     LMAC_SYNTH                                                                |     0.062 |
+|       LMAC_CORE_TOP                                                           |     0.062 |
+|         byte_reordering                                                       |     0.002 |
+|         core                                                                  |     0.049 |
+|           ipcs_fifo                                                           |     0.001 |
+|             ipcs_fifo_ip                                                      |     0.001 |
+|               U0                                                              |     0.001 |
+|                 inst_fifo_gen                                                 |     0.001 |
+|                   gconvfifo.rf                                                |     0.001 |
+|                     grf.rf                                                    |     0.001 |
+|                       gntv_or_sync_fifo.gl0.rd                                |    <0.001 |
+|                         grss.rsts                                             |    <0.001 |
+|                           c1                                                  |     0.000 |
+|                           c2                                                  |    <0.001 |
+|                         rpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.gl0.wr                                |    <0.001 |
+|                         gwss.wsts                                             |    <0.001 |
+|                           c0                                                  |     0.000 |
+|                           c1                                                  |    <0.001 |
+|                         wpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.mem                                   |    <0.001 |
+|                         gbm.gbmg.gbmga.ngecc.bmg                              |    <0.001 |
+|                           inst_blk_mem_gen                                    |    <0.001 |
+|                             gnativebmg.native_blk_mem_gen                     |    <0.001 |
+|                               valid.cstr                                      |    <0.001 |
+|                                 ramloop[0].ram.r                              |    <0.001 |
+|                                   prim_noinit.ram                             |    <0.001 |
+|           rx_xgmii                                                            |     0.004 |
+|           rxfifo                                                              |     0.008 |
+|             rxfifo_ip_4Kx64                                                   |     0.008 |
+|               U0                                                              |     0.008 |
+|                 inst_fifo_gen                                                 |     0.008 |
+|                   gconvfifo.rf                                                |     0.008 |
+|                     grf.rf                                                    |     0.008 |
+|                       gntv_or_sync_fifo.gl0.rd                                |    <0.001 |
+|                         grss.rsts                                             |    <0.001 |
+|                           c1                                                  |    <0.001 |
+|                           c2                                                  |     0.000 |
+|                         rpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.gl0.wr                                |    <0.001 |
+|                         gwss.wsts                                             |    <0.001 |
+|                           c0                                                  |    <0.001 |
+|                           c1                                                  |    <0.001 |
+|                         wpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.mem                                   |     0.007 |
+|                         gbm.gbmg.gbmga.ngecc.bmg                              |     0.007 |
+|                           inst_blk_mem_gen                                    |     0.007 |
+|                             gnativebmg.native_blk_mem_gen                     |     0.007 |
+|                               valid.cstr                                      |     0.007 |
+|                                 ramloop[0].ram.r                              |    <0.001 |
+|                                   prim_noinit.ram                             |    <0.001 |
+|                                 ramloop[1].ram.r                              |    <0.001 |
+|                                   prim_noinit.ram                             |    <0.001 |
+|                                 ramloop[2].ram.r                              |    <0.001 |
+|                                   prim_noinit.ram                             |    <0.001 |
+|                                 ramloop[3].ram.r                              |    <0.001 |
+|                                   prim_noinit.ram                             |    <0.001 |
+|                                 ramloop[4].ram.r                              |    <0.001 |
+|                                   prim_noinit.ram                             |    <0.001 |
+|                                 ramloop[5].ram.r                              |     0.002 |
+|                                   prim_noinit.ram                             |     0.002 |
+|                                 ramloop[6].ram.r                              |    <0.001 |
+|                                   prim_noinit.ram                             |    <0.001 |
+|                                 ramloop[7].ram.r                              |     0.002 |
+|                                   prim_noinit.ram                             |     0.002 |
+|           tx_10G_wrap                                                         |     0.014 |
+|             tx_encap                                                          |     0.002 |
+|             tx_xgmii                                                          |     0.011 |
+|               tx_mac10g_crc32x64                                              |     0.008 |
+|           tx_1G_wrap                                                          |     0.016 |
+|             gige_tx_encap                                                     |     0.002 |
+|             gige_tx_gmii                                                      |     0.014 |
+|               gige_crc32x64                                                   |     0.010 |
+|           txfifo                                                              |     0.005 |
+|             txfifo_ip_1024x64                                                 |     0.005 |
+|               U0                                                              |     0.005 |
+|                 inst_fifo_gen                                                 |     0.005 |
+|                   gconvfifo.rf                                                |     0.005 |
+|                     grf.rf                                                    |     0.005 |
+|                       gntv_or_sync_fifo.gl0.rd                                |    <0.001 |
+|                         grss.gdc.dc                                           |    <0.001 |
+|                           gsym_dc.dc                                          |    <0.001 |
+|                         grss.rsts                                             |    <0.001 |
+|                           c1                                                  |     0.000 |
+|                           c2                                                  |    <0.001 |
+|                         rpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.gl0.wr                                |    <0.001 |
+|                         gwss.wsts                                             |    <0.001 |
+|                           c0                                                  |     0.000 |
+|                           c1                                                  |    <0.001 |
+|                         wpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.mem                                   |     0.005 |
+|                         gbm.gbmg.gbmga.ngecc.bmg                              |     0.005 |
+|                           inst_blk_mem_gen                                    |     0.005 |
+|                             gnativebmg.native_blk_mem_gen                     |     0.005 |
+|                               valid.cstr                                      |     0.005 |
+|                                 ramloop[0].ram.r                              |     0.002 |
+|                                   prim_noinit.ram                             |     0.002 |
+|                                 ramloop[1].ram.r                              |     0.002 |
+|                                   prim_noinit.ram                             |     0.002 |
+|         rx_5g                                                                 |     0.010 |
+|           ctrl_2g_5g                                                          |     0.001 |
+|           g2x_ctrl                                                            |     0.001 |
+|           gige_s2p                                                            |     0.003 |
+|           gigerx_bcnt_fifo256x16                                              |     0.001 |
+|             gigerx_bcnt_fifo_ip_256x16                                        |     0.001 |
+|               U0                                                              |     0.001 |
+|                 inst_fifo_gen                                                 |     0.001 |
+|                   gconvfifo.rf                                                |     0.001 |
+|                     grf.rf                                                    |     0.001 |
+|                       gntv_or_sync_fifo.gl0.rd                                |    <0.001 |
+|                         grss.rsts                                             |    <0.001 |
+|                         rpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.gl0.wr                                |    <0.001 |
+|                         gwss.wsts                                             |    <0.001 |
+|                         wpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.mem                                   |    <0.001 |
+|                         gbm.gbmg.gbmga.ngecc.bmg                              |    <0.001 |
+|                           inst_blk_mem_gen                                    |    <0.001 |
+|                             gnativebmg.native_blk_mem_gen                     |    <0.001 |
+|                               valid.cstr                                      |    <0.001 |
+|                                 ramloop[0].ram.r                              |    <0.001 |
+|                                   prim_noinit.ram                             |    <0.001 |
+|           gigerx_fifo256x64_2clk                                              |     0.002 |
+|             gigerx_fifo_ip_256x64                                             |     0.002 |
+|               U0                                                              |     0.002 |
+|                 inst_fifo_gen                                                 |     0.002 |
+|                   gconvfifo.rf                                                |     0.002 |
+|                     grf.rf                                                    |     0.002 |
+|                       gntv_or_sync_fifo.gl0.rd                                |    <0.001 |
+|                         grss.rsts                                             |    <0.001 |
+|                         rpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.gl0.wr                                |    <0.001 |
+|                         gwss.wsts                                             |    <0.001 |
+|                         wpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.mem                                   |     0.001 |
+|                         gbm.gbmg.gbmga.ngecc.bmg                              |     0.001 |
+|                           inst_blk_mem_gen                                    |     0.001 |
+|                             gnativebmg.native_blk_mem_gen                     |     0.001 |
+|                               valid.cstr                                      |     0.001 |
+|                                 ramloop[0].ram.r                              |     0.001 |
+|                                   prim_noinit.ram                             |     0.001 |
+|           gigerx_fifo256x8                                                    |    <0.001 |
+|             gigerx_fifo_ip_256x8                                              |    <0.001 |
+|               U0                                                              |    <0.001 |
+|                 inst_fifo_gen                                                 |    <0.001 |
+|                   gconvfifo.rf                                                |    <0.001 |
+|                     grf.rf                                                    |    <0.001 |
+|                       gntv_or_sync_fifo.gl0.rd                                |    <0.001 |
+|                         grss.rsts                                             |    <0.001 |
+|                         rpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.gl0.wr                                |    <0.001 |
+|                         gwss.wsts                                             |    <0.001 |
+|                         wpntr                                                 |    <0.001 |
+|                       gntv_or_sync_fifo.mem                                   |    <0.001 |
+|                         gbm.gbmg.gbmga.ngecc.bmg                              |    <0.001 |
+|                           inst_blk_mem_gen                                    |    <0.001 |
+|                             gnativebmg.native_blk_mem_gen                     |    <0.001 |
+|                               valid.cstr                                      |    <0.001 |
+|                                 ramloop[0].ram.r                              |    <0.001 |
+|                                   prim_noinit.ram                             |    <0.001 |
+|     LPBK_MODULE                                                               |     0.002 |
+|     ten_gig_eth_pcs_pma_inst                                                  |     0.387 |
+|       inst                                                                    |     0.387 |
+|         ten_gig_eth_pcs_pma_block_i                                           |     0.385 |
+|           cable_pull_logic_i                                                  |     0.001 |
+|             cable_pull_reset_rising_rxusrclk2_sync_i                          |    <0.001 |
+|             cable_pull_reset_sync_i                                           |    <0.001 |
+|             cable_unpull_reset_rising_rxusrclk2_sync_i                        |    <0.001 |
+|             cable_unpull_reset_sync_i                                         |    <0.001 |
+|           gt0_gtwizard_10gbaser_multi_gt_i                                    |     0.339 |
+|             gt0_gtwizard_gth_10gbaser_i                                       |     0.339 |
+|           gt0_rxresetdone_i_reg_rxusrclk2_sync_i                              |    <0.001 |
+|           gt0_rxresetdone_i_sync_i                                            |    <0.001 |
+|           gt0_txresetdone_i_sync_i                                            |    <0.001 |
+|           gtrxreset_coreclk_sync_i                                            |    <0.001 |
+|           qplllock_coreclk_sync_i                                             |    <0.001 |
+|           qplllock_rxusrclk2_sync_i                                           |    <0.001 |
+|           qplllock_txusrclk2_sync_i                                           |    <0.001 |
+|           signal_detect_coreclk_sync_i                                        |    <0.001 |
+|           signal_detect_rxusrclk2_sync_i                                      |    <0.001 |
+|           ten_gig_eth_pcs_pma_ip_shared_logic_in_core_core                    |     0.041 |
+|             ten_gig_eth_pcs_pma_inst                                          |     0.041 |
+|               G_IS_BASER.ten_gig_eth_pcs_pma_inst                             |     0.041 |
+|                 BASER.ten_gig_eth_pcs_pma_inst                                |     0.041 |
+|                   G_7SERIES_RXRATECOUNTER.rxratecounter_i                     |    <0.001 |
+|                   G_7SERIES_TXFIFO.txratefifo_i                               |     0.006 |
+|                     asynch_fifo_i                                             |     0.006 |
+|                       dp_ram_i                                                |     0.004 |
+|                         ten_gig_disti_ram_reg_0_31_0_5                        |    <0.001 |
+|                         ten_gig_disti_ram_reg_0_31_12_17                      |    <0.001 |
+|                         ten_gig_disti_ram_reg_0_31_18_23                      |    <0.001 |
+|                         ten_gig_disti_ram_reg_0_31_24_29                      |    <0.001 |
+|                         ten_gig_disti_ram_reg_0_31_30_35                      |    <0.001 |
+|                         ten_gig_disti_ram_reg_0_31_36_41                      |    <0.001 |
+|                         ten_gig_disti_ram_reg_0_31_42_47                      |    <0.001 |
+|                         ten_gig_disti_ram_reg_0_31_48_53                      |    <0.001 |
+|                         ten_gig_disti_ram_reg_0_31_54_59                      |    <0.001 |
+|                         ten_gig_disti_ram_reg_0_31_60_65                      |    <0.001 |
+|                         ten_gig_disti_ram_reg_0_31_6_11                       |    <0.001 |
+|                   coreclk_rxusrclk2_resets_resyncs_i                          |    <0.001 |
+|                   coreclk_rxusrclk2_resyncs2_i                                |    <0.001 |
+|                     resynch[0].synch_inst                                     |    <0.001 |
+|                   coreclk_rxusrclk2_resyncs_i                                 |    <0.001 |
+|                     resynch[0].synchc_inst                                    |    <0.001 |
+|                     resynch[1].synchc_inst                                    |    <0.001 |
+|                     resynch[2].synchc_inst                                    |    <0.001 |
+|                     resynch[3].synchc_inst                                    |    <0.001 |
+|                   coreclk_txusrclk2_resyncs_i                                 |    <0.001 |
+|                     resynch[0].synch_inst                                     |    <0.001 |
+|                     resynch[1].synch_inst                                     |    <0.001 |
+|                   ebuff_gen.rx_elastic_buffer_i                               |     0.006 |
+|                     rx_elastic_buffer_i                                       |     0.006 |
+|                       asynch_fifo_i                                           |     0.003 |
+|                         dp_ram_i                                              |     0.001 |
+|                           ten_gig_disti_ram_reg_0_31_0_5                      |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_12_17                    |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_18_23                    |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_24_29                    |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_30_35                    |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_36_41                    |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_42_47                    |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_48_53                    |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_54_59                    |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_60_65                    |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_66_71                    |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_6_11                     |    <0.001 |
+|                           ten_gig_disti_ram_reg_0_31_72_73                    |    <0.001 |
+|                       can_insert_synch                                        |    <0.001 |
+|                       idle_delete_i                                           |     0.001 |
+|                         idle_detect_i0                                        |     0.000 |
+|                         idle_detect_i1                                        |     0.000 |
+|                         seq_detect_i0                                         |    <0.001 |
+|                         seq_detect_i1                                         |    <0.001 |
+|                       idle_insert_i                                           |     0.001 |
+|                   management_inst                                             |     0.006 |
+|                     drp_ipif_i                                                |     0.002 |
+|                       synch_1                                                 |    <0.001 |
+|                         toggle_sync                                           |    <0.001 |
+|                       synch_2                                                 |    <0.001 |
+|                         toggle_sync                                           |    <0.001 |
+|                     ieee_counters_i                                           |    <0.001 |
+|                     ieee_registers_i                                          |     0.003 |
+|                       common_reg_block                                        |     0.002 |
+|                         reg_1_0_0                                             |    <0.001 |
+|                         reg_1_0_11                                            |    <0.001 |
+|                         reg_1_0_15                                            |    <0.001 |
+|                         reg_1_10_0                                            |    <0.001 |
+|                         reg_1_1_2                                             |    <0.001 |
+|                         reg_1_8_11                                            |    <0.001 |
+|                         reg_1_9_0                                             |    <0.001 |
+|                         reg_3_0_11                                            |    <0.001 |
+|                         reg_3_0_14                                            |    <0.001 |
+|                         reg_3_0_15                                            |    <0.001 |
+|                         reg_3_1_2                                             |    <0.001 |
+|                         reg_3_32_0                                            |    <0.001 |
+|                         reg_3_32_1                                            |    <0.001 |
+|                         reg_3_32_12                                           |    <0.001 |
+|                         reg_3_33_13_8                                         |    <0.001 |
+|                         reg_3_33_14                                           |    <0.001 |
+|                         reg_3_33_15                                           |    <0.001 |
+|                         reg_3_33_7_0                                          |    <0.001 |
+|                         reg_3_34_all                                          |    <0.001 |
+|                         reg_3_35_all                                          |    <0.001 |
+|                         reg_3_36_all                                          |    <0.001 |
+|                         reg_3_37_9_0                                          |    <0.001 |
+|                         reg_3_38_all                                          |    <0.001 |
+|                         reg_3_39_all                                          |    <0.001 |
+|                         reg_3_40_all                                          |    <0.001 |
+|                         reg_3_41_9_0                                          |    <0.001 |
+|                         reg_3_42_5_0                                          |    <0.001 |
+|                         reg_3_43_all                                          |    <0.001 |
+|                         reg_3_65535_all                                       |    <0.001 |
+|                         reg_3_8_10                                            |    <0.001 |
+|                     management_mdio_i                                         |     0.001 |
+|                       ipif_access_inst                                        |    <0.001 |
+|                       mdio_interface_i                                        |     0.001 |
+|                   norm_err_block_counter_i                                    |    <0.001 |
+|                     psynch_1                                                  |    <0.001 |
+|                     psynch_2                                                  |    <0.001 |
+|                     psynch_3                                                  |    <0.001 |
+|                   pcs_ber_counter_i                                           |    <0.001 |
+|                     psynch_1                                                  |    <0.001 |
+|                     psynch_2                                                  |    <0.001 |
+|                     psynch_3                                                  |    <0.001 |
+|                   pcs_top_i                                                   |     0.014 |
+|                     coreclk_rxusrclk2_timer_125us_resync                      |    <0.001 |
+|                       resynch[0].synchc_inst                                  |    <0.001 |
+|                       resynch[10].synchc_inst                                 |    <0.001 |
+|                       resynch[11].synchc_inst                                 |    <0.001 |
+|                       resynch[12].synchc_inst                                 |    <0.001 |
+|                       resynch[13].synchc_inst                                 |    <0.001 |
+|                       resynch[14].synchc_inst                                 |    <0.001 |
+|                       resynch[15].synchc_inst                                 |    <0.001 |
+|                       resynch[1].synchc_inst                                  |    <0.001 |
+|                       resynch[2].synchc_inst                                  |    <0.001 |
+|                       resynch[3].synchc_inst                                  |    <0.001 |
+|                       resynch[4].synchc_inst                                  |    <0.001 |
+|                       resynch[5].synchc_inst                                  |    <0.001 |
+|                       resynch[6].synchc_inst                                  |    <0.001 |
+|                       resynch[7].synchc_inst                                  |    <0.001 |
+|                       resynch[8].synchc_inst                                  |    <0.001 |
+|                       resynch[9].synchc_inst                                  |    <0.001 |
+|                     rx_pcs_i                                                  |     0.004 |
+|                       pcs_descramble_i                                        |    <0.001 |
+|                       rx_ber_mon_fsm_i                                        |    <0.001 |
+|                       rx_block_lock_fsm_i                                     |    <0.001 |
+|                       rx_decoder_i                                            |     0.002 |
+|                       rx_pcs_fsm_i                                            |    <0.001 |
+|                       rx_pcs_test_i                                           |    <0.001 |
+|                       synch_signal_ok                                         |    <0.001 |
+|                     tx_pcs_i                                                  |     0.009 |
+|                       pcs_scramble_i                                          |     0.002 |
+|                       tx_encoder_i                                            |     0.007 |
+|                       tx_pcs_fsm_i                                            |    <0.001 |
+|                   rxusrclk2_coreclk_resyncs_i                                 |    <0.001 |
+|                     resynch[0].synch_inst                                     |    <0.001 |
+|                     resynch[1].synch_inst                                     |    <0.001 |
+|                     resynch[2].synch_inst                                     |    <0.001 |
+|                   synch_4                                                     |    <0.001 |
+|                   synch_5                                                     |    <0.001 |
+|                   test_err_block_counter_i                                    |    <0.001 |
+|                     psynch_1                                                  |    <0.001 |
+|                     psynch_2                                                  |    <0.001 |
+|                     psynch_3                                                  |    <0.001 |
+|           ten_gig_eth_pcs_pma_ip_shared_logic_in_core_local_clock_reset_block |     0.002 |
+|             areset_rxusrclk2_sync_i                                           |    <0.001 |
+|             coreclk_areset_sync_i                                             |    <0.001 |
+|             coreclk_reset_rx_sync_i                                           |    <0.001 |
+|             coreclk_reset_tx_sync_i                                           |    <0.001 |
+|             dclk_areset_sync_i                                                |    <0.001 |
+|             dclk_reset_rx_sync_i                                              |    <0.001 |
+|             gtrxreset_rxusrclk2_sync_i                                        |    <0.001 |
+|             pma_resetout_rising_rxusrclk2_sync_i                              |    <0.001 |
+|             rxreset_rxusrclk2_sync_i                                          |    <0.001 |
+|             rxresetdone_dclk_sync_i                                           |    <0.001 |
+|             signal_detect_coreclk_sync_i                                      |    <0.001 |
+|             signal_detect_dclk_sync_i                                         |    <0.001 |
+|             sim_speedup_controller_inst                                       |    <0.001 |
+|             txreset_txusrclk2_sync_i                                          |    <0.001 |
+|         ten_gig_eth_pcs_pma_gt_common_block                                   |    <0.001 |
+|         ten_gig_eth_pcs_pma_shared_clock_reset_block                          |     0.002 |
+|           areset_coreclk_sync_i                                               |    <0.001 |
+|           gttxreset_txusrclk2_sync_i                                          |    <0.001 |
+|           qplllock_txusrclk2_sync_i                                           |    <0.001 |
+|   sync_perst_to_ethclk                                                        |    <0.001 |
++-------------------------------------------------------------------------------+-----------+
+
+

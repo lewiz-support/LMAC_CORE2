@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4-gate_level/hardware/sources/hdl/pvtmon/kcpsm6.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity kcpsm6
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4-gate_level/hardware/sources/hdl/pvtmon/power_test_control.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity power_test_control
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4-gate_level/hardware/sources/hdl/pvtmon/power_test_control_program.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity power_test_control_program
+INFO: [VRFC 10-307] analyzing entity jtag_loader_6
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4-gate_level/hardware/sources/hdl/clock_control/clock_control.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_control
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/SUNNY2/LMAC2-vc709-2015-4-gate_level/hardware/sources/hdl/clock_control/clock_control_program.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity clock_control_program
+INFO: [VRFC 10-307] analyzing entity jtag_loader_6

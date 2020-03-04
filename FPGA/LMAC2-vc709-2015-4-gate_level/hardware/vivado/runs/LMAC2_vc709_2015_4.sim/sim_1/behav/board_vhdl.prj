@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../../../sources/hdl/pvtmon/kcpsm6.vhd"
+vhdl xil_defaultlib  "../../../../../sources/hdl/pvtmon/power_test_control.vhd"
+vhdl xil_defaultlib  "../../../../../sources/hdl/pvtmon/power_test_control_program.vhd"
+vhdl xil_defaultlib  "../../../../../sources/hdl/clock_control/clock_control.vhd"
+vhdl xil_defaultlib  "../../../../../sources/hdl/clock_control/clock_control_program.vhd"
+
+# Do not sort compile order
+nosort

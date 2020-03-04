@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Thu Jan 19 09:27:38 2017
+# Process ID: 36424
+# Current directory: C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.runs/ipcs_fifo_ip_synth_1
+# Command line: vivado.exe -log ipcs_fifo_ip.vds -mode batch -messageDb vivado.pb -notrace -source ipcs_fifo_ip.tcl
+# Log file: C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.runs/ipcs_fifo_ip_synth_1/ipcs_fifo_ip.vds
+# Journal file: C:/SUNNY2/LMAC2-vc709-2015-4/hardware/vivado/runs/LMAC2_vc709_2015_4.runs/ipcs_fifo_ip_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ipcs_fifo_ip.tcl -notrace
