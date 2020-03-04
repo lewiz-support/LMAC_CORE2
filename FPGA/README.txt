@@ -48,13 +48,10 @@ is to show the Ethernet implementation. Where not needed, other parts of the Con
 The project's directory contains 3 sub directories:
 1) LMAC2-vc709-2015-4 -> This directory is for behavioral simulation, synthesis and implementaion of LMAC_CORE2.
 2) LMAC2-vc709-2015-4-gate_level  -> This directory is for gate level simulation of LMAC_CORE2 + SerDes loopback
-3) Screenshots -> 	
+3) Screenshots -> This directory contains various screenshots of behavioral simulation and gate-level simulation including resulting
+waveforms. The main purpose of the screenshots is to show that the functionality of behavioral simulation and gate-level simulation remain the same, i.e. working.
+Screenshots of Gate level simulations can be found under GATE_LEVEL_SIMULATION directory. Each screenshot contains explanation of the results in the image.
 
-This directory contains various screenshots of behavioral simulation and gate-level simulation including resulting
-waveforms. 
-The main purpose of the screenshots is to show that the functionality of behavioral simulation and gate-level simulation remain the same, i.e. working.
-Screenshots of Gate level simulations can be found under GATE_LEVEL_SIMULATION directory.
-Each screenshot contains explanation of the results in the image
 
 	differential clock input ( from testbench or Board)        
                           |                                 
@@ -62,13 +59,13 @@ Each screenshot contains explanation of the results in the image
 |LMAC2-vc709-2015-4       |                               | 
 |                         |                               | 
 |                         |                               | 
-|                         V                               | 
-|	 ----------------------------------------------       |   
+|                         v                               | 
+|    ----------------------------------------------       |   
 |   |CLOCK CONTROL BLOCK                           |      | 
 |   |provides clock to other modules	           |      |    
 |    ----------------------------------------------       | 
-|                      |                                  | 
-|      				   V                                  |          
+|                         |                               | 
+|      			  v                               |          
 |    ----------------------------------------------       | 
 |   |NETWORK_PATH_INST_0                           |      | 
 |   |                                              |      | 
@@ -76,26 +73,27 @@ Each screenshot contains explanation of the results in the image
 |   |    | LOOPBACK MODULE                   |     |      | 
 |   |    | (to loopback input data)          |     |      | 
 |   |     -----------------------------------      |      | 
-|   |             |         ^                      |      | 
-|	|			  V         |                      |      |           
+|   |             |        ^                       |      | 
+|   |		  v        |                       |      |           
 |   |     ------------------------------------     |      | 
 |   |    | LMAC SYNTH                         |    |      | 
 |   |    |(LEWIZ MAC HDL/GATE TOP)            |    |      | 
 |   |     ------------------------------------     |      | 
 |   |             |        ^                       |      | 
-|   |             V        |                       |      | 
+|   |             v        |                       |      | 
 |   |     ------------------------------------     |      |       
 |   |    | ten_gig_pcs_pma_inst               |    |      | 
 |   |    |(Xilinx 10G SERDES)                 |    |      | 
 |   |     ------------------------------------     |      | 
 |   |             |        ^                       |      | 
-|   |             V        |                       |      | 
-|   |         diff_tx     diff_rx                  |      | 
-|    ----------------------------------------------       | 
-|                                                         | 
-|                                                         | 
- ---------------------------------------------------------  
-
+|   |             |        |                       |      | 
+|    -------------|--------|-----------------------       | 
+|                 |        |                              | 
+|                 |        |                              | 
+ -----------------|--------|------------------------------  
+		  |	   |
+		  v	   |
+	     diff_tx     diff_rx
 
 
 LMAC2-vc709-2015-4 directory and LMAC2-vc709-2015-4-gate_level directory, 
