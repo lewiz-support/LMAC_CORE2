@@ -8,8 +8,10 @@ LMAC2_INFO - contains all the code, testbench, modelsim project files, test plan
 LMAC2_INFO_part2* - contains RX test cases and test results (part 2a, 2b, 2c)
 LMAC2_INFO_part3* - contains TX test cases and test results (part 3a and 3b)
 
-24 JANUARY '19
-- Update code and replace zip files with actual code files
+-----24 JANUARY '2019
 
-04 MARCH '20
-- VC709 FPGA Implementation of LMAC_CORE2
+ Update code and replace zip files with actual code files
+
+-----04 MARCH '2020
+
+ VC709 FPGA Implementation of LMAC_CORE2

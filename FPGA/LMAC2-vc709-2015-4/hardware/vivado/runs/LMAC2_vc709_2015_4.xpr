@@ -34,6 +34,28 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xml"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="ten_gig_eth_pcs_pma_v6_0_3/hdl/ten_gig_eth_pcs_pma_v6_0_rfs.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_support.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_cable_pull_logic.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_ff_synchronizer_rst2.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_shared_clock_and_reset.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_ff_synchronizer.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_ff_synchronizer_rst.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_gtwizard_gth_10gbaser_multi_gt.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_gtwizard_gth_10gbaser_gt.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="elaborate/configure_gt.tcl"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_gt_common.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_block.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_sim_speedup_controller.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="doc/ten_gig_eth_pcs_pma_v6_0_changelog.txt"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_local_clock_and_reset.v"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.veo"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.vho"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core_clocks.xdc"/>
+        <CompFileExtendedInfo CompFileName="ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xci" FileRelPathName="synth/ten_gig_eth_pcs_pma_ip_shared_logic_in_core.xdc"/>
       </File>
       <File Path="$PPRDIR/../../sources/hdl/common/synchronizer_simple.v">
         <FileInfo>
@@ -370,6 +392,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <File Path="$PPRDIR/../../sources/testbench/board.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -552,11 +575,9 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7vx690tffg1761-2" ConstrsSet="constrs_1" Description="Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7vx690tffg1761-2" ConstrsSet="constrs_1" Description="Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2015">
-          <Desc>Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold</Desc>
-        </StratHandle>
+        <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design">
           <Option Id="ResourceSharing">2</Option>
           <Option Id="FsmExtraction">1</Option>
@@ -566,85 +587,58 @@
           <Option Id="ShregMinSize">5</Option>
         </Step>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="br_sfifo_ip_4x32_synth_1" Type="Ft3:Synth" SrcSet="br_sfifo_ip_4x32" Part="xc7vx690tffg1761-2" ConstrsSet="br_sfifo_ip_4x32" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/br_sfifo_ip_4x32_synth_1" IncludeInArchive="true">
+    <Run Id="br_sfifo_ip_4x32_synth_1" Type="Ft3:Synth" SrcSet="br_sfifo_ip_4x32" Part="xc7vx690tffg1761-2" ConstrsSet="br_sfifo_ip_4x32" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="pktctrl_fifo_ip_synth_1" Type="Ft3:Synth" SrcSet="pktctrl_fifo_ip" Part="xc7vx690tffg1761-2" ConstrsSet="pktctrl_fifo_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/pktctrl_fifo_ip_synth_1" IncludeInArchive="true">
+    <Run Id="pktctrl_fifo_ip_synth_1" Type="Ft3:Synth" SrcSet="pktctrl_fifo_ip" Part="xc7vx690tffg1761-2" ConstrsSet="pktctrl_fifo_ip" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="rxfifo_ip_4Kx64_synth_1" Type="Ft3:Synth" SrcSet="rxfifo_ip_4Kx64" Part="xc7vx690tffg1761-2" ConstrsSet="rxfifo_ip_4Kx64" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/rxfifo_ip_4Kx64_synth_1" IncludeInArchive="true">
+    <Run Id="rxfifo_ip_4Kx64_synth_1" Type="Ft3:Synth" SrcSet="rxfifo_ip_4Kx64" Part="xc7vx690tffg1761-2" ConstrsSet="rxfifo_ip_4Kx64" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="ipcs_fifo_ip_synth_1" Type="Ft3:Synth" SrcSet="ipcs_fifo_ip" Part="xc7vx690tffg1761-2" ConstrsSet="ipcs_fifo_ip" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ipcs_fifo_ip_synth_1" IncludeInArchive="true">
+    <Run Id="ipcs_fifo_ip_synth_1" Type="Ft3:Synth" SrcSet="ipcs_fifo_ip" Part="xc7vx690tffg1761-2" ConstrsSet="ipcs_fifo_ip" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="gigerx_bcnt_fifo_ip_256x16_synth_1" Type="Ft3:Synth" SrcSet="gigerx_bcnt_fifo_ip_256x16" Part="xc7vx690tffg1761-2" ConstrsSet="gigerx_bcnt_fifo_ip_256x16" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/gigerx_bcnt_fifo_ip_256x16_synth_1" IncludeInArchive="true">
+    <Run Id="gigerx_bcnt_fifo_ip_256x16_synth_1" Type="Ft3:Synth" SrcSet="gigerx_bcnt_fifo_ip_256x16" Part="xc7vx690tffg1761-2" ConstrsSet="gigerx_bcnt_fifo_ip_256x16" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="gigerx_fifo_ip_256x8_synth_1" Type="Ft3:Synth" SrcSet="gigerx_fifo_ip_256x8" Part="xc7vx690tffg1761-2" ConstrsSet="gigerx_fifo_ip_256x8" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/gigerx_fifo_ip_256x8_synth_1" IncludeInArchive="true">
+    <Run Id="gigerx_fifo_ip_256x8_synth_1" Type="Ft3:Synth" SrcSet="gigerx_fifo_ip_256x8" Part="xc7vx690tffg1761-2" ConstrsSet="gigerx_fifo_ip_256x8" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="gigerx_fifo_ip_256x64_synth_1" Type="Ft3:Synth" SrcSet="gigerx_fifo_ip_256x64" Part="xc7vx690tffg1761-2" ConstrsSet="gigerx_fifo_ip_256x64" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/gigerx_fifo_ip_256x64_synth_1" IncludeInArchive="true">
+    <Run Id="gigerx_fifo_ip_256x64_synth_1" Type="Ft3:Synth" SrcSet="gigerx_fifo_ip_256x64" Part="xc7vx690tffg1761-2" ConstrsSet="gigerx_fifo_ip_256x64" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="txfifo_ip_1024x64_synth_1" Type="Ft3:Synth" SrcSet="txfifo_ip_1024x64" Part="xc7vx690tffg1761-2" ConstrsSet="txfifo_ip_1024x64" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/txfifo_ip_1024x64_synth_1" IncludeInArchive="true">
+    <Run Id="txfifo_ip_1024x64_synth_1" Type="Ft3:Synth" SrcSet="txfifo_ip_1024x64" Part="xc7vx690tffg1761-2" ConstrsSet="txfifo_ip_1024x64" Description="Vivado Synthesis Defaults" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7vx690tffg1761-2" ConstrsSet="constrs_1" Description="Uses multiple algorithms for optimization, placement, and routing to get potentially better results." State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7vx690tffg1761-2" ConstrsSet="constrs_1" Description="Uses multiple algorithms for optimization, placement, and routing to get potentially better results." State="current" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Performance_Explore" Flow="Vivado Implementation 2015">
-          <Desc>Uses multiple algorithms for optimization, placement, and routing to get potentially better results.</Desc>
-        </StratHandle>
+        <StratHandle Name="Performance_Explore" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design">
           <Option Id="Directive">0</Option>
@@ -663,13 +657,10 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="br_sfifo_ip_4x32_impl_1" Type="Ft2:EntireDesign" Part="xc7vx690tffg1761-2" ConstrsSet="br_sfifo_ip_4x32" Description="Vivado Implementation Defaults" SynthRun="br_sfifo_ip_4x32_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -683,9 +674,7 @@
     </Run>
     <Run Id="pktctrl_fifo_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7vx690tffg1761-2" ConstrsSet="pktctrl_fifo_ip" Description="Vivado Implementation Defaults" SynthRun="pktctrl_fifo_ip_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -699,9 +688,7 @@
     </Run>
     <Run Id="rxfifo_ip_4Kx64_impl_1" Type="Ft2:EntireDesign" Part="xc7vx690tffg1761-2" ConstrsSet="rxfifo_ip_4Kx64" Description="Vivado Implementation Defaults" SynthRun="rxfifo_ip_4Kx64_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -715,9 +702,7 @@
     </Run>
     <Run Id="ipcs_fifo_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7vx690tffg1761-2" ConstrsSet="ipcs_fifo_ip" Description="Vivado Implementation Defaults" SynthRun="ipcs_fifo_ip_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -731,9 +716,7 @@
     </Run>
     <Run Id="gigerx_bcnt_fifo_ip_256x16_impl_1" Type="Ft2:EntireDesign" Part="xc7vx690tffg1761-2" ConstrsSet="gigerx_bcnt_fifo_ip_256x16" Description="Vivado Implementation Defaults" SynthRun="gigerx_bcnt_fifo_ip_256x16_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -747,9 +730,7 @@
     </Run>
     <Run Id="gigerx_fifo_ip_256x8_impl_1" Type="Ft2:EntireDesign" Part="xc7vx690tffg1761-2" ConstrsSet="gigerx_fifo_ip_256x8" Description="Vivado Implementation Defaults" SynthRun="gigerx_fifo_ip_256x8_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -763,9 +744,7 @@
     </Run>
     <Run Id="gigerx_fifo_ip_256x64_impl_1" Type="Ft2:EntireDesign" Part="xc7vx690tffg1761-2" ConstrsSet="gigerx_fifo_ip_256x64" Description="Vivado Implementation Defaults" SynthRun="gigerx_fifo_ip_256x64_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -779,9 +758,7 @@
     </Run>
     <Run Id="txfifo_ip_1024x64_impl_1" Type="Ft2:EntireDesign" Part="xc7vx690tffg1761-2" ConstrsSet="txfifo_ip_1024x64" Description="Vivado Implementation Defaults" SynthRun="txfifo_ip_1024x64_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
