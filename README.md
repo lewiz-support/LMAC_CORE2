@@ -1,6 +1,18 @@
 # LMAC_CORE2
 LeWiz Communications Ethernet MAC Core2 10G/5G/2.5G/1G
 
+----------- Feb 2, 2021
+
+Open source simulation tool such as Verilator has been used by other users  
+Simulation tool in FPGA tool such as Vivado has also been used by users with this core  
+This core also has been implemented successfully on OpenFPGA core and tools  
+
+-----04 MARCH '2020
+
+ VC709 FPGA Implementation of LMAC_CORE2  
+ 
+---------------------------------------------  
+
 Make sure you read the license file.
 
 DOCS.zip - contains all the documentation for the LMAC CORE2
@@ -12,6 +24,4 @@ LMAC2_INFO_part3* - contains TX test cases and test results (part 3a and 3b)
 
  Update code and replace zip files with actual code files
 
------04 MARCH '2020
 
- VC709 FPGA Implementation of LMAC_CORE2
