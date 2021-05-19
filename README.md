@@ -2,6 +2,7 @@
 LeWiz Communications Ethernet MAC Core2 10G/5G/2.5G/1G
 
 ---------- May 19, 2021
+
 Release application note for the register interface design
 
 ----------- Feb 2, 2021
