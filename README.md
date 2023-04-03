@@ -1,6 +1,17 @@
 # LMAC_CORE2
 LeWiz Communications Ethernet MAC Core2 10G/5G/2.5G/1G
 
+------------- April 2, 2023
+
+All materials are for LMAC_CORE2 are now licensed under
+
+Apache License 2.0
+
+Version 2.0, January 2004
+
+http://www.apache.org/licenses/
+
+
 ---------- May 19, 2021
 
 Release application note for the register interface design
